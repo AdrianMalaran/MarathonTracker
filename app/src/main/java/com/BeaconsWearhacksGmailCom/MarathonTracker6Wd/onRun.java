@@ -19,6 +19,7 @@ import android.widget.Toast;
 
 import com.BeaconsWearhacksGmailCom.MarathonTracker6Wd.estimote.BeaconID;
 import com.BeaconsWearhacksGmailCom.MarathonTracker6Wd.estimote.BeaconStats;
+import com.BeaconsWearhacksGmailCom.MarathonTracker6Wd.estimote.Database;
 import com.BeaconsWearhacksGmailCom.MarathonTracker6Wd.estimote.EstimoteCloudBeaconDetails;
 import com.BeaconsWearhacksGmailCom.MarathonTracker6Wd.estimote.EstimoteCloudBeaconDetailsFactory;
 import com.BeaconsWearhacksGmailCom.MarathonTracker6Wd.estimote.ProximityContentManager;
@@ -46,6 +47,7 @@ public class onRun extends AppCompatActivity implements SensorEventListener {
     private int stepsThisSection;
     private List<Integer> stepsAllSections = new ArrayList<Integer>();
     private int offset;
+    private Database db = new Database(this);
     boolean start = true;
     boolean activityRunning;
 
@@ -64,6 +66,7 @@ public class onRun extends AppCompatActivity implements SensorEventListener {
     private Chronometer chronometer;
     private Thread thread;
 
+    private List<String> lapTimes;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -143,8 +146,8 @@ public class onRun extends AppCompatActivity implements SensorEventListener {
                     bs = bs.grabById(beaconDetails.getId());
                     speakOut("You have ran 6 miles, Your average speed is 6");
 
-                    //Write to db
-
+                    //Write to db (Float distanceTravelled, Float caloriesBurned, Integer stepCount, Float maxSpeed, Float timeTaken )
+                   // db.insertData((float)1.0,(float)1.0, 10,(float)2.0, (float)100.0);
 
 
                 }

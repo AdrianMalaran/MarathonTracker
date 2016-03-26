@@ -22,13 +22,12 @@
         <activity android:name=".historyPage"></activity>
         <activity android:name=".onRun"></activity>
         <activity android:name=".MainActivity"></activity>
-        <activity android:name=".pastHistory"></activity>
-<<<<<<< HEAD
-        <activity android:name=".HayesThing"></activity>
+        <activity android:name=".pastHistory"></activity><!-- ATTENTION: This was auto-generated to add Google Play services to your project for
+     App Indexing.  See https://g.co/AppIndexing/AndroidStudio for more information. -->
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
 
-
-=======
->>>>>>> 03062c3e4efb9e25c5afa9bb85de9566c95f793b
     </application>
 
 </manifest>
