@@ -11,11 +11,13 @@ public class BeaconStats {
     private int mileMarker;
     private String beaconType;
 
-    BeaconStats(String name){
+    public BeaconStats(){}
 
 
-        //Make table cal
-}
+    public BeaconStats(int mileMarker, String beaconType){
+        this.mileMarker = mileMarker;
+        this.beaconType = beaconType;
+    }
 
     public int getMileMarker() { return mileMarker; }
 
@@ -23,7 +25,13 @@ public class BeaconStats {
         return beaconType;
     }
 
+    public BeaconStats grabById(UUID id){
+        //Search through db
+        mileMarker = 2;
+        beaconType = "as";
 
+        return new BeaconStats(mileMarker, beaconType);
+    }
     @Override
     public String toString() {
         return "[mileMarker: " + getMileMarker() + ", beacon type: " + getbeaconType() + "]";

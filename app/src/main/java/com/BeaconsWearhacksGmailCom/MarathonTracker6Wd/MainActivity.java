@@ -46,7 +46,6 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        final MediaPlayer mp;
 
         t1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
             @Override
@@ -69,17 +68,23 @@ public class MainActivity extends AppCompatActivity {
                 Integer backgroundColor;
                 if (content != null) {
                     EstimoteCloudBeaconDetails beaconDetails = (EstimoteCloudBeaconDetails) content;
-                    //  BeaconStats bs =
-                    text = "You're in " + beaconDetails.getBeaconName() + "'s range!";// This is Mile marker " + beaconDetails.getMileMarker();
-                    //BeaconStats bm = new BeaconStats(beaconDetails.getBeaconName());
 
+                    BeaconStats bs = new BeaconStats();
+                    //Read beacon info
+                    bs = bs.grabById(beaconDetails.getId());
                     speakOut("You have ran 6 miles, Your average speed is 6");
+
+                    //Write to db
+
+
+
                     backgroundColor = BACKGROUND_COLORS.get(beaconDetails.getBeaconColor());
                 } else {
                     text = "No beacons in range.";
+                    ((TextView) findViewById(R.id.textView)).setText(text);
+
                     backgroundColor = null;
                 }
-                ((TextView) findViewById(R.id.textView)).setText(text);
                 findViewById(R.id.relativeLayout).setBackgroundColor(
                         backgroundColor != null ? backgroundColor : BACKGROUND_COLOR_NEUTRAL);
             }
