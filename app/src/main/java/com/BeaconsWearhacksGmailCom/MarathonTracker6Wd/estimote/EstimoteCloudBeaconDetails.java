@@ -6,7 +6,8 @@ public class EstimoteCloudBeaconDetails {
 
     private String beaconName;
     private Color beaconColor;
-
+    private int mileMarker;
+    private String beaconType; //Start, onRace, Finish
     public EstimoteCloudBeaconDetails(String beaconName, Color beaconColor) {
         this.beaconName = beaconName;
         this.beaconColor = beaconColor;
@@ -19,6 +20,7 @@ public class EstimoteCloudBeaconDetails {
     public Color getBeaconColor() {
         return beaconColor;
     }
+
 
     @Override
     public String toString() {
