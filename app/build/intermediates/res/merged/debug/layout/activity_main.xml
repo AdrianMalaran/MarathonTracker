@@ -16,9 +16,18 @@
         android:layout_height="wrap_content"
         android:background="@color/colorAccent"
         android:text="Start Run"
-        android:id="@+id/button3"
+        android:id="@+id/button"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="127dp" />
+        android:layout_marginBottom="50dp" />
+
+    <fragment xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/map"
+        tools:context=".MapsActivity"
+        android:name="com.google.android.gms.maps.SupportMapFragment" />
+
 </RelativeLayout>
 <!-- From: file:/C:/Users/sam/Documents/GitHub/MarathonTracker/app/src/main/res/layout/activity_main.xml -->
