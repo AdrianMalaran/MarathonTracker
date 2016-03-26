@@ -30,13 +30,16 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme" >
-        <activity android:name="com.BeaconsWearhacksGmailCom.MarathonTracker6Wd.MainActivity" >
+        <activity android:name="com.BeaconsWearhacksGmailCom.MarathonTracker6Wd.mainPage" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name="com.BeaconsWearhacksGmailCom.MarathonTracker6Wd.historyPage" />
+        <activity android:name="com.BeaconsWearhacksGmailCom.MarathonTracker6Wd.MainActivity" />
+        <activity android:name="com.BeaconsWearhacksGmailCom.MarathonTracker6Wd.pastHistory" />
 
         <service
             android:name="com.estimote.sdk.service.BeaconService"

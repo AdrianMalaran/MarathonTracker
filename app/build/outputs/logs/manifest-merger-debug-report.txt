@@ -1,6 +1,6 @@
 -- Merging decision tree log ---
 manifest
-ADDED from C:\Users\sam\Documents\GitHub\MarathonTracker\app\src\main\AndroidManifest.xml:2:1-26:12
+ADDED from C:\Users\sam\Documents\GitHub\MarathonTracker\app\src\main\AndroidManifest.xml:2:1-35:12
 	package
 		ADDED from C:\Users\sam\Documents\GitHub\MarathonTracker\app\src\main\AndroidManifest.xml:3:5-62
 		INJECTED from C:\Users\sam\Documents\GitHub\MarathonTracker\app\src\main\AndroidManifest.xml
@@ -18,7 +18,7 @@ ADDED from C:\Users\sam\Documents\GitHub\MarathonTracker\app\src\main\AndroidMan
 	android:name
 		ADDED from C:\Users\sam\Documents\GitHub\MarathonTracker\app\src\main\AndroidManifest.xml:5:22-76
 application
-ADDED from C:\Users\sam\Documents\GitHub\MarathonTracker\app\src\main\AndroidManifest.xml:7:5-24:19
+ADDED from C:\Users\sam\Documents\GitHub\MarathonTracker\app\src\main\AndroidManifest.xml:7:5-33:19
 MERGED from [com.android.support:appcompat-v7:23.1.0] C:\Users\sam\Documents\GitHub\MarathonTracker\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.1.0\AndroidManifest.xml:22:5-20
 MERGED from [com.android.support:support-v4:23.1.0] C:\Users\sam\Documents\GitHub\MarathonTracker\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.1.0\AndroidManifest.xml:22:5-20
 MERGED from [com.android.support:design:23.1.0] C:\Users\sam\Documents\GitHub\MarathonTracker\app\build\intermediates\exploded-aar\com.android.support\design\23.1.0\AndroidManifest.xml:22:5-20
@@ -39,10 +39,10 @@ MERGED from [com.estimote:sdk:0.9.4] C:\Users\sam\Documents\GitHub\MarathonTrack
 		ADDED from C:\Users\sam\Documents\GitHub\MarathonTracker\app\src\main\AndroidManifest.xml:13:9-40
 	android:name
 		ADDED from C:\Users\sam\Documents\GitHub\MarathonTracker\app\src\main\AndroidManifest.xml:8:9-38
-activity#com.BeaconsWearhacksGmailCom.MarathonTracker6Wd.MainActivity
+activity#com.BeaconsWearhacksGmailCom.MarathonTracker6Wd.mainPage
 ADDED from C:\Users\sam\Documents\GitHub\MarathonTracker\app\src\main\AndroidManifest.xml:15:9-20:20
 	android:name
-		ADDED from C:\Users\sam\Documents\GitHub\MarathonTracker\app\src\main\AndroidManifest.xml:15:19-47
+		ADDED from C:\Users\sam\Documents\GitHub\MarathonTracker\app\src\main\AndroidManifest.xml:15:19-43
 intent-filter#android.intent.action.MAIN+android.intent.category.LAUNCHER
 ADDED from C:\Users\sam\Documents\GitHub\MarathonTracker\app\src\main\AndroidManifest.xml:16:13-19:29
 action#android.intent.action.MAIN
@@ -53,6 +53,18 @@ category#android.intent.category.LAUNCHER
 ADDED from C:\Users\sam\Documents\GitHub\MarathonTracker\app\src\main\AndroidManifest.xml:18:17-77
 	android:name
 		ADDED from C:\Users\sam\Documents\GitHub\MarathonTracker\app\src\main\AndroidManifest.xml:18:27-74
+activity#com.BeaconsWearhacksGmailCom.MarathonTracker6Wd.historyPage
+ADDED from C:\Users\sam\Documents\GitHub\MarathonTracker\app\src\main\AndroidManifest.xml:23:9-58
+	android:name
+		ADDED from C:\Users\sam\Documents\GitHub\MarathonTracker\app\src\main\AndroidManifest.xml:23:19-46
+activity#com.BeaconsWearhacksGmailCom.MarathonTracker6Wd.MainActivity
+ADDED from C:\Users\sam\Documents\GitHub\MarathonTracker\app\src\main\AndroidManifest.xml:25:9-59
+	android:name
+		ADDED from C:\Users\sam\Documents\GitHub\MarathonTracker\app\src\main\AndroidManifest.xml:25:19-47
+activity#com.BeaconsWearhacksGmailCom.MarathonTracker6Wd.pastHistory
+ADDED from C:\Users\sam\Documents\GitHub\MarathonTracker\app\src\main\AndroidManifest.xml:26:9-58
+	android:name
+		ADDED from C:\Users\sam\Documents\GitHub\MarathonTracker\app\src\main\AndroidManifest.xml:26:19-46
 uses-sdk
 INJECTED from C:\Users\sam\Documents\GitHub\MarathonTracker\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 MERGED from [com.android.support:appcompat-v7:23.1.0] C:\Users\sam\Documents\GitHub\MarathonTracker\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.1.0\AndroidManifest.xml:20:5-43

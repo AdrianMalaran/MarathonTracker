@@ -1,14 +1,19 @@
 package com.BeaconsWearhacksGmailCom.MarathonTracker6Wd;
 
+import android.content.Context;
 import android.content.Intent;
+import android.media.AudioManager;
+import android.media.MediaPlayer;
 import android.os.Bundle;
+import android.speech.tts.TextToSpeech;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
-import android.view.View;
-import android.widget.Button;
+import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.BeaconsWearhacksGmailCom.MarathonTracker6Wd.estimote.BeaconID;
+import com.BeaconsWearhacksGmailCom.MarathonTracker6Wd.estimote.BeaconStats;
 import com.BeaconsWearhacksGmailCom.MarathonTracker6Wd.estimote.EstimoteCloudBeaconDetails;
 import com.BeaconsWearhacksGmailCom.MarathonTracker6Wd.estimote.EstimoteCloudBeaconDetailsFactory;
 import com.BeaconsWearhacksGmailCom.MarathonTracker6Wd.estimote.ProximityContentManager;
@@ -17,15 +22,15 @@ import com.estimote.sdk.cloud.model.Color;
 
 import java.util.Arrays;
 import java.util.HashMap;
+import java.util.Locale;
 import java.util.Map;
 
-public class MainActivity extends AppCompatActivity {
-
-    private static final String TAG = "MainActivity";
+public class onRun extends AppCompatActivity {
+    TextToSpeech t1;
+    EditText ed1;
+    private static final String TAG = "onRun";
 
     private static final Map<Color, Integer> BACKGROUND_COLORS = new HashMap<>();
-
-    private Button startRun;
 
     static {
         BACKGROUND_COLORS.put(Color.ICY_MARSHMALLOW, android.graphics.Color.rgb(109, 170, 199));
@@ -42,9 +47,19 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        t1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
+            @Override
+            public void onInit(int status) {
+                if (status != TextToSpeech.ERROR) {
+                    t1.setLanguage(Locale.US);
+                }
+            }
+        });
+
+
         proximityContentManager = new ProximityContentManager(this,
                 Arrays.asList(
-                        new BeaconID("B9407F30-F5F8-466E-AFF9-25556B57FE6D", 41270, 54969)),
+                        new BeaconID("B9407F30-F5F8-466E-AFF9-25556B57FE6D", 23105, 37595)),
                 new EstimoteCloudBeaconDetailsFactory());
         proximityContentManager.setListener(new ProximityContentManager.Listener() {
             @Override
@@ -53,24 +68,25 @@ public class MainActivity extends AppCompatActivity {
                 Integer backgroundColor;
                 if (content != null) {
                     EstimoteCloudBeaconDetails beaconDetails = (EstimoteCloudBeaconDetails) content;
-                    text = "You're in " + beaconDetails.getBeaconName() + "'s range!";
+
+                    BeaconStats bs = new BeaconStats();
+                    //Read beacon info
+                    bs = bs.grabById(beaconDetails.getId());
+                    speakOut("You have ran 6 miles, Your average speed is 6");
+
+                    //Write to db
+
+
+
                     backgroundColor = BACKGROUND_COLORS.get(beaconDetails.getBeaconColor());
                 } else {
                     text = "No beacons in range.";
+                    ((TextView) findViewById(R.id.textView)).setText(text);
+
                     backgroundColor = null;
                 }
-                ((TextView) findViewById(R.id.textView)).setText(text);
                 findViewById(R.id.relativeLayout).setBackgroundColor(
                         backgroundColor != null ? backgroundColor : BACKGROUND_COLOR_NEUTRAL);
-            }
-        });
-
-        startRun = (Button) findViewById(R.id.button3);
-
-        startRun.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(MainActivity.this, historyPage.class));
             }
         });
     }
@@ -100,5 +116,26 @@ public class MainActivity extends AppCompatActivity {
     protected void onDestroy() {
         super.onDestroy();
         proximityContentManager.destroy();
+    }
+
+
+    private void speakOut(String text) {
+
+        final AudioManager audioManager =
+                (AudioManager) getSystemService(Context.AUDIO_SERVICE);
+        AudioManager.OnAudioFocusChangeListener afChangeListener = new AudioManager.OnAudioFocusChangeListener() {
+            public void onAudioFocusChange(int focusChange) {
+                //    audioManager.abandonAudioFocus(afChangeListener);
+            }
+        };
+
+        int result = audioManager.requestAudioFocus(afChangeListener, audioManager.STREAM_MUSIC, audioManager.AUDIOFOCUS_GAIN);
+        if (result == AudioManager.AUDIOFOCUS_REQUEST_GRANTED)
+            t1.speak(text, TextToSpeech.QUEUE_FLUSH, null);
+        if(!t1.isSpeaking())
+            audioManager.abandonAudioFocus(afChangeListener);
+
+
+
     }
 }
