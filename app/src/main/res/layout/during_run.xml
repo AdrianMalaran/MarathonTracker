@@ -29,7 +29,7 @@
         <ImageButton
             android:layout_width="89dp"
             android:layout_height="wrap_content"
-            android:id="@+id/imageButton"
+            android:id="@+id/stopButton"
             android:layout_gravity="center_horizontal"
             android:layout_weight="0.21" />
 

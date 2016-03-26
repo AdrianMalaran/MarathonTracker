@@ -39,15 +39,11 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme" >
-<<<<<<< HEAD
-        <activity android:name="com.BeaconsWearhacksGmailCom.MarathonTracker6Wd.onRun" >
-=======
         <meta-data
             android:name="com.google.android.geo.API_KEY"
             android:value="AIzaSyDaOAXxw0HcHDr2sqhBEipRocr3kMhBKI0" />
 
         <activity android:name="com.BeaconsWearhacksGmailCom.MarathonTracker6Wd.mainPage" >
->>>>>>> 9825ec29f35445fad7913d76556dab8fc4e256fb
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -55,15 +51,9 @@
             </intent-filter>
         </activity>
         <activity android:name="com.BeaconsWearhacksGmailCom.MarathonTracker6Wd.historyPage" />
-<<<<<<< HEAD
-        <activity android:name="com.BeaconsWearhacksGmailCom.MarathonTracker6Wd.mainPage" />
+        <activity android:name="com.BeaconsWearhacksGmailCom.MarathonTracker6Wd.onRun" />
         <activity android:name="com.BeaconsWearhacksGmailCom.MarathonTracker6Wd.MainActivity" />
-=======
-        <activity android:name="com.BeaconsWearhacksGmailCom.MarathonTracker6Wd.MainActivity" >
-        </activity>
->>>>>>> 9825ec29f35445fad7913d76556dab8fc4e256fb
         <activity android:name="com.BeaconsWearhacksGmailCom.MarathonTracker6Wd.pastHistory" />
-
         <!-- Include the AdActivity and InAppPurchaseActivity configChanges and themes. -->
         <activity
             android:name="com.google.android.gms.ads.AdActivity"

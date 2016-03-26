@@ -31,10 +31,5 @@
 
     <include layout="@layout/abc_screen_content_include" />
 
-<<<<<<< HEAD
-</android.support.v7.internal.widget.FitWindowsLinearLayout>
-<!-- From: file:/usr/local/google/buildbot/repo_clients/https___googleplex-android.googlesource.com_a_platform_manifest.git/mnc-supportlib-release/frameworks/support/v7/appcompat/res/layout/abc_screen_simple.xml --><!-- From: file:/C:/Users/Andrew/Documents/GitHub/MarathonTracker/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.0/res/layout/abc_screen_simple.xml -->
-=======
 </android.support.v7.widget.FitWindowsLinearLayout>
 <!-- From: file:/usr/local/google/buildbot/src/googleplex-android/mnc-supportlib-release/frameworks/support/v7/appcompat/res/layout/abc_screen_simple.xml --><!-- From: file:/C:/Users/sam/Documents/GitHub/MarathonTracker/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/layout/abc_screen_simple.xml -->
->>>>>>> 9825ec29f35445fad7913d76556dab8fc4e256fb

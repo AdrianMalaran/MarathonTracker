@@ -50,10 +50,5 @@
 
     </android.support.v7.widget.ActionBarContainer>
 
-<<<<<<< HEAD
-</android.support.v7.internal.widget.ActionBarOverlayLayout>
-<!-- From: file:/usr/local/google/buildbot/repo_clients/https___googleplex-android.googlesource.com_a_platform_manifest.git/mnc-supportlib-release/frameworks/support/v7/appcompat/res/layout/abc_screen_toolbar.xml --><!-- From: file:/C:/Users/Andrew/Documents/GitHub/MarathonTracker/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.0/res/layout/abc_screen_toolbar.xml -->
-=======
 </android.support.v7.widget.ActionBarOverlayLayout>
 <!-- From: file:/usr/local/google/buildbot/src/googleplex-android/mnc-supportlib-release/frameworks/support/v7/appcompat/res/layout/abc_screen_toolbar.xml --><!-- From: file:/C:/Users/sam/Documents/GitHub/MarathonTracker/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/layout/abc_screen_toolbar.xml -->
->>>>>>> 9825ec29f35445fad7913d76556dab8fc4e256fb
