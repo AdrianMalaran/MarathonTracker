@@ -22,18 +22,10 @@
 
 
         <activity android:name=".historyPage"></activity>
-<<<<<<< HEAD
         <activity android:name=".onRun"></activity>
         <activity android:name=".MainActivity"></activity>
-=======
-        <activity android:name=".MainActivity">
-        </activity>
->>>>>>> 9825ec29f35445fad7913d76556dab8fc4e256fb
         <activity android:name=".pastHistory"></activity>
-
-
-
-
+        <activity android:name=".HayesThing"></activity>
 
 
     </application>
