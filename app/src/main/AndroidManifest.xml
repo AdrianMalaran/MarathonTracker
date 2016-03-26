@@ -3,7 +3,7 @@
     package="com.BeaconsWearhacksGmailCom.MarathonTracker6Wd">
 
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
-
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
     <application
         android:name=".MyApplication"
         android:allowBackup="true"
@@ -11,6 +11,7 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <meta-data android:name="com.google.android.geo.API_KEY" android:value="AIzaSyDaOAXxw0HcHDr2sqhBEipRocr3kMhBKI0"/>
 
         <activity android:name=".mainPage">
             <intent-filter>
@@ -21,8 +22,13 @@
 
 
         <activity android:name=".historyPage"></activity>
+<<<<<<< HEAD
         <activity android:name=".onRun"></activity>
         <activity android:name=".MainActivity"></activity>
+=======
+        <activity android:name=".MainActivity">
+        </activity>
+>>>>>>> 9825ec29f35445fad7913d76556dab8fc4e256fb
         <activity android:name=".pastHistory"></activity>
 
 
