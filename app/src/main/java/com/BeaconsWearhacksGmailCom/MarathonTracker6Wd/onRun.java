@@ -1,6 +1,10 @@
 package com.BeaconsWearhacksGmailCom.MarathonTracker6Wd;
 
 import android.content.Context;
+import android.hardware.Sensor;
+import android.hardware.SensorEvent;
+import android.hardware.SensorEventListener;
+import android.hardware.SensorManager;
 import android.media.AudioManager;
 import android.os.Bundle;
 import android.speech.tts.TextToSpeech;
@@ -11,6 +15,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.BeaconsWearhacksGmailCom.MarathonTracker6Wd.estimote.BeaconID;
 import com.BeaconsWearhacksGmailCom.MarathonTracker6Wd.estimote.BeaconStats;
@@ -28,12 +33,21 @@ import java.util.Locale;
 import java.util.Map;
 
 
-public class onRun extends AppCompatActivity {
+public class onRun extends AppCompatActivity implements SensorEventListener {
     TextToSpeech t1;
     EditText ed1;
     private static final String TAG = "onRun";
     private TextView myTimer;
     private ImageButton stopButton;
+
+    private SensorManager sensorManager;
+    private TextView count;
+    private int stepsTotal;
+    private int stepsThisSection;
+    private List<Integer> stepsAllSections = new ArrayList<Integer>();
+    private int offset;
+    boolean start = true;
+    boolean activityRunning;
 
     private static final Map<Color, Integer> BACKGROUND_COLORS = new HashMap<>();
 
@@ -43,7 +57,6 @@ public class onRun extends AppCompatActivity {
         BACKGROUND_COLORS.put(Color.MINT_COCKTAIL, android.graphics.Color.rgb(155, 186, 160));
     }
 
-    private static final int BACKGROUND_COLOR_NEUTRAL = android.graphics.Color.rgb(160, 169, 172);
 
     private ProximityContentManager proximityContentManager;
 
@@ -51,7 +64,6 @@ public class onRun extends AppCompatActivity {
     private Chronometer chronometer;
     private Thread thread;
 
-    private List<String> lapTimes;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -81,6 +93,9 @@ public class onRun extends AppCompatActivity {
             }
         });
 */
+        activityRunning = true;
+        sensorManager = (SensorManager) getSystemService(Context.SENSOR_SERVICE);
+
         stopButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -159,6 +174,13 @@ public class onRun extends AppCompatActivity {
             Log.d(TAG, "Starting ProximityContentManager content updates");
             proximityContentManager.startContentUpdates();
         }
+        activityRunning = true;
+        Sensor countSensor = sensorManager.getDefaultSensor(Sensor.TYPE_STEP_COUNTER);
+        if (countSensor != null) {
+            sensorManager.registerListener(this, countSensor, SensorManager.SENSOR_DELAY_FASTEST);
+        } else {
+            Toast.makeText(this, "Count sensor not available!", Toast.LENGTH_LONG).show();
+        }
     }
 
     @Override
@@ -191,4 +213,47 @@ public class onRun extends AppCompatActivity {
         if(!t1.isSpeaking())
             audioManager.abandonAudioFocus(afChangeListener);
     }
+
+
+    @Override
+    public void onSensorChanged(SensorEvent event) {
+        stepsThisSection = (int)event.values[0];
+
+        if (start){
+            offset = stepsThisSection;
+            start = false;
+        }
+    }
+
+    @Override
+    public void onAccuracyChanged(Sensor sensor, int accuracy) {
+    }
+
+    // AFTER THE WHOLE TRIP IS DONE
+    public int getTotalSteps(){
+        return stepsTotal;
+    }
+
+    // DURING THE TRIP
+    public int getCurrentSteps(){
+        int currentSteps = 0;
+        for (Integer stepsPerSection: stepsAllSections){
+            currentSteps += stepsPerSection;
+        }
+        currentSteps += stepsThisSection;
+        return currentSteps;
+    }
+
+    // GET SPECIFIC SECTION
+    public int getSteps(int section){
+        return stepsAllSections.get(section);
+    }
+
+    public void passCheckPoint(){
+        stepsAllSections.add(stepsThisSection);
+        stepsTotal += stepsThisSection;
+        stepsThisSection = 0;
+    }
+
+
 }
