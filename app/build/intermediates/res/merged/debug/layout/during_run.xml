@@ -23,33 +23,16 @@
         android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_weight="1"></LinearLayout>
+        android:layout_weight="1"
+        android:weightSum="1">
 
-    <LinearLayout
-        android:orientation="horizontal"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_weight="1">
+        <ImageButton
+            android:layout_width="89dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/stopButton"
+            android:layout_gravity="center_horizontal"
+            android:layout_weight="0.21" />
 
-        <Button
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:text="Start"
-            android:id="@+id/button5"
-            android:layout_weight="1" />
-
-        <Button
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:text="Lap"
-            android:id="@+id/button6"
-            android:layout_weight="1" />
-
-        <Button
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:text="Stop"
-            android:id="@+id/button7"
-            android:layout_weight="1" />
     </LinearLayout>
-</LinearLayout><!-- From: file:/C:/Users/Andrew/Documents/GitHub/MarathonTracker/app/src/main/res/layout/during_run.xml -->
+
+</LinearLayout><!-- From: file:/C:/Users/sam/Documents/GitHub/MarathonTracker/app/src/main/res/layout/during_run.xml -->

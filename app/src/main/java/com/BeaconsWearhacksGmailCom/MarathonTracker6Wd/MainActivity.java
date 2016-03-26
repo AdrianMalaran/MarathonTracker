@@ -67,7 +67,7 @@ public class MainActivity  extends FragmentActivity implements OnMapReadyCallbac
         startRun.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(MainActivity.this, historyPage.class));
+                startActivity(new Intent(MainActivity.this, onRun.class));
             }
         });
         mGoogleApiClient = new GoogleApiClient.Builder(this)

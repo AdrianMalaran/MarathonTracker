@@ -9,6 +9,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.TextView;
 
 import com.BeaconsWearhacksGmailCom.MarathonTracker6Wd.estimote.BeaconID;
@@ -32,7 +33,7 @@ public class onRun extends AppCompatActivity {
     EditText ed1;
     private static final String TAG = "onRun";
     private TextView myTimer;
-    private Button stopButton;
+    private ImageButton stopButton;
 
     private static final Map<Color, Integer> BACKGROUND_COLORS = new HashMap<>();
 
@@ -60,7 +61,7 @@ public class onRun extends AppCompatActivity {
         mcontext = this;
 
         myTimer = (TextView) findViewById(R.id.textView3);
-        stopButton = (Button) findViewById(R.id.button7);
+        stopButton = (ImageButton) findViewById(R.id.stopButton);
 
         if(chronometer == null) {
             chronometer = new Chronometer(mcontext);

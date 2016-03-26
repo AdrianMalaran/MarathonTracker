@@ -57,9 +57,15 @@
         android:weightSum="1">
 
         <ImageButton
+<<<<<<< HEAD
             android:layout_width="70dp"
             android:layout_height="50dp"
             android:id="@+id/imageButton"
+=======
+            android:layout_width="89dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/stopButton"
+>>>>>>> 03062c3e4efb9e25c5afa9bb85de9566c95f793b
             android:layout_gravity="center_horizontal"
             android:layout_weight="0.21"
             android:background="@drawable/Flag512" />
