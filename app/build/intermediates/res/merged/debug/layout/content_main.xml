@@ -2,7 +2,7 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/colorPrimaryDark">
+    android:background="@color/colorBackground">
 
     <TextView
         android:layout_width="wrap_content"
@@ -11,29 +11,58 @@
         android:text="Marathon Tracker"
         android:id="@+id/textView2"
         android:layout_gravity="center"
-        android:layout_marginTop="204dp"
         android:textSize="25dp"
-        android:layout_alignParentTop="true"
+        android:layout_centerVertical="true"
         android:layout_centerHorizontal="true" />
 
     <Button
-        android:layout_width="wrap_content"
+        android:layout_width="120dp"
         android:layout_height="wrap_content"
         android:background="@color/colorAccent"
+        android:textColor="#FFFFFF"
         android:text="      Start Run      "
         android:id="@+id/button"
-        android:layout_marginTop="126dp"
-        android:layout_below="@+id/textView2"
+        android:layout_marginStart="36dp"
+        android:layout_alignParentBottom="true"
         android:layout_alignParentStart="true"
-        android:layout_marginStart="36dp" />
+        android:layout_marginBottom="126dp" />
 
     <Button
-        android:layout_width="wrap_content"
+        android:layout_width="120dp"
         android:layout_height="wrap_content"
         android:text="Previous History"
         android:background="@color/colorAccent"
+        android:textColor="#FFFFFF"
         android:id="@+id/button2"
         android:layout_alignTop="@+id/button"
         android:layout_alignParentEnd="true"
         android:layout_marginEnd="41dp" />
-</RelativeLayout><!-- From: file:/C:/Users/sam/Documents/GitHub/MarathonTracker/app/src/main/res/layout/content_main.xml -->
+
+    <ImageView
+        android:layout_width="500px"
+        android:layout_height="500px"
+        android:background="@drawable/abc"
+        android:id="@+id/imageView"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="69dp" />
+
+    <ImageButton
+        android:layout_width="100px"
+        android:layout_height="100px"
+        android:background="@drawable/settingicon"
+        android:id="@+id/imageButton2"
+        android:layout_alignParentBottom="true"
+        android:paddingBottom="50px"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Click here to set up a new race"
+        android:id="@+id/textView9"
+        android:layout_alignParentBottom="true"
+        android:layout_toEndOf="@+id/imageButton2"
+        android:singleLine="false"
+        android:paddingBottom="15dp" />
+</RelativeLayout><!-- From: file:/C:/Users/Andrew/Documents/GitHub/MarathonTracker/app/src/main/res/layout/content_main.xml -->

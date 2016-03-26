@@ -23,12 +23,8 @@
         <activity android:name=".onRun"></activity>
         <activity android:name=".MainActivity"></activity>
         <activity android:name=".pastHistory"></activity>
-<<<<<<< HEAD
         <activity android:name=".HayesThing"></activity>
 
-
-=======
->>>>>>> 03062c3e4efb9e25c5afa9bb85de9566c95f793b
     </application>
 
 </manifest>

@@ -1,6 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:fillViewport="false">
 
-</ScrollView><!-- From: file:/C:/Users/sam/Documents/GitHub/MarathonTracker/app/src/main/res/layout/past_history.xml -->
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:layout_marginTop="30dp"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Previous History"
+        android:id="@+id/textView10" />
+</ScrollView><!-- From: file:/C:/Users/Andrew/Documents/GitHub/MarathonTracker/app/src/main/res/layout/past_history.xml -->

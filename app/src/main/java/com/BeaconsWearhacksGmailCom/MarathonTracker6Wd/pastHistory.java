@@ -20,6 +20,7 @@ public class pastHistory extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.past_history);
+
     }
 
     public void displayButtons() {

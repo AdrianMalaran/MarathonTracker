@@ -54,6 +54,8 @@
         <activity android:name="com.BeaconsWearhacksGmailCom.MarathonTracker6Wd.onRun" />
         <activity android:name="com.BeaconsWearhacksGmailCom.MarathonTracker6Wd.MainActivity" />
         <activity android:name="com.BeaconsWearhacksGmailCom.MarathonTracker6Wd.pastHistory" />
+        <activity android:name="com.BeaconsWearhacksGmailCom.MarathonTracker6Wd.HayesThing" />
+
         <!-- Include the AdActivity and InAppPurchaseActivity configChanges and themes. -->
         <activity
             android:name="com.google.android.gms.ads.AdActivity"

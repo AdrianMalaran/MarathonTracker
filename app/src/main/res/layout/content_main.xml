@@ -37,4 +37,32 @@
         android:layout_alignTop="@+id/button"
         android:layout_alignParentEnd="true"
         android:layout_marginEnd="41dp" />
+
+    <ImageView
+        android:layout_width="500px"
+        android:layout_height="500px"
+        android:background="@drawable/abc"
+        android:id="@+id/imageView"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="69dp" />
+
+    <ImageButton
+        android:layout_width="100px"
+        android:layout_height="100px"
+        android:background="@drawable/settingicon"
+        android:id="@+id/imageButton2"
+        android:layout_alignParentBottom="true"
+        android:paddingBottom="50px"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Click here to set up a new race"
+        android:id="@+id/textView9"
+        android:layout_alignParentBottom="true"
+        android:layout_toEndOf="@+id/imageButton2"
+        android:singleLine="false"
+        android:paddingBottom="15dp" />
 </RelativeLayout>

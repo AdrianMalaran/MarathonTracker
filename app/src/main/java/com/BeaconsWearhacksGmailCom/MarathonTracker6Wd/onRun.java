@@ -1,13 +1,15 @@
 package com.BeaconsWearhacksGmailCom.MarathonTracker6Wd;
 
 import android.content.Context;
+import android.location.Location;
+import android.location.LocationListener;
+import android.location.LocationManager;
 import android.media.AudioManager;
 import android.os.Bundle;
 import android.speech.tts.TextToSpeech;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
-import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.TextView;
@@ -28,13 +30,17 @@ import java.util.Locale;
 import java.util.Map;
 
 
-public class onRun extends AppCompatActivity {
+public class onRun extends AppCompatActivity implements LocationListener {
     TextToSpeech t1;
     EditText ed1;
     private static final String TAG = "onRun";
     private TextView myTimer;
     private ImageButton stopButton;
-
+    LocationManager lm;
+    LocationListener ll;
+    public Location location;
+    private float speed;
+    Location previousLocation = null;
     private static final Map<Color, Integer> BACKGROUND_COLORS = new HashMap<>();
 
     static {
@@ -135,6 +141,16 @@ public class onRun extends AppCompatActivity {
                 }
             }
         });
+        lm = (LocationManager) this.getSystemService(Context.LOCATION_SERVICE);
+
+        try {
+            location = lm.getLastKnownLocation(LocationManager.GPS_PROVIDER);
+            lm.requestLocationUpdates(LocationManager.GPS_PROVIDER, 0, 0, this);
+        } catch (SecurityException e) {
+
+        }
+
+        this.onLocationChanged(null);
     }
 
     public void updateTime(final String text) {
@@ -146,6 +162,35 @@ public class onRun extends AppCompatActivity {
         });
     }
 
+    @Override
+    public void onLocationChanged(Location currentLocation) {
+        TextView txt = (TextView) this.findViewById(R.id.textView5);
+
+        if (currentLocation == null)
+        {
+            speed = 0;
+            txt.setText("-.- m/s");
+        }
+        else {
+            speed = currentLocation.getSpeed();
+            txt.setText(speed + "m/s");
+        }
+
+    }
+    // TODO move to util class?
+    private float getAverageSpeed(float distance, float timeTaken) {
+        //float minutes = timeTaken/60;
+        //float hours = minutes/60;
+        float speed = 0;
+        if(distance > 0) {
+            float distancePerSecond = timeTaken > 0 ? distance/timeTaken : 0;
+            float distancePerMinute = distancePerSecond*60;
+            float distancePerHour = distancePerMinute*60;
+            speed = distancePerHour > 0 ? (distancePerHour/1000) : 0;
+        }
+
+        return speed;
+    }
 
     @Override
     protected void onResume() {
@@ -190,5 +235,23 @@ public class onRun extends AppCompatActivity {
             t1.speak(text, TextToSpeech.QUEUE_FLUSH, null);
         if(!t1.isSpeaking())
             audioManager.abandonAudioFocus(afChangeListener);
+    }
+
+    @Override
+    public void onProviderDisabled(String arg0) {
+        // TODO Auto-generated method stub
+
+    }
+
+    @Override
+    public void onProviderEnabled(String arg0) {
+        // TODO Auto-generated method stub
+
+    }
+
+    @Override
+    public void onStatusChanged(String arg0, int arg1, Bundle arg2) {
+        // TODO Auto-generated method stub
+
     }
 }
