@@ -21,7 +21,7 @@
 
 
         <activity android:name=".historyPage"></activity>
-
+        <activity android:name=".onRun"></activity>
         <activity android:name=".MainActivity"></activity>
         <activity android:name=".pastHistory"></activity>
 

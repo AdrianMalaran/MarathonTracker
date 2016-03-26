@@ -2,53 +2,53 @@
 <items version="2" >
 
     <item
-        jar="C:\Users\sam\Documents\GitHub\MarathonTracker\app\build\intermediates\exploded-aar\com.estimote\sdk\0.9.4\jars\classes.jar"
-        jumboMode="false"
-        revision="23.0.1"
-        sha1="e3f2bd7d626b065e0960be2404e0af133e7b179b">
-        <dex dex="C:\Users\sam\Documents\GitHub\MarathonTracker\app\build\intermediates\pre-dexed\debug\classes-e1a85a7086f82d230d7e213ff8c14a4f892ba28f.jar" />
-    </item>
-    <item
-        jar="C:\Users\sam\Documents\GitHub\MarathonTracker\app\build\intermediates\exploded-aar\com.android.support\recyclerview-v7\23.1.0\jars\classes.jar"
-        jumboMode="false"
-        revision="23.0.1"
-        sha1="3f151e49c316a5ab2c065969a3b3b55ef9b393fc">
-        <dex dex="C:\Users\sam\Documents\GitHub\MarathonTracker\app\build\intermediates\pre-dexed\debug\classes-d44dfe87b6e9b89e6645509f15708e32bf9575bb.jar" />
-    </item>
-    <item
-        jar="C:\Users\sam\Documents\GitHub\MarathonTracker\app\build\intermediates\exploded-aar\com.android.support\design\23.1.0\jars\classes.jar"
+        jar="C:\Users\Andrew\Documents\GitHub\MarathonTracker\app\build\intermediates\exploded-aar\com.android.support\design\23.1.0\jars\classes.jar"
         jumboMode="false"
         revision="23.0.1"
         sha1="19026d31f5d3ae868db81319671a642be5fbba08">
-        <dex dex="C:\Users\sam\Documents\GitHub\MarathonTracker\app\build\intermediates\pre-dexed\debug\classes-1d352f3793f6d17ddabf4b2f457cce925ddfea90.jar" />
+        <dex dex="C:\Users\Andrew\Documents\GitHub\MarathonTracker\app\build\intermediates\pre-dexed\debug\classes-1a50cf1884eb13bdf53e6578e4313f3eaf68abad.jar" />
     </item>
     <item
-        jar="C:\Users\sam\Documents\GitHub\MarathonTracker\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.1.0\jars\classes.jar"
-        jumboMode="false"
-        revision="23.0.1"
-        sha1="ddde541c289c8b816a8f8fd6c325d80788c522a6">
-        <dex dex="C:\Users\sam\Documents\GitHub\MarathonTracker\app\build\intermediates\pre-dexed\debug\classes-1b1d3e087dfaf894571d24e99c3fec41e3accafc.jar" />
-    </item>
-    <item
-        jar="C:\Users\sam\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\23.1.0\support-annotations-23.1.0.jar"
+        jar="C:\Users\Andrew\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\23.1.0\support-annotations-23.1.0.jar"
         jumboMode="false"
         revision="23.0.1"
         sha1="92e3fc113ec3ee36b64603a38857b95700025633">
-        <dex dex="C:\Users\sam\Documents\GitHub\MarathonTracker\app\build\intermediates\pre-dexed\debug\support-annotations-23.1.0-64860649461c906e9cd846b45a9a0f6f557d8432.jar" />
+        <dex dex="C:\Users\Andrew\Documents\GitHub\MarathonTracker\app\build\intermediates\pre-dexed\debug\support-annotations-23.1.0-dae1cc49f1ef865d77d50a4701d5f0d2d941d646.jar" />
     </item>
     <item
-        jar="C:\Users\sam\Documents\GitHub\MarathonTracker\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.1.0\jars\libs\internal_impl-23.1.0.jar"
+        jar="C:\Users\Andrew\Documents\GitHub\MarathonTracker\app\build\intermediates\exploded-aar\com.estimote\sdk\0.9.4\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="e3f2bd7d626b065e0960be2404e0af133e7b179b">
+        <dex dex="C:\Users\Andrew\Documents\GitHub\MarathonTracker\app\build\intermediates\pre-dexed\debug\classes-1dcd4d980bf086ad0107f2e540a850333d583c2f.jar" />
+    </item>
+    <item
+        jar="C:\Users\Andrew\Documents\GitHub\MarathonTracker\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.1.0\jars\libs\internal_impl-23.1.0.jar"
         jumboMode="false"
         revision="23.0.1"
         sha1="8716243bf04bae8d6c9ca94d27b9a9be7236f0a3">
-        <dex dex="C:\Users\sam\Documents\GitHub\MarathonTracker\app\build\intermediates\pre-dexed\debug\internal_impl-23.1.0-2af0fdb8403148d504f83f64ad8321837606ae78.jar" />
+        <dex dex="C:\Users\Andrew\Documents\GitHub\MarathonTracker\app\build\intermediates\pre-dexed\debug\internal_impl-23.1.0-1d123b01b5d1a859cc4c009e1a14cc2702d5d8b8.jar" />
     </item>
     <item
-        jar="C:\Users\sam\Documents\GitHub\MarathonTracker\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.1.0\jars\classes.jar"
+        jar="C:\Users\Andrew\Documents\GitHub\MarathonTracker\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.1.0\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="ddde541c289c8b816a8f8fd6c325d80788c522a6">
+        <dex dex="C:\Users\Andrew\Documents\GitHub\MarathonTracker\app\build\intermediates\pre-dexed\debug\classes-b11b6b485ee2b972afe2a1934ec4ffee37ff1e7b.jar" />
+    </item>
+    <item
+        jar="C:\Users\Andrew\Documents\GitHub\MarathonTracker\app\build\intermediates\exploded-aar\com.android.support\recyclerview-v7\23.1.0\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="3f151e49c316a5ab2c065969a3b3b55ef9b393fc">
+        <dex dex="C:\Users\Andrew\Documents\GitHub\MarathonTracker\app\build\intermediates\pre-dexed\debug\classes-19b254c14239eec13e0570de333cd34dcd94d8ca.jar" />
+    </item>
+    <item
+        jar="C:\Users\Andrew\Documents\GitHub\MarathonTracker\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.1.0\jars\classes.jar"
         jumboMode="false"
         revision="23.0.1"
         sha1="57ae0d750ff83f0c738d21720224ac7ea866a094">
-        <dex dex="C:\Users\sam\Documents\GitHub\MarathonTracker\app\build\intermediates\pre-dexed\debug\classes-9e820abd337efe0a05ad74fdbf78c6289d974158.jar" />
+        <dex dex="C:\Users\Andrew\Documents\GitHub\MarathonTracker\app\build\intermediates\pre-dexed\debug\classes-be191b94452091b1ab1d7c37e3c8a86e4571242b.jar" />
     </item>
 
 </items>

@@ -1,16 +1,15 @@
 package com.BeaconsWearhacksGmailCom.MarathonTracker6Wd;
 
 import android.content.Context;
-import android.content.Intent;
 import android.media.AudioManager;
-import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.speech.tts.TextToSpeech;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
+import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.BeaconsWearhacksGmailCom.MarathonTracker6Wd.estimote.BeaconID;
 import com.BeaconsWearhacksGmailCom.MarathonTracker6Wd.estimote.BeaconStats;
@@ -20,15 +19,20 @@ import com.BeaconsWearhacksGmailCom.MarathonTracker6Wd.estimote.ProximityContent
 import com.estimote.sdk.SystemRequirementsChecker;
 import com.estimote.sdk.cloud.model.Color;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Locale;
 import java.util.Map;
+
 
 public class onRun extends AppCompatActivity {
     TextToSpeech t1;
     EditText ed1;
     private static final String TAG = "onRun";
+    private TextView myTimer;
+    private Button stopButton;
 
     private static final Map<Color, Integer> BACKGROUND_COLORS = new HashMap<>();
 
@@ -42,10 +46,59 @@ public class onRun extends AppCompatActivity {
 
     private ProximityContentManager proximityContentManager;
 
+    private Context mcontext;
+    private Chronometer chronometer;
+    private Thread thread;
+
+    private List<String> lapTimes;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.during_run);
+        lapTimes = new ArrayList<>();
+        mcontext = this;
+
+        myTimer = (TextView) findViewById(R.id.textView3);
+        stopButton = (Button) findViewById(R.id.button7);
+
+        if(chronometer == null) {
+            chronometer = new Chronometer(mcontext);
+            thread = new Thread (chronometer);
+            thread.start();
+            chronometer.start();
+        }
+       /* startButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(chronometer == null) {
+                    chronometer = new Chronometer(mcontext);
+                    thread = new Thread (chronometer);
+                    thread.start();
+                    chronometer.start();
+                }
+            }
+        });
+*/
+        stopButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(chronometer != null) {
+                    chronometer.stop();
+                    thread.interrupt();
+                    thread = null;
+                    chronometer = null;
+                }
+            }
+        });
+
+       /* lapButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String lap = String.valueOf(myTimer);
+                lapTimes.add(lap);
+            }
+        });*/
 
         t1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
             @Override
@@ -78,18 +131,20 @@ public class onRun extends AppCompatActivity {
 
 
 
-                    backgroundColor = BACKGROUND_COLORS.get(beaconDetails.getBeaconColor());
-                } else {
-                    text = "No beacons in range.";
-                    ((TextView) findViewById(R.id.textView)).setText(text);
-
-                    backgroundColor = null;
                 }
-                findViewById(R.id.relativeLayout).setBackgroundColor(
-                        backgroundColor != null ? backgroundColor : BACKGROUND_COLOR_NEUTRAL);
             }
         });
     }
+
+    public void updateTime(final String text) {
+        runOnUiThread(new Runnable() {
+            @Override
+            public void run() {
+                myTimer.setText(text);
+            }
+        });
+    }
+
 
     @Override
     protected void onResume() {
@@ -134,8 +189,5 @@ public class onRun extends AppCompatActivity {
             t1.speak(text, TextToSpeech.QUEUE_FLUSH, null);
         if(!t1.isSpeaking())
             audioManager.abandonAudioFocus(afChangeListener);
-
-
-
     }
 }
