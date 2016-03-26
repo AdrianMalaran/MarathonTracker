@@ -11,7 +11,7 @@ import android.widget.Toast;
 import java.util.ArrayList;
 import java.util.List;
 
-public class HayesThing extends Activity implements SensorEventListener {
+public class stepCount extends Activity implements SensorEventListener {
 
     private SensorManager sensorManager;
     private TextView count;
