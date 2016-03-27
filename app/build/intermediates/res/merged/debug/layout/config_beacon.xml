@@ -54,4 +54,4 @@
         android:text="Add Beacons"
         android:id="@+id/add"
         android:layout_gravity="center_horizontal" />
-</LinearLayout><!-- From: file:/C:/Users/Andrew/Documents/GitHub/MarathonTracker/app/src/main/res/layout/config_beacon.xml -->
+</LinearLayout><!-- From: file:/C:/Users/sam/Documents/GitHub/MarathonTracker/app/src/main/res/layout/config_beacon.xml -->

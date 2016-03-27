@@ -2,6 +2,11 @@ package com.BeaconsWearhacksGmailCom.MarathonTracker6Wd;
 
 import android.content.Context;
 import android.content.Intent;
+import android.database.Cursor;
+import android.hardware.Sensor;
+import android.hardware.SensorEvent;
+import android.hardware.SensorEventListener;
+import android.hardware.SensorManager;
 import android.location.Location;
 import android.location.LocationListener;
 import android.location.LocationManager;
@@ -14,9 +19,11 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.BeaconsWearhacksGmailCom.MarathonTracker6Wd.estimote.BeaconID;
 import com.BeaconsWearhacksGmailCom.MarathonTracker6Wd.estimote.BeaconStats;
+import com.BeaconsWearhacksGmailCom.MarathonTracker6Wd.estimote.Database;
 import com.BeaconsWearhacksGmailCom.MarathonTracker6Wd.estimote.EstimoteCloudBeaconDetails;
 import com.BeaconsWearhacksGmailCom.MarathonTracker6Wd.estimote.EstimoteCloudBeaconDetailsFactory;
 import com.BeaconsWearhacksGmailCom.MarathonTracker6Wd.estimote.ProximityContentManager;
@@ -32,7 +39,7 @@ import java.util.Locale;
 import java.util.Map;
 
 
-public class onRun extends AppCompatActivity implements LocationListener {
+public class onRun extends AppCompatActivity implements LocationListener, SensorEventListener {
     TextToSpeech t1;
     EditText ed1;
     private static final String TAG = "onRun";
@@ -42,9 +49,17 @@ public class onRun extends AppCompatActivity implements LocationListener {
     LocationListener ll;
     public Location location;
     private float speed;
+    private float maxSpeed;
     Location previousLocation = null;
+    private SensorManager sensorManager;
+    private int stepsTotal;
+    private int stepsThisSection;
+    private List<Integer> stepsAllSections = new ArrayList<Integer>();
+    private int offset;
+    boolean start = true;
+    boolean activityRunning;
     private static final Map<Color, Integer> BACKGROUND_COLORS = new HashMap<>();
-
+    Sensor countSensor;
     static {
         BACKGROUND_COLORS.put(Color.ICY_MARSHMALLOW, android.graphics.Color.rgb(109, 170, 199));
         BACKGROUND_COLORS.put(Color.BLUEBERRY_PIE, android.graphics.Color.rgb(98, 84, 158));
@@ -61,9 +76,11 @@ public class onRun extends AppCompatActivity implements LocationListener {
     private DonutProgress donutProgress;
 
     private List<String> lapTimes;
+    private Database db;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.during_run);
         lm = (LocationManager) this.getSystemService(Context.LOCATION_SERVICE);
@@ -79,46 +96,41 @@ public class onRun extends AppCompatActivity implements LocationListener {
 
         lapTimes = new ArrayList<>();
         mcontext = this;
-
         myTimer = (TextView) findViewById(R.id.textView3);
         stopButton = (ImageButton) findViewById(R.id.stopButton);
 
-        if(chronometer == null) {
+        if (chronometer == null) {
             chronometer = new Chronometer(mcontext);
-            thread = new Thread (chronometer);
+            thread = new Thread(chronometer);
             thread.start();
             chronometer.start();
         }
-       /* startButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                if(chronometer == null) {
-                    chronometer = new Chronometer(mcontext);
-                    thread = new Thread (chronometer);
-                    thread.start();
-                    chronometer.start();
-                }
-            }
-        });
-*/
+
+        db = new Database(this);
+
+
         stopButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(chronometer != null) {
+                if (chronometer != null) {
                     chronometer.stop();
                     thread.interrupt();
                     thread = null;
                     chronometer = null;
                     startActivity(new Intent(onRun.this, historyPage.class));
                 }
+
+                if (db.writeToHistoric())
+                    startActivity(new Intent(onRun.this, historyPage.class));
+                else
+                    Log.e("ERROR", "could not write to db");
             }
         });
 
        /* lapButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String lap = String.valueOf(myTimer);
-                lapTimes.add(lap);
+
             }
         });*/
 
@@ -135,6 +147,18 @@ public class onRun extends AppCompatActivity implements LocationListener {
             }
         });
 
+        if(this.activityRunning) {
+            sensorManager = (SensorManager) getSystemService(Context.SENSOR_SERVICE);
+            this.onResume();
+        }
+        lm = (LocationManager) this.getSystemService(Context.LOCATION_SERVICE);
+
+        try {
+            location = lm.getLastKnownLocation(LocationManager.GPS_PROVIDER);
+            lm.requestLocationUpdates(LocationManager.GPS_PROVIDER, 0, 0, this);
+        } catch (SecurityException e) {
+        }
+        this.onLocationChanged(null);
 
         proximityContentManager = new ProximityContentManager(this,
                 Arrays.asList(
@@ -143,23 +167,26 @@ public class onRun extends AppCompatActivity implements LocationListener {
         proximityContentManager.setListener(new ProximityContentManager.Listener() {
             @Override
             public void onContentChanged(Object content) {
-                String text;
-                Integer backgroundColor;
+
                 if (content != null) {
                     EstimoteCloudBeaconDetails beaconDetails = (EstimoteCloudBeaconDetails) content;
+                    String lap = String.valueOf(myTimer);
 
                     BeaconStats bs = new BeaconStats();
                     //Read beacon info
-                    bs = bs.grabById(beaconDetails.getId());
-                    speakOut("You have ran 6 miles, Your average speed is 6");
+                    //bs = bs.grabById(beaconDetails.getId());
+//                    speakOut("You have ran" +  bs.getMileMarker() + " miles, Your average speed is this split was " + getAverageSpeed(bs.getMileMarker() - 1, Float.parseFloat(lap) ));
 
                     //Write to db
+//                    String distanceTravelled, String caloriesBurned, String stepCount, String maxSpeed, String timeTaken, String section
+//                    if(!db.insertData(bs.getMileMarker(), 10, getSteps(bs.getMileMarker()),maxSpeed, lap, bs.getMileMarker()))
+//                        Log.e("ERROR", "COULD NOT POST");
 
+                    //lapTimes.add(lap);
 
                 }
             }
         });
-
     }
 
     public void updateTime(final String text) {
@@ -170,7 +197,6 @@ public class onRun extends AppCompatActivity implements LocationListener {
             }
         });
     }
-
     @Override
     public void onLocationChanged(Location currentLocation) {
         TextView txt = (TextView) this.findViewById(R.id.textView5);
@@ -213,6 +239,11 @@ public class onRun extends AppCompatActivity implements LocationListener {
             Log.d(TAG, "Starting ProximityContentManager content updates");
             proximityContentManager.startContentUpdates();
         }
+        if(this.activityRunning)
+         countSensor = sensorManager.getDefaultSensor(Sensor.TYPE_STEP_COUNTER);
+        if (countSensor != null) {
+            sensorManager.registerListener(this, countSensor, SensorManager.SENSOR_DELAY_FASTEST);
+        }
     }
 
     @Override
@@ -220,8 +251,46 @@ public class onRun extends AppCompatActivity implements LocationListener {
         super.onPause();
         Log.d(TAG, "Stopping ProximityContentManager content updates");
         proximityContentManager.stopContentUpdates();
+        activityRunning = false;
+
+    }
+    @Override
+    public void onSensorChanged(SensorEvent event) {
+        stepsThisSection = (int)event.values[0];
+
+        if (start){
+            offset = stepsThisSection;
+            start = false;
+        }
+    }
+    public void onAccuracyChanged(Sensor sensor, int accuracy) {
     }
 
+    // AFTER THE WHOLE TRIP IS DONE
+    public int getTotalSteps(){
+        return stepsTotal;
+    }
+
+    // DURING THE TRIP
+    public int getCurrentSteps(){
+        int currentSteps = 0;
+        for (Integer stepsPerSection: stepsAllSections){
+            currentSteps += stepsPerSection;
+        }
+        currentSteps += stepsThisSection;
+        return currentSteps;
+    }
+
+    // GET SPECIFIC SECTION
+    public int getSteps(int section){
+        return stepsAllSections.get(section);
+    }
+
+    public void passCheckPoint(){
+        stepsAllSections.add(stepsThisSection);
+        stepsTotal += stepsThisSection;
+        stepsThisSection = 0;
+    }
     @Override
     protected void onDestroy() {
         super.onDestroy();
