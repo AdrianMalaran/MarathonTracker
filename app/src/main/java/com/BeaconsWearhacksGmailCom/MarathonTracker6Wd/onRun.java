@@ -2,7 +2,6 @@ package com.BeaconsWearhacksGmailCom.MarathonTracker6Wd;
 
 import android.content.Context;
 import android.content.Intent;
-import android.database.Cursor;
 import android.hardware.Sensor;
 import android.hardware.SensorEvent;
 import android.hardware.SensorEventListener;
@@ -15,11 +14,15 @@ import android.os.Bundle;
 import android.speech.tts.TextToSpeech;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
+import android.view.Gravity;
 import android.view.View;
+import android.view.ViewGroup.LayoutParams;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
+import android.widget.PopupWindow;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.BeaconsWearhacksGmailCom.MarathonTracker6Wd.estimote.BeaconID;
 import com.BeaconsWearhacksGmailCom.MarathonTracker6Wd.estimote.BeaconStats;
@@ -45,6 +48,7 @@ public class onRun extends AppCompatActivity implements LocationListener, Sensor
     private static final String TAG = "onRun";
     private TextView myTimer;
     private ImageButton stopButton;
+    private ImageButton alert;
     LocationManager lm;
     LocationListener ll;
     public Location location;
@@ -58,6 +62,11 @@ public class onRun extends AppCompatActivity implements LocationListener, Sensor
     private int offset;
     boolean start = true;
     boolean activityRunning;
+    private PopupWindow popup;
+    private boolean check = true;
+    private RelativeLayout layout;
+    private RelativeLayout mainLayout;
+
     private static final Map<Color, Integer> BACKGROUND_COLORS = new HashMap<>();
     Sensor countSensor;
     static {
@@ -77,6 +86,8 @@ public class onRun extends AppCompatActivity implements LocationListener, Sensor
 
     private List<String> lapTimes;
     private Database db;
+    private TextView tv;
+    private Button but;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -98,6 +109,13 @@ public class onRun extends AppCompatActivity implements LocationListener, Sensor
         mcontext = this;
         myTimer = (TextView) findViewById(R.id.textView3);
         stopButton = (ImageButton) findViewById(R.id.stopButton);
+        alert = (ImageButton) findViewById(R.id.alertButton);
+        popup = new PopupWindow(this);
+        layout = new RelativeLayout(this);
+        LayoutParams params;
+        tv = new TextView(this);
+        but = new Button(this);
+        mainLayout = new RelativeLayout(this);
 
         if (chronometer == null) {
             chronometer = new Chronometer(mcontext);
@@ -127,6 +145,28 @@ public class onRun extends AppCompatActivity implements LocationListener, Sensor
             }
         });
 
+        alert.setOnClickListener(new View.OnClickListener() {
+                                     @Override
+                                     public void onClick(View v) {
+                                         if(check) {
+                                             popup.showAtLocation(layout, Gravity.BOTTOM, 10, 10);
+                                             popup.update(50,50,300,80);
+                                             check = false;
+                                         } else {
+                                             popup.dismiss();
+                                             check = true;
+                                         }
+                                     }
+                                 });
+        params = new LayoutParams(LayoutParams.WRAP_CONTENT,
+                LayoutParams.WRAP_CONTENT);
+        //layout.setOrientation(LinearLayout.VERTICAL);
+        tv.setText("Are you sure?");
+        layout.addView(tv, params);
+        popup.setContentView(layout);
+        // popUp.showAtLocation(layout, Gravity.BOTTOM, 10, 10);
+        mainLayout.addView(but, params);
+        setContentView(mainLayout);
        /* lapButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -135,7 +175,7 @@ public class onRun extends AppCompatActivity implements LocationListener, Sensor
         });*/
 
         donutProgress = (DonutProgress) findViewById(R.id.donut_progress);
-        donutProgress.setMax(42);
+        //donutProgress.setMax(42);
 
 
         t1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
@@ -193,7 +233,7 @@ public class onRun extends AppCompatActivity implements LocationListener, Sensor
         runOnUiThread(new Runnable() {
             @Override
             public void run() {
-                myTimer.setText(text);
+                myTimer.setText("Time: " + text);
             }
         });
     }
@@ -201,7 +241,7 @@ public class onRun extends AppCompatActivity implements LocationListener, Sensor
     public void onLocationChanged(Location currentLocation) {
         TextView txt = (TextView) this.findViewById(R.id.textView5);
         speed = 0;
-        if (currentLocation == null)
+        if (currentLocation.equals(null))
         {
             speed = 0;
             txt.setText("-.- m/s");
