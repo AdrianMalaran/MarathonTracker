@@ -34,13 +34,18 @@ public class MainActivity  extends FragmentActivity implements OnMapReadyCallbac
     private Fragment mMapFragment;
     private LocationManager mLocationManager;
     private Button startRun;
+    
+    private Button btnShowData;
+    private Button btnUpdateData;
+   
 
     private final static int CONNECTION_FAILURE_RESOLUTION_REQUEST = 9000;
     private GoogleApiClient mGoogleApiClient;
     private LocationRequest mLocationRequest;
     private double currentLatitude;
     private double currentLongitude;
-
+    
+    Database myDb;
 
     private final LocationListener mLocationListener = new LocationListener() {
 
@@ -64,12 +69,19 @@ public class MainActivity  extends FragmentActivity implements OnMapReadyCallbac
                 .findFragmentById(R.id.map);
         mapFragment.getMapAsync(this);
         startRun = (Button) findViewById(R.id.button);
+        btnShowData = (Button) findViewById(R.id.showdb);
+        btnUpdateData = (Button)findViewById(R.id.updatedb);
+        myDb = new Database(this);
+        
         startRun.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(MainActivity.this, onRun.class));
             }
         });
+        
+        viewAll();
+        
         mGoogleApiClient = new GoogleApiClient.Builder(this)
                 // The next two lines tell the new client that “this” current class will handle connection stuff
                 .addConnectionCallbacks(this)
@@ -84,6 +96,58 @@ public class MainActivity  extends FragmentActivity implements OnMapReadyCallbac
                 .setInterval(10 * 1000)        // 10 seconds, in milliseconds
                 .setFastestInterval(1 * 1000); // 1 second, in milliseconds
 
+    }
+    
+    public void viewAll() {
+        btnShowData.setOnClickListener(
+                        new View.OnClickListener() {
+                            @Override
+                            public void onClick(View v) {
+                                Cursor res = myDb.getAllData();
+                                if (res.getCount() == 0) {
+                                    // show message
+                                    showMessage("Error:", "Nothing found");
+                                    return;
+                                }
+                                StringBuilder buffer = new StringBuilder();
+                                while (res.moveToNext()) {
+                                    buffer.append("Distance Travelled:" + res.getString(0) + "\n");
+                                    buffer.append("Calories Burned:" + res.getString(1) + "\n");
+                                    buffer.append("Step Count:" + res.getString(2) + "\n");
+                                    buffer.append("Max Speed:" + res.getString(3) + "\n");
+                                    buffer.append("Time Taken:" + res.getString(4) + "\n");
+                                    buffer.append("Section:" + res.getString(5) + "\n\n");
+                                }
+                                showMessage("Data", buffer.toString());
+                            }
+                        }
+                    );
+                }
+
+
+    public void UpdateData(){
+        btnUpdateData.setOnClickListener(
+                new View.OnClickListener(){
+                    @Override
+                public void onClick(View v){
+                        // Test case for updating
+                        boolean isUpdate = myDb.updateData("3.7","2.3","5","6.7","1.4","2");
+                        if(isUpdate == true)
+                            Toast.makeText(MainActivity.this, "Data Update", Toast.LENGTH_LONG).show();
+                        else
+                            Toast.makeText(MainActivity.this, "Data Update", Toast.LENGTH_LONG).show();
+                    }
+                }
+        );
+    }
+
+
+    public void showMessage(String title, String message) {
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setCancelable(true);
+        builder.setTitle(title);
+        builder.setMessage(message);
+        builder.show();
     }
 
     protected void onResume() {
