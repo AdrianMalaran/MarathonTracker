@@ -47,12 +47,23 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+            android:screenOrientation="portrait"
         </activity>
-        <activity android:name="com.BeaconsWearhacksGmailCom.MarathonTracker6Wd.historyPage" />
-        <activity android:name="com.BeaconsWearhacksGmailCom.MarathonTracker6Wd.onRun" />
-        <activity android:name="com.BeaconsWearhacksGmailCom.MarathonTracker6Wd.MainActivity" />
-        <activity android:name="com.BeaconsWearhacksGmailCom.MarathonTracker6Wd.pastHistory" />
-        <activity android:name="com.BeaconsWearhacksGmailCom.MarathonTracker6Wd.BeaconConfig" />
+        <activity android:name="com.BeaconsWearhacksGmailCom.MarathonTracker6Wd.historyPage" >
+android:screenOrientation="portrait"
+        </activity>
+        <activity android:name="com.BeaconsWearhacksGmailCom.MarathonTracker6Wd.onRun" >
+android:screenOrientation="portrait"
+        </activity>
+        <activity android:name="com.BeaconsWearhacksGmailCom.MarathonTracker6Wd.MainActivity" >
+android:screenOrientation="portrait"
+        </activity>
+        <activity android:name="com.BeaconsWearhacksGmailCom.MarathonTracker6Wd.pastHistory" >
+android:screenOrientation="portrait"
+        </activity>
+        <activity android:name="com.BeaconsWearhacksGmailCom.MarathonTracker6Wd.BeaconConfig" >
+android:screenOrientation="portrait"
+        </activity>
 
         <!-- Include the AdActivity and InAppPurchaseActivity configChanges and themes. -->
         <activity

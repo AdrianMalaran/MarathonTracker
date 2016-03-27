@@ -2,6 +2,7 @@ package com.BeaconsWearhacksGmailCom.MarathonTracker6Wd;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.database.sqlite.SQLiteDatabase;
 import android.net.Uri;
 import android.os.Bundle;
 import android.util.Log;
@@ -53,6 +54,7 @@ public class BeaconConfig extends Activity {
     private BeaconListAdapter adapter;
 
     private Database db;
+    private SQLiteDatabase database;
     /**
      * ATTENTION: This was auto-generated to implement the App Indexing API.
      * See https://g.co/AppIndexing/AndroidStudio for more information.
@@ -66,6 +68,7 @@ public class BeaconConfig extends Activity {
         uuid = new TextView(this);
         mileInput = new EditText(this);
         db = new Database(this);
+        database = db.getWritableDatabase();
         super.onCreate(savedInstanceState);
         setContentView(R.layout.config_beacon);
 
@@ -76,10 +79,11 @@ public class BeaconConfig extends Activity {
                 public void onClick(View v) {
                     //POST TO DATABASE -- String id, Integer mileMarker, float longitude, float latitude
                     if (uuid != null && mileInput.length() > 0 && mileInput.length() <= 42)
-                        db.addNewBeacon(uuid.getText().toString(), Integer.parseInt(mileInput.toString()), (float) (44 + 3 * Math.random()), (float) (44 + 3 * Math.random()));
+                        db.addNewBeacon(database, uuid.getText().toString(), Integer.parseInt(mileInput.toString()), (float) (44 + 3 * Math.random()), (float) (44 + 3 * Math.random()));
                     //   Toast.makeText(this, "made" +uuid.getText(), Toast.LENGTH_LONG).show();
                 }
             });
+
         }
         proximityContentManager = new ProximityContentManager(this,
                 Arrays.asList(
@@ -116,6 +120,8 @@ public class BeaconConfig extends Activity {
 
     protected void onDestroy() {
         super.onDestroy();
+        database.close();
+        db.close();
         proximityContentManager.destroy();
     }
 

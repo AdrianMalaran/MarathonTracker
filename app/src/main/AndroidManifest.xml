@@ -20,12 +20,13 @@
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+            android:screenOrientation="portrait"
         </activity>
-        <activity android:name=".historyPage"></activity>
-        <activity android:name=".onRun"></activity>
-        <activity android:name=".MainActivity"></activity>
-        <activity android:name=".pastHistory"></activity>
-        <activity android:name=".BeaconConfig"></activity>
+        <activity android:name=".historyPage">android:screenOrientation="portrait"</activity>
+        <activity android:name=".onRun">android:screenOrientation="portrait"</activity>
+        <activity android:name=".MainActivity">android:screenOrientation="portrait"</activity>
+        <activity android:name=".pastHistory">android:screenOrientation="portrait"</activity>
+        <activity android:name=".BeaconConfig">android:screenOrientation="portrait"</activity>
 
     </application>
 

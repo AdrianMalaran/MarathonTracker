@@ -3,6 +3,8 @@ package com.BeaconsWearhacksGmailCom.MarathonTracker6Wd;
 import android.content.Context;
 import android.content.Intent;
 import android.database.Cursor;
+import android.database.sqlite.SQLiteDatabase;
+import android.database.sqlite.SQLiteOpenHelper;
 import android.hardware.Sensor;
 import android.hardware.SensorEvent;
 import android.hardware.SensorEventListener;
@@ -11,7 +13,9 @@ import android.location.Location;
 import android.location.LocationListener;
 import android.location.LocationManager;
 import android.media.AudioManager;
+import android.os.AsyncTask;
 import android.os.Bundle;
+import android.os.SystemClock;
 import android.speech.tts.TextToSpeech;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
@@ -58,6 +62,11 @@ public class onRun extends AppCompatActivity implements LocationListener, Sensor
     boolean start = true;
     boolean activityRunning;
     private static final Map<Color, Integer> BACKGROUND_COLORS = new HashMap<>();
+    private long millisecs;
+
+    private double lapTime;
+    private double totalTime;
+
     Sensor countSensor;
     static {
         BACKGROUND_COLORS.put(Color.ICY_MARSHMALLOW, android.graphics.Color.rgb(109, 170, 199));
@@ -74,7 +83,7 @@ public class onRun extends AppCompatActivity implements LocationListener, Sensor
     private Thread thread;
 
     private Database db;
-
+    SQLiteDatabase database;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
@@ -83,18 +92,18 @@ public class onRun extends AppCompatActivity implements LocationListener, Sensor
         mcontext = this;
         myTimer = (TextView) findViewById(R.id.textView3);
         stopButton = (ImageButton) findViewById(R.id.stopButton);
+        db = new Database(this);
+        database = db.getWritableDatabase();
+        new inBack().execute(0);
 
         if (chronometer == null) {
+
             chronometer = new Chronometer(mcontext);
             thread = new Thread(chronometer);
+            millisecs = SystemClock.currentThreadTimeMillis();
             thread.start();
             chronometer.start();
         }
-
-        db = new Database(this);
-
-
-
     }
 
 
@@ -137,6 +146,23 @@ public class onRun extends AppCompatActivity implements LocationListener, Sensor
 
         return speed;
     }
+    private class inBack extends AsyncTask <Integer , Void, Boolean > {
+        protected Boolean doInBackground(Integer ... params) {
+            for (int i = 1; i < 11; i++) {
+                double rand = Math.random();
+                db.insertDataHistorical(database, i + rand * 0.7 - 0.35, rand * 200, rand * 130, rand * 7.4, Chronometer.setFromSec((long) rand * 1600), i);
+                if (isCancelled()) break;
+            }
+            return true;
+        }
+        protected void onPostExecute(Boolean result) {
+            Log.d("Done","d");
+        }
+
+        protected void onPreExecute() {}
+
+        protected void onProgressUpdate(Void... values) {}
+    }
 
     @Override
     protected void onStart() {
@@ -152,10 +178,9 @@ public class onRun extends AppCompatActivity implements LocationListener, Sensor
                     chronometer = null;
                 }
                 proximityContentManager.destroy();
-
-                if (db.writeToHistoric())
+               // if (db.writeToHistoric())
                     startActivity(new Intent(onRun.this, historyPage.class));
-                else
+            //    else
                     Log.e("ERROR", "could not write to db");
             }
         });
@@ -166,7 +191,6 @@ public class onRun extends AppCompatActivity implements LocationListener, Sensor
 
             }
         });*/
-
         t1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
             @Override
             public void onInit(int status) {
@@ -199,16 +223,19 @@ public class onRun extends AppCompatActivity implements LocationListener, Sensor
 
                 if (content != null) {
                     EstimoteCloudBeaconDetails beaconDetails = (EstimoteCloudBeaconDetails) content;
-                    String lap = String.valueOf(myTimer);
+
+                    double lapTime = (SystemClock.currentThreadTimeMillis() - millisecs) / 6000.0;
+
 
                     BeaconStats bs = new BeaconStats();
                     //Read beacon info
                     bs = bs.grabById(beaconDetails.getId());
-                    speakOut("You have ran" +  bs.getMileMarker() + " miles, Your average speed is this split was " + getAverageSpeed(bs.getMileMarker() - 1, Float.parseFloat(lap) ));
+                    speakOut("You have ran" +  bs.getMileMarker() + " miles, Your average speed is this split was " + getAverageSpeed(bs.getMileMarker() - 1, (float)lapTime ));
 
                     //Write to d String distanceTravelled, String caloriesBurned, String stepCount, String maxSpeed, String timeTaken, String section
                   //  if(db.contains
-                    if(!db.insertData(bs.getMileMarker(), 10, getSteps(bs.getMileMarker()),maxSpeed, lap, bs.getMileMarker()))
+
+                    if(!db.insertData(database, bs.getMileMarker(), 10, getSteps(bs.getMileMarker()),maxSpeed, Double.toString(lapTime), bs.getMileMarker()))
                         Log.e("ERROR", "COULD NOT POST");
 
                     //lapTimes.add(lap);
@@ -277,7 +304,10 @@ public class onRun extends AppCompatActivity implements LocationListener, Sensor
 
     // GET SPECIFIC SECTION
     public int getSteps(int section){
+        if(stepsAllSections.size() >= section)
         return stepsAllSections.get(section);
+        else
+            return 100;
     }
 
     public void passCheckPoint(){
@@ -289,6 +319,9 @@ public class onRun extends AppCompatActivity implements LocationListener, Sensor
     protected void onDestroy() {
         super.onDestroy();
         proximityContentManager.destroy();
+        database.close();
+        db.close();
+      //  lm.clearTestProviderLocation();
     }
 
 
@@ -302,7 +335,7 @@ public class onRun extends AppCompatActivity implements LocationListener, Sensor
             }
         };
 
-        int result = audioManager.requestAudioFocus(afChangeListener, audioManager.STREAM_MUSIC, audioManager.AUDIOFOCUS_GAIN);
+        int result = audioManager.requestAudioFocus(afChangeListener, AudioManager.STREAM_MUSIC, AudioManager.AUDIOFOCUS_GAIN);
         if (result == AudioManager.AUDIOFOCUS_REQUEST_GRANTED)
             t1.speak(text, TextToSpeech.QUEUE_FLUSH, null);
         if(!t1.isSpeaking())
