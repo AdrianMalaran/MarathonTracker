@@ -47,23 +47,30 @@
                     android:paddingTop="30dp" /></LinearLayout>
 
                 <LinearLayout
-                    android:id="@+id/graph1"
+                    android:id="@+id/graph"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:orientation="vertical"></LinearLayout>
+                    android:orientation="vertical">
+
+                    <com.jjoe64.graphview.GraphView
+                        android:layout_width="match_parent"
+                        android:layout_height="200dip"
+                        android:id="@+id/graph1" />
+                </LinearLayout>
+
 
                 <LinearLayout
                     android:id="@+id/graph2"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:orientation="vertical"></LinearLayout>
+                    android:orientation="vertical">
+                    <com.jjoe64.graphview.GraphView
+                        android:layout_width="match_parent"
+                        android:layout_height="200dip"
+                        android:id="@+id/graph3" />
+                </LinearLayout>
             </FrameLayout>
         </LinearLayout>
     </TabHost>
 
-<<<<<<< HEAD
-    </ScrollView>
-</LinearLayout><!-- From: file:/C:/Users/Andrew/Documents/GitHub/MarathonTracker/app/src/main/res/layout/history_page.xml -->
-=======
 </LinearLayout><!-- From: file:/C:/Users/sam/Documents/GitHub/MarathonTracker/app/src/main/res/layout/history_page.xml -->
->>>>>>> 8d0b3f84ee831b6429a936c04b263c1fd386cd74

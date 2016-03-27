@@ -88,30 +88,9 @@ public class Database extends SQLiteOpenHelper {
     }
     //(String table, String[] columns, String selection, String[] selectionArgs, String groupBy, String having, String orderBy, String limit)
     public Cursor getAllData(SQLiteDatabase db, String table, String[] cols, int lim) {
-        Cursor res = db.query(table, cols, cols[0] + "",null,null,null,null,"10");
-        //res.toString();
+        Cursor res = db.query(table, cols,null,null,null,null,"SECTION","10");
         return res;
     }
-    /*public boolean writeToHistoric() {
-        SQLiteDatabase db = this.getWritableDatabase();
-
-      //  Cursor cs = getAllData(TABLE_NAME);
-        ContentValues contentValues = new ContentValues();
-        long result = 0;
-        while (!cs.isLast()) {
-            contentValues.put(COL2_1, cs.getColumnIndex("1")); // DISTANCE TRAVELLED
-            contentValues.put(COL2_2, cs.getColumnIndex("2")); // CALORIES BURNED
-            contentValues.put(COL2_3, cs.getColumnIndex("3")); // STEP COUNT
-            contentValues.put(COL2_4, cs.getColumnIndex("4")); // MAX SPEED
-            contentValues.put(COL2_5, cs.getColumnIndex("5")); // TOTAL TIME TAKEN
-            result = db.insert(TABLE_NAME2, null, contentValues);
-            if (result == -1)
-                return false;
-        }
-        onUpgrade(db,1,2);
-        cs.close();
-        return true;
-    }*/
 
     public boolean addNewBeacon(SQLiteDatabase db, String id, Integer mileMarker, float longitude, float latitude) {
         ContentValues contentValues = new ContentValues();

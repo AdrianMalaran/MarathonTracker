@@ -8,7 +8,7 @@ package com.github.lzyzsd.circleprogress;
 
 public final class R {
 	public static final class attr {
-		public static final int arcProgressStyle = 0x7f010145;
+		public static final int arcProgressStyle = 0x7f010149;
 		public static final int arc_angle = 0x7f010034;
 		public static final int arc_bottom_text = 0x7f01003e;
 		public static final int arc_bottom_text_size = 0x7f01003f;
@@ -22,7 +22,7 @@ public final class R {
 		public static final int arc_text_color = 0x7f01003a;
 		public static final int arc_text_size = 0x7f010039;
 		public static final int arc_unfinished_color = 0x7f010037;
-		public static final int circleProgressStyle = 0x7f010143;
+		public static final int circleProgressStyle = 0x7f010147;
 		public static final int circle_finished_color = 0x7f010044;
 		public static final int circle_max = 0x7f010042;
 		public static final int circle_prefix_text = 0x7f010047;
@@ -31,7 +31,7 @@ public final class R {
 		public static final int circle_text_color = 0x7f010046;
 		public static final int circle_text_size = 0x7f010045;
 		public static final int circle_unfinished_color = 0x7f010043;
-		public static final int donutProgressStyle = 0x7f010144;
+		public static final int donutProgressStyle = 0x7f010148;
 		public static final int donut_background_color = 0x7f01006b;
 		public static final int donut_finished_color = 0x7f010064;
 		public static final int donut_finished_stroke_width = 0x7f010065;
@@ -92,7 +92,7 @@ public final class R {
 		public static final int DonutProgress_donut_text_size = 6;
 		public static final int DonutProgress_donut_unfinished_color = 2;
 		public static final int DonutProgress_donut_unfinished_stroke_width = 5;
-		public static final int[] Themes = { 0x7f010143, 0x7f010144, 0x7f010145 };
+		public static final int[] Themes = { 0x7f010147, 0x7f010148, 0x7f010149 };
 		public static final int Themes_arcProgressStyle = 2;
 		public static final int Themes_circleProgressStyle = 0;
 		public static final int Themes_donutProgressStyle = 1;
