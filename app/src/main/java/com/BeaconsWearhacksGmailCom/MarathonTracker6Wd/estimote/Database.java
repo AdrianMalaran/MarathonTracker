@@ -65,6 +65,7 @@ public class Database extends SQLiteOpenHelper {
         contentValues.put(COL_3, stepCount); // STEP COUNT
         contentValues.put(COL_4, maxSpeed); // MAX SPEED
         contentValues.put(COL_5, timeTaken); // TOTAL TIME TAKEN
+        contentValues.put(COL_6, section); // RACE SECTION
         long result = db.insert(TABLE_NAME, null, contentValues);
         return result != -1;
     }
@@ -76,6 +77,7 @@ public class Database extends SQLiteOpenHelper {
         contentValues.put(COL2_3, stepCount); // STEP COUNT
         contentValues.put(COL2_4, maxSpeed); // MAX SPEED
         contentValues.put(COL2_5, timeTaken); // TOTAL TIME TAKEN
+        contentValues.put(COL2_6, section); // RACE SECTION
         Log.d("entering", contentValues.toString());
         long result = db.insert(TABLE_NAME2, null, contentValues);
         return result != -1;
