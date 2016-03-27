@@ -73,7 +73,6 @@ public class onRun extends AppCompatActivity implements LocationListener, Sensor
     private Chronometer chronometer;
     private Thread thread;
 
-    private List<String> lapTimes;
     private Database db;
 
     @Override
@@ -81,7 +80,6 @@ public class onRun extends AppCompatActivity implements LocationListener, Sensor
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.during_run);
-        lapTimes = new ArrayList<>();
         mcontext = this;
         myTimer = (TextView) findViewById(R.id.textView3);
         stopButton = (ImageButton) findViewById(R.id.stopButton);
@@ -96,6 +94,54 @@ public class onRun extends AppCompatActivity implements LocationListener, Sensor
         db = new Database(this);
 
 
+
+    }
+
+
+
+    public void updateTime(final String text) {
+        runOnUiThread(new Runnable() {
+            @Override
+            public void run() {
+                myTimer.setText(text);
+            }
+        });
+
+    }
+    @Override
+    public void onLocationChanged(Location currentLocation) {
+        TextView txt = (TextView) this.findViewById(R.id.textView5);
+
+        if (currentLocation == null)
+        {
+            speed = 0;
+            txt.setText("-.- m/s");
+        }
+        else {
+            speed = currentLocation.getSpeed();
+            txt.setText(speed + "m/s");
+        }
+
+    }
+    // TODO move to util class?
+    private float getAverageSpeed(float distance, float timeTaken) {
+        //float minutes = timeTaken/60;
+        //float hours = minutes/60;
+        float speed = 0;
+        if(distance > 0) {
+            float distancePerSecond = timeTaken > 0 ? distance/timeTaken : 0;
+            float distancePerMinute = distancePerSecond*60;
+            float distancePerHour = distancePerMinute*60;
+            speed = distancePerHour > 0 ? (distancePerHour/1000) : 0;
+        }
+
+        return speed;
+    }
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+
         stopButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -105,6 +151,7 @@ public class onRun extends AppCompatActivity implements LocationListener, Sensor
                     thread = null;
                     chronometer = null;
                 }
+                proximityContentManager.destroy();
 
                 if (db.writeToHistoric())
                     startActivity(new Intent(onRun.this, historyPage.class));
@@ -156,13 +203,13 @@ public class onRun extends AppCompatActivity implements LocationListener, Sensor
 
                     BeaconStats bs = new BeaconStats();
                     //Read beacon info
-                    //bs = bs.grabById(beaconDetails.getId());
-//                    speakOut("You have ran" +  bs.getMileMarker() + " miles, Your average speed is this split was " + getAverageSpeed(bs.getMileMarker() - 1, Float.parseFloat(lap) ));
+                    bs = bs.grabById(beaconDetails.getId());
+                    speakOut("You have ran" +  bs.getMileMarker() + " miles, Your average speed is this split was " + getAverageSpeed(bs.getMileMarker() - 1, Float.parseFloat(lap) ));
 
-                    //Write to db
-//                    String distanceTravelled, String caloriesBurned, String stepCount, String maxSpeed, String timeTaken, String section
-//                    if(!db.insertData(bs.getMileMarker(), 10, getSteps(bs.getMileMarker()),maxSpeed, lap, bs.getMileMarker()))
-//                        Log.e("ERROR", "COULD NOT POST");
+                    //Write to d String distanceTravelled, String caloriesBurned, String stepCount, String maxSpeed, String timeTaken, String section
+                  //  if(db.contains
+                    if(!db.insertData(bs.getMileMarker(), 10, getSteps(bs.getMileMarker()),maxSpeed, lap, bs.getMileMarker()))
+                        Log.e("ERROR", "COULD NOT POST");
 
                     //lapTimes.add(lap);
 
@@ -170,49 +217,13 @@ public class onRun extends AppCompatActivity implements LocationListener, Sensor
                 }
             }
         });
-    }
 
-    public void updateTime(final String text) {
-        runOnUiThread(new Runnable() {
-            @Override
-            public void run() {
-                myTimer.setText(text);
-            }
-        });
-    }
-    @Override
-    public void onLocationChanged(Location currentLocation) {
-        TextView txt = (TextView) this.findViewById(R.id.textView5);
-
-        if (currentLocation == null)
-        {
-            speed = 0;
-            txt.setText("-.- m/s");
-        }
-        else {
-            speed = currentLocation.getSpeed();
-            txt.setText(speed + "m/s");
-        }
-
-    }
-    // TODO move to util class?
-    private float getAverageSpeed(float distance, float timeTaken) {
-        //float minutes = timeTaken/60;
-        //float hours = minutes/60;
-        float speed = 0;
-        if(distance > 0) {
-            float distancePerSecond = timeTaken > 0 ? distance/timeTaken : 0;
-            float distancePerMinute = distancePerSecond*60;
-            float distancePerHour = distancePerMinute*60;
-            speed = distancePerHour > 0 ? (distancePerHour/1000) : 0;
-        }
-
-        return speed;
     }
 
     @Override
     protected void onResume() {
         super.onResume();
+
 
         if (!SystemRequirementsChecker.checkWithDefaultDialogs(this)) {
             Log.e(TAG, "Can't scan for beacons, some pre-conditions were not met");

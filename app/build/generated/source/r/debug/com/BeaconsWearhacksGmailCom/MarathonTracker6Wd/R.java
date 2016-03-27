@@ -2777,7 +2777,7 @@ containing a value of this type.
         public static final int settingicon=0x7f0200a3;
     }
     public static final class id {
-        public static final int UUID=0x7f0d0096;
+        public static final int UUID=0x7f0d0095;
         public static final int action0=0x7f0d00ba;
         public static final int action_bar=0x7f0d0081;
         public static final int action_bar_activity_content=0x7f0d0000;
@@ -2794,7 +2794,7 @@ containing a value of this type.
         public static final int action_mode_bar_stub=0x7f0d007d;
         public static final int action_mode_close_button=0x7f0d0063;
         public static final int activity_chooser_view_content=0x7f0d0064;
-        public static final int add=0x7f0d0098;
+        public static final int add=0x7f0d0097;
         public static final int adjust_height=0x7f0d0034;
         public static final int adjust_width=0x7f0d0035;
         public static final int alertTitle=0x7f0d0070;
@@ -2805,8 +2805,8 @@ containing a value of this type.
         public static final int android_pay_light_with_border=0x7f0d0059;
         public static final int art=0x7f0d00b2;
         public static final int auto=0x7f0d0041;
-        public static final int beaconColor=0x7f0d0094;
-        public static final int beaconName=0x7f0d0095;
+        public static final int beaconColor=0x7f0d0093;
+        public static final int beaconName=0x7f0d0094;
         public static final int beginning=0x7f0d0032;
         public static final int book_now=0x7f0d0050;
         public static final int bottom=0x7f0d001d;
@@ -2841,7 +2841,7 @@ containing a value of this type.
         public static final int design_menu_item_action_area_stub=0x7f0d00a3;
         public static final int design_menu_item_text=0x7f0d00a2;
         public static final int design_navigation_view=0x7f0d00a1;
-        public static final int device_list=0x7f0d0093;
+        public static final int device_list=0x7f0d0098;
         public static final int disableHome=0x7f0d000f;
         public static final int disconnect=0x7f0d00b8;
         public static final int donate_with=0x7f0d0054;
@@ -2890,7 +2890,7 @@ containing a value of this type.
         public static final int media_route_volume_layout=0x7f0d00b5;
         public static final int media_route_volume_slider=0x7f0d00b6;
         public static final int middle=0x7f0d0033;
-        public static final int mileMarker=0x7f0d0097;
+        public static final int mileMarker=0x7f0d0096;
         public static final int mini=0x7f0d0031;
         public static final int monochrome=0x7f0d005f;
         public static final int multiply=0x7f0d0027;

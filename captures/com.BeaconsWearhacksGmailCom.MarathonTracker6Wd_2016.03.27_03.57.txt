@@ -1,0 +1,431 @@
+TASK com.BeaconsWearhacksGmailCom.MarathonTracker6Wd id=1203
+  ACTIVITY com.BeaconsWearhacksGmailCom.MarathonTracker6Wd/.onRun d79ddda pid=8947
+    Local FragmentActivity 82157f1 State:
+      mCreated=truemResumed=true mStopped=false mReallyStopped=false
+      mLoadersStarted=true
+    FragmentManager misc state:
+      mHost=android.support.v4.app.FragmentActivity$HostCallbacks@419858
+      mContainer=android.support.v4.app.FragmentActivity$HostCallbacks@419858
+      mCurState=5 mStateSaved=false mDestroyed=false
+    View Hierarchy:
+      com.android.internal.policy.PhoneWindow$DecorView{468ddb1 V.E..... ... 0,0-1080,1920}
+        android.widget.LinearLayout{c188296 V.E..... ... 0,0-1080,1776}
+          android.view.ViewStub{43d7e17 G.E..... ... 0,0-0,0 #10203ab android:id/action_mode_bar_stub}
+          android.widget.FrameLayout{763e204 V.E..... ... 0,72-1080,1776}
+            android.support.v7.widget.ActionBarOverlayLayout{77ca3ed V.E..... ... 0,0-1080,1704 #7f0d007f app:id/decor_content_parent}
+              android.support.v7.widget.ContentFrameLayout{523222 V.E..... ... 0,168-1080,1704 #1020002 android:id/content}
+                android.widget.LinearLayout{691e4b3 V.E..... ... 0,0-1080,1536}
+                  android.widget.LinearLayout{53f1a70 V.E..... ... 0,0-1080,768}
+                    android.support.v7.widget.AppCompatTextView{88c91e9 V.ED.... ... 466,0-614,178 #7f0d00a5 app:id/textView6}
+                    android.support.v7.widget.AppCompatTextView{91ac872 V.ED.... ... 195,178-885,368 #7f0d00a6 app:id/textView3}
+                    android.support.v7.widget.AppCompatTextView{b854e6e V.ED.... ... 337,368-743,543 #7f0d00a7 app:id/textView7}
+                    android.support.v7.widget.AppCompatTextView{cbc190f V.ED.... ... 368,543-712,733 #7f0d00a8 app:id/textView5}
+                  android.widget.LinearLayout{c536d9c V.E..... ... 0,768-1080,1536}
+                    android.support.v7.widget.AppCompatImageButton{d9363a5 VFED..C. ... 435,0-645,241 #7f0d00a9 app:id/stopButton}
+                    android.support.v7.widget.AppCompatTextView{6bbe37a V.ED.... ... 346,241-733,513 #7f0d00aa app:id/textView4}
+              android.support.v7.widget.ActionBarContainer{7ab372b V.ED.... ... 0,0-1080,168 #7f0d0080 app:id/action_bar_container}
+                android.support.v7.widget.Toolbar{4f7c788 V.E..... ... 0,0-1080,168 #7f0d0081 app:id/action_bar}
+                  android.widget.TextView{77b9521 V.ED.... ... 48,43-625,124}
+                  android.support.v7.widget.ActionMenuView{f94bd46 V.E..... ... 1080,0-1080,168}
+                android.support.v7.widget.ActionBarContextView{e241b07 G.E..... ... 0,0-0,0 #7f0d0082 app:id/action_context_bar}
+        android.view.View{405d434 V.ED.... ... 0,1776-1080,1920 #1020030 android:id/navigationBarBackground}
+        android.view.View{15b625d V.ED.... ... 0,0-1080,72 #102002f android:id/statusBarBackground}
+
+  ACTIVITY com.BeaconsWearhacksGmailCom.MarathonTracker6Wd/.MainActivity 8e7ec1b pid=8947
+    Local FragmentActivity d6d4c81 State:
+      mCreated=truemResumed=false mStopped=true mReallyStopped=true
+      mLoadersStarted=true
+    Active Fragments in ccf67d2:
+      #0: SupportMapFragment{45d60a3 #0 id=0x7f0d0092}
+        mFragmentId=#7f0d0092 mContainerId=#7f0d0090 mTag=null
+        mState=2 mIndex=0 mWho=android:fragment:0 mBackStackNesting=0
+        mAdded=true mRemoving=false mResumed=false mFromLayout=true mInLayout=true
+        mHidden=false mDetached=false mMenuVisible=true mHasMenu=false
+        mRetainInstance=false mRetaining=false mUserVisibleHint=true
+        mFragmentManager=FragmentManager{ccf67d2 in HostCallbacks{45ffa0}}
+        mHost=android.support.v4.app.FragmentActivity$HostCallbacks@45ffa0
+        mSavedViewState={1=android.view.AbsSavedState$1@770c759, 2=android.view.AbsSavedState$1@770c759, 3=android.view.AbsSavedState$1@770c759, 4=android.view.AbsSavedState$1@770c759, 5=android.view.AbsSavedState$1@770c759, 2131558546=android.view.AbsSavedState$1@770c759}
+        mView=android.widget.FrameLayout{f982f1e V.E...C.. .......D 48,48-1032,1656 #7f0d0092 app:id/map}
+        mInnerView=android.widget.FrameLayout{f982f1e V.E...C.. .......D 48,48-1032,1656 #7f0d0092 app:id/map}
+        Child FragmentManager{15b63ff in SupportMapFragment{45d60a3}}:
+          FragmentManager misc state:
+            mHost=android.support.v4.app.FragmentActivity$HostCallbacks@45ffa0
+            mContainer=android.support.v4.app.Fragment$1@29b75cc
+            mParent=SupportMapFragment{45d60a3 #0 id=0x7f0d0092}
+            mCurState=2 mStateSaved=true mDestroyed=false
+    Added Fragments:
+      #0: SupportMapFragment{45d60a3 #0 id=0x7f0d0092}
+    FragmentManager misc state:
+      mHost=android.support.v4.app.FragmentActivity$HostCallbacks@45ffa0
+      mContainer=android.support.v4.app.FragmentActivity$HostCallbacks@45ffa0
+      mCurState=2 mStateSaved=true mDestroyed=false
+    View Hierarchy:
+      com.android.internal.policy.PhoneWindow$DecorView{1dd8015 I.E..... ... 0,0-1080,1920}
+        android.widget.LinearLayout{d941f2a V.E..... ... 0,0-1080,1776}
+          android.view.ViewStub{e0c411b G.E..... ... 0,0-0,0 #10203ab android:id/action_mode_bar_stub}
+          android.widget.FrameLayout{cf022b8 V.E..... ... 0,72-1080,1776 #1020002 android:id/content}
+            android.widget.RelativeLayout{f230891 V.E..... ... 0,0-1080,1704 #7f0d0090 app:id/relativeLayout}
+              android.widget.Button{fad03f6 VFED..C. ... 408,1362-672,1506 #7f0d0091 app:id/button}
+              android.widget.FrameLayout{f982f1e V.E...C. ... 48,48-1032,1656 #7f0d0092 app:id/map}
+                android.widget.FrameLayout{a23d3f7 V.E..... ... 0,0-984,1608}
+                  maps.dg.p{3e0b264 VFED..C. ... 0,0-984,1608}
+                  android.widget.RelativeLayout{a5e9ccd V.E..... ... 0,0-984,1608}
+                    android.widget.ImageView{19d6982 V.ED.... ... 15,1527-195,1593}
+                    android.widget.TextView{2b7b893 G.ED.... ... 0,0-0,0}
+                  android.widget.RelativeLayout{72890d0 V.E..... ... 0,0-984,1608}
+                    android.widget.ImageView{94538c9 G.ED.... ... 0,0-0,0 #2}
+                    android.widget.RelativeLayout{e3c9bce V.E..... ... 954,30-954,1578 #3}
+                      maps.ei.k{2395993 G.ED..C. ... 0,0-0,0}
+                    android.widget.LinearLayout{69b4aef G.E..... ... 0,0-0,0 #1}
+                      android.widget.ImageView{4cde9fc V.ED..C. ... 0,0-0,0}
+                      android.widget.ImageView{ddf9885 V.ED..C. ... 0,0-0,0}
+                    android.widget.LinearLayout{48aa6da G.E..... ... 0,0-0,0 #4}
+                      android.widget.ImageView{47ba70b V.ED..C. ... 0,0-0,0}
+                      android.widget.ImageView{30da9e8 V.ED..C. ... 0,0-0,0}
+                      android.widget.ImageView{8063801 V.ED..C. ... 0,0-0,0}
+                    maps.ei.bn{17c56a6 I.ED..C. ... 30,30-150,150 #5}
+        android.view.View{ebba8e7 V.ED.... ... 0,1776-1080,1920 #1020030 android:id/navigationBarBackground}
+        android.view.View{d077c94 V.ED.... ... 0,0-1080,72 #102002f android:id/statusBarBackground}
+
+  ACTIVITY com.BeaconsWearhacksGmailCom.MarathonTracker6Wd/.mainPage 9a6bb39 pid=8947
+    Local Activity 6e533fe State:
+      mResumed=false mStopped=true mFinished=false
+      mChangingConfigurations=false
+      mCurrentConfig={1.0 302mcc720mnc en_US ldltr sw360dp w360dp h568dp 480dpi nrml port finger -keyb/v/h -nav/h s.171}
+      mLoadersStarted=true
+      FragmentManager misc state:
+        mHost=android.app.Activity$HostCallbacks@29d533d
+        mContainer=android.app.Activity$HostCallbacks@29d533d
+        mCurState=3 mStateSaved=true mDestroyed=false
+    ViewRoot:
+      mAdded=true mRemoved=false
+      mConsumeBatchedInputScheduled=false
+      mConsumeBatchedInputImmediatelyScheduled=false
+      mPendingInputEventCount=0
+      mProcessInputEventsScheduled=false
+      mTraversalScheduled=false
+      android.view.ViewRootImpl$NativePreImeInputStage: mQueueLength=0
+      android.view.ViewRootImpl$ImeInputStage: mQueueLength=0
+      android.view.ViewRootImpl$NativePostImeInputStage: mQueueLength=0
+    Choreographer:
+      mFrameScheduled=true
+      mLastFrameTime=146413010 (49 ms ago)
+    View Hierarchy:
+      com.android.internal.policy.PhoneWindow$DecorView{a873732 I.E...... R......D 0,0-1080,1920}
+        android.widget.LinearLayout{10fec83 V.E...... .......D 0,0-1080,1776}
+          android.view.ViewStub{e29ce00 G.E...... ......I. 0,0-0,0 #10203ab android:id/action_mode_bar_stub}
+          android.widget.FrameLayout{890e639 V.E...... .......D 0,72-1080,1776 #1020002 android:id/content}
+            android.widget.RelativeLayout{4ed947e V.E...... ......ID 0,0-1080,1704}
+              android.widget.TextView{3dacddf V.ED..... ........ 246,801-834,902 #7f0d0099 app:id/textView2}
+              android.widget.Button{85dca2c VFED..C.. ......ID 108,1182-468,1326 #7f0d0091 app:id/button}
+              android.widget.Button{d90acf5 VFED..C.. ......ID 597,1182-957,1326 #7f0d009a app:id/button2}
+              android.widget.ImageView{5ca7a8a V.ED..... ......ID 290,207-790,707 #7f0d009b app:id/imageView}
+              android.widget.ImageButton{94868fb VFED..C.. ......ID 0,1604-100,1704 #7f0d009c app:id/imageButton2}
+              android.widget.TextView{f35d18 V.ED..... ........ 100,1586-828,1704 #7f0d009d app:id/textView9}
+        android.view.View{68c2371 V.ED..... ......ID 0,1776-1080,1920 #1020030 android:id/navigationBarBackground}
+        android.view.View{6ddb556 V.ED..... ......ID 0,0-1080,72 #102002f android:id/statusBarBackground}
+    Looper (main, tid 1) {2a99d7}
+      Message 0: { when=-46ms callback=com.BeaconsWearhacksGmailCom.MarathonTracker6Wd.onRun$1 target=android.os.Handler }
+      Message 1: { when=-46ms callback=com.BeaconsWearhacksGmailCom.MarathonTracker6Wd.onRun$1 target=android.os.Handler }
+      Message 2: { when=-46ms callback=com.BeaconsWearhacksGmailCom.MarathonTracker6Wd.onRun$1 target=android.os.Handler }
+      Message 3: { when=-46ms callback=com.BeaconsWearhacksGmailCom.MarathonTracker6Wd.onRun$1 target=android.os.Handler }
+      Message 4: { when=-46ms callback=com.BeaconsWearhacksGmailCom.MarathonTracker6Wd.onRun$1 target=android.os.Handler }
+      Message 5: { when=-45ms callback=com.BeaconsWearhacksGmailCom.MarathonTracker6Wd.onRun$1 target=android.os.Handler }
+      Message 6: { when=-45ms callback=com.BeaconsWearhacksGmailCom.MarathonTracker6Wd.onRun$1 target=android.os.Handler }
+      Message 7: { when=-45ms callback=com.BeaconsWearhacksGmailCom.MarathonTracker6Wd.onRun$1 target=android.os.Handler }
+      Message 8: { when=-45ms callback=com.BeaconsWearhacksGmailCom.MarathonTracker6Wd.onRun$1 target=android.os.Handler }
+      Message 9: { when=-45ms callback=com.BeaconsWearhacksGmailCom.MarathonTracker6Wd.onRun$1 target=android.os.Handler }
+      Message 10: { when=-45ms callback=com.BeaconsWearhacksGmailCom.MarathonTracker6Wd.onRun$1 target=android.os.Handler }
+      Message 11: { when=-45ms callback=com.BeaconsWearhacksGmailCom.MarathonTracker6Wd.onRun$1 target=android.os.Handler }
+      Message 12: { when=-45ms callback=com.BeaconsWearhacksGmailCom.MarathonTracker6Wd.onRun$1 target=android.os.Handler }
+      Message 13: { when=-45ms callback=com.BeaconsWearhacksGmailCom.MarathonTracker6Wd.onRun$1 target=android.os.Handler }
+      Message 14: { when=-45ms callback=com.BeaconsWearhacksGmailCom.MarathonTracker6Wd.onRun$1 target=android.os.Handler }
+      Message 15: { when=-45ms callback=com.BeaconsWearhacksGmailCom.MarathonTracker6Wd.onRun$1 target=android.os.Handler }
+      Message 16: { when=-44ms callback=com.BeaconsWearhacksGmailCom.MarathonTracker6Wd.onRun$1 target=android.os.Handler }
+      Message 17: { when=-44ms callback=com.BeaconsWearhacksGmailCom.MarathonTracker6Wd.onRun$1 target=android.os.Handler }
+      Message 18: { when=-44ms callback=com.BeaconsWearhacksGmailCom.MarathonTracker6Wd.onRun$1 target=android.os.Handler }
+      Message 19: { when=-44ms callback=com.BeaconsWearhacksGmailCom.MarathonTracker6Wd.onRun$1 target=android.os.Handler }
+      Message 20: { when=-44ms barrier=2010 }
+      Message 21: { when=-44ms callback=com.BeaconsWearhacksGmailCom.MarathonTracker6Wd.onRun$1 target=android.os.Handler }
+      Message 22: { when=-41ms callback=com.BeaconsWearhacksGmailCom.MarathonTracker6Wd.onRun$1 target=android.os.Handler }
+      Message 23: { when=-41ms callback=com.BeaconsWearhacksGmailCom.MarathonTracker6Wd.onRun$1 target=android.os.Handler }
+      Message 24: { when=-41ms callback=com.BeaconsWearhacksGmailCom.MarathonTracker6Wd.onRun$1 target=android.os.Handler }
+      Message 25: { when=-40ms callback=com.BeaconsWearhacksGmailCom.MarathonTracker6Wd.onRun$1 target=android.os.Handler }
+      Message 26: { when=-40ms callback=com.BeaconsWearhacksGmailCom.MarathonTracker6Wd.onRun$1 target=android.os.Handler }
+      Message 27: { when=-40ms callback=com.BeaconsWearhacksGmailCom.MarathonTracker6Wd.onRun$1 target=android.os.Handler }
+      Message 28: { when=-40ms callback=com.BeaconsWearhacksGmailCom.MarathonTracker6Wd.onRun$1 target=android.os.Handler }
+      Message 29: { when=-40ms callback=com.BeaconsWearhacksGmailCom.MarathonTracker6Wd.onRun$1 target=android.os.Handler }
+      Message 30: { when=-40ms callback=com.BeaconsWearhacksGmailCom.MarathonTracker6Wd.onRun$1 target=android.os.Handler }
+      Message 31: { when=-40ms callback=com.BeaconsWearhacksGmailCom.MarathonTracker6Wd.onRun$1 target=android.os.Handler }
+      Message 32: { when=-40ms callback=com.BeaconsWearhacksGmailCom.MarathonTracker6Wd.onRun$1 target=android.os.Handler }
+      Message 33: { when=-40ms callback=com.BeaconsWearhacksGmailCom.MarathonTracker6Wd.onRun$1 target=android.os.Handler }
+      Message 34: { when=-39ms callback=com.BeaconsWearhacksGmailCom.MarathonTracker6Wd.onRun$1 target=android.os.Handler }
+      Message 35: { when=-39ms callback=com.BeaconsWearhacksGmailCom.MarathonTracker6Wd.onRun$1 target=android.os.Handler }
+      Message 36: { when=-39ms callback=com.BeaconsWearhacksGmailCom.MarathonTracker6Wd.onRun$1 target=android.os.Handler }
+      Message 37: { when=-39ms callback=com.BeaconsWearhacksGmailCom.MarathonTracker6Wd.onRun$1 target=android.os.Handler }
+      Message 38: { when=-39ms callback=com.BeaconsWearhacksGmailCom.MarathonTracker6Wd.onRun$1 target=android.os.Handler }
+      Message 39: { when=-39ms callback=com.BeaconsWearhacksGmailCom.MarathonTracker6Wd.onRun$1 target=android.os.Handler }
+      Message 40: { when=-39ms callback=com.BeaconsWearhacksGmailCom.MarathonTracker6Wd.onRun$1 target=android.os.Handler }
+      Message 41: { when=-38ms callback=com.BeaconsWearhacksGmailCom.MarathonTracker6Wd.onRun$1 target=android.os.Handler }
+      Message 42: { when=-38ms callback=com.BeaconsWearhacksGmailCom.MarathonTracker6Wd.onRun$1 target=android.os.Handler }
+      Message 43: { when=-38ms callback=com.BeaconsWearhacksGmailCom.MarathonTracker6Wd.onRun$1 target=android.os.Handler }
+      Message 44: { when=-38ms callback=com.BeaconsWearhacksGmailCom.MarathonTracker6Wd.onRun$1 target=android.os.Handler }
+      Message 45: { when=-38ms callback=com.BeaconsWearhacksGmailCom.MarathonTracker6Wd.onRun$1 target=android.os.Handler }
+      Message 46: { when=-38ms callback=com.BeaconsWearhacksGmailCom.MarathonTracker6Wd.onRun$1 target=android.os.Handler }
+      Message 47: { when=-38ms callback=com.BeaconsWearhacksGmailCom.MarathonTracker6Wd.onRun$1 target=android.os.Handler }
+      Message 48: { when=-38ms callback=com.BeaconsWearhacksGmailCom.MarathonTracker6Wd.onRun$1 target=android.os.Handler }
+      Message 49: { when=-37ms callback=com.BeaconsWearhacksGmailCom.MarathonTracker6Wd.onRun$1 target=android.os.Handler }
+      Message 50: { when=-37ms callback=com.BeaconsWearhacksGmailCom.MarathonTracker6Wd.onRun$1 target=android.os.Handler }
+      Message 51: { when=-37ms callback=com.BeaconsWearhacksGmailCom.MarathonTracker6Wd.onRun$1 target=android.os.Handler }
+      Message 52: { when=-35ms callback=com.BeaconsWearhacksGmailCom.MarathonTracker6Wd.onRun$1 target=android.os.Handler }
+      Message 53: { when=-35ms callback=com.BeaconsWearhacksGmailCom.MarathonTracker6Wd.onRun$1 target=android.os.Handler }
+      Message 54: { when=-35ms callback=com.BeaconsWearhacksGmailCom.MarathonTracker6Wd.onRun$1 target=android.os.Handler }
+      Message 55: { when=-35ms callback=com.BeaconsWearhacksGmailCom.MarathonTracker6Wd.onRun$1 target=android.os.Handler }
+      Message 56: { when=-33ms callback=com.BeaconsWearhacksGmailCom.MarathonTracker6Wd.onRun$1 target=android.os.Handler }
+      Message 57: { when=-33ms callback=com.BeaconsWearhacksGmailCom.MarathonTracker6Wd.onRun$1 target=android.os.Handler }
+      Message 58: { when=-33ms callback=com.BeaconsWearhacksGmailCom.MarathonTracker6Wd.onRun$1 target=android.os.Handler }
+      Message 59: { when=-33ms callback=com.BeaconsWearhacksGmailCom.MarathonTracker6Wd.onRun$1 target=android.os.Handler }
+      Message 60: { when=-33ms callback=com.BeaconsWearhacksGmailCom.MarathonTracker6Wd.onRun$1 target=android.os.Handler }
+      Message 61: { when=-32ms callback=com.BeaconsWearhacksGmailCom.MarathonTracker6Wd.onRun$1 target=android.os.Handler }
+      Message 62: { when=-32ms callback=com.BeaconsWearhacksGmailCom.MarathonTracker6Wd.onRun$1 target=android.os.Handler }
+      Message 63: { when=-32ms callback=com.BeaconsWearhacksGmailCom.MarathonTracker6Wd.onRun$1 target=android.os.Handler }
+      Message 64: { when=-32ms callback=android.view.Choreographer$FrameDisplayEventReceiver target=android.view.Choreographer$FrameHandler }
+      Message 65: { when=-32ms callback=com.BeaconsWearhacksGmailCom.MarathonTracker6Wd.onRun$1 target=android.os.Handler }
+      Message 66: { when=-32ms callback=com.BeaconsWearhacksGmailCom.MarathonTracker6Wd.onRun$1 target=android.os.Handler }
+      Message 67: { when=-32ms callback=com.BeaconsWearhacksGmailCom.MarathonTracker6Wd.onRun$1 target=android.os.Handler }
+      Message 68: { when=-32ms callback=com.BeaconsWearhacksGmailCom.MarathonTracker6Wd.onRun$1 target=android.os.Handler }
+      Message 69: { when=-32ms callback=com.BeaconsWearhacksGmailCom.MarathonTracker6Wd.onRun$1 target=android.os.Handler }
+      Message 70: { when=-31ms callback=com.BeaconsWearhacksGmailCom.MarathonTracker6Wd.onRun$1 target=android.os.Handler }
+      Message 71: { when=-31ms callback=com.BeaconsWearhacksGmailCom.MarathonTracker6Wd.onRun$1 target=android.os.Handler }
+      Message 72: { when=-31ms callback=com.BeaconsWearhacksGmailCom.MarathonTracker6Wd.onRun$1 target=android.os.Handler }
+      Message 73: { when=-31ms callback=com.BeaconsWearhacksGmailCom.MarathonTracker6Wd.onRun$1 target=android.os.Handler }
+      Message 74: { when=-31ms callback=com.BeaconsWearhacksGmailCom.MarathonTracker6Wd.onRun$1 target=android.os.Handler }
+      Message 75: { when=-31ms callback=com.BeaconsWearhacksGmailCom.MarathonTracker6Wd.onRun$1 target=android.os.Handler }
+      Message 76: { when=-31ms callback=com.BeaconsWearhacksGmailCom.MarathonTracker6Wd.onRun$1 target=android.os.Handler }
+      Message 77: { when=-31ms callback=com.BeaconsWearhacksGmailCom.MarathonTracker6Wd.onRun$1 target=android.os.Handler }
+      Message 78: { when=-31ms callback=com.BeaconsWearhacksGmailCom.MarathonTracker6Wd.onRun$1 target=android.os.Handler }
+      Message 79: { when=-30ms callback=com.BeaconsWearhacksGmailCom.MarathonTracker6Wd.onRun$1 target=android.os.Handler }
+      Message 80: { when=-30ms callback=com.BeaconsWearhacksGmailCom.MarathonTracker6Wd.onRun$1 target=android.os.Handler }
+      Message 81: { when=-30ms callback=com.BeaconsWearhacksGmailCom.MarathonTracker6Wd.onRun$1 target=android.os.Handler }
+      Message 82: { when=-30ms callback=com.BeaconsWearhacksGmailCom.MarathonTracker6Wd.onRun$1 target=android.os.Handler }
+      Message 83: { when=-30ms callback=com.BeaconsWearhacksGmailCom.MarathonTracker6Wd.onRun$1 target=android.os.Handler }
+      Message 84: { when=-30ms callback=com.BeaconsWearhacksGmailCom.MarathonTracker6Wd.onRun$1 target=android.os.Handler }
+      Message 85: { when=-30ms callback=com.BeaconsWearhacksGmailCom.MarathonTracker6Wd.onRun$1 target=android.os.Handler }
+      Message 86: { when=-30ms callback=com.BeaconsWearhacksGmailCom.MarathonTracker6Wd.onRun$1 target=android.os.Handler }
+      Message 87: { when=-30ms callback=com.BeaconsWearhacksGmailCom.MarathonTracker6Wd.onRun$1 target=android.os.Handler }
+      Message 88: { when=-29ms callback=com.BeaconsWearhacksGmailCom.MarathonTracker6Wd.onRun$1 target=android.os.Handler }
+      Message 89: { when=-29ms callback=com.BeaconsWearhacksGmailCom.MarathonTracker6Wd.onRun$1 target=android.os.Handler }
+      Message 90: { when=-29ms callback=com.BeaconsWearhacksGmailCom.MarathonTracker6Wd.onRun$1 target=android.os.Handler }
+      Message 91: { when=-29ms callback=com.BeaconsWearhacksGmailCom.MarathonTracker6Wd.onRun$1 target=android.os.Handler }
+      Message 92: { when=-29ms callback=com.BeaconsWearhacksGmailCom.MarathonTracker6Wd.onRun$1 target=android.os.Handler }
+      Message 93: { when=-28ms callback=com.BeaconsWearhacksGmailCom.MarathonTracker6Wd.onRun$1 target=android.os.Handler }
+      Message 94: { when=-28ms callback=com.BeaconsWearhacksGmailCom.MarathonTracker6Wd.onRun$1 target=android.os.Handler }
+      Message 95: { when=-28ms callback=com.BeaconsWearhacksGmailCom.MarathonTracker6Wd.onRun$1 target=android.os.Handler }
+      Message 96: { when=-27ms callback=com.BeaconsWearhacksGmailCom.MarathonTracker6Wd.onRun$1 target=android.os.Handler }
+      Message 97: { when=-27ms callback=com.BeaconsWearhacksGmailCom.MarathonTracker6Wd.onRun$1 target=android.os.Handler }
+      Message 98: { when=-27ms callback=com.BeaconsWearhacksGmailCom.MarathonTracker6Wd.onRun$1 target=android.os.Handler }
+      Message 99: { when=-27ms callback=com.BeaconsWearhacksGmailCom.MarathonTracker6Wd.onRun$1 target=android.os.Handler }
+      Message 100: { when=-27ms callback=com.BeaconsWearhacksGmailCom.MarathonTracker6Wd.onRun$1 target=android.os.Handler }
+      Message 101: { when=-27ms callback=com.BeaconsWearhacksGmailCom.MarathonTracker6Wd.onRun$1 target=android.os.Handler }
+      Message 102: { when=-27ms callback=com.BeaconsWearhacksGmailCom.MarathonTracker6Wd.onRun$1 target=android.os.Handler }
+      Message 103: { when=-27ms callback=com.BeaconsWearhacksGmailCom.MarathonTracker6Wd.onRun$1 target=android.os.Handler }
+      Message 104: { when=-27ms callback=com.BeaconsWearhacksGmailCom.MarathonTracker6Wd.onRun$1 target=android.os.Handler }
+      Message 105: { when=-23ms callback=com.BeaconsWearhacksGmailCom.MarathonTracker6Wd.onRun$1 target=android.os.Handler }
+      Message 106: { when=-23ms callback=com.BeaconsWearhacksGmailCom.MarathonTracker6Wd.onRun$1 target=android.os.Handler }
+      Message 107: { when=-23ms callback=com.BeaconsWearhacksGmailCom.MarathonTracker6Wd.onRun$1 target=android.os.Handler }
+      Message 108: { when=-23ms callback=com.BeaconsWearhacksGmailCom.MarathonTracker6Wd.onRun$1 target=android.os.Handler }
+      Message 109: { when=-23ms callback=com.BeaconsWearhacksGmailCom.MarathonTracker6Wd.onRun$1 target=android.os.Handler }
+      Message 110: { when=-23ms callback=com.BeaconsWearhacksGmailCom.MarathonTracker6Wd.onRun$1 target=android.os.Handler }
+      Message 111: { when=-22ms callback=com.BeaconsWearhacksGmailCom.MarathonTracker6Wd.onRun$1 target=android.os.Handler }
+      Message 112: { when=-22ms callback=com.BeaconsWearhacksGmailCom.MarathonTracker6Wd.onRun$1 target=android.os.Handler }
+      Message 113: { when=-22ms callback=com.BeaconsWearhacksGmailCom.MarathonTracker6Wd.onRun$1 target=android.os.Handler }
+      Message 114: { when=-22ms callback=com.BeaconsWearhacksGmailCom.MarathonTracker6Wd.onRun$1 target=android.os.Handler }
+      Message 115: { when=-22ms callback=com.BeaconsWearhacksGmailCom.MarathonTracker6Wd.onRun$1 target=android.os.Handler }
+      Message 116: { when=-22ms callback=com.BeaconsWearhacksGmailCom.MarathonTracker6Wd.onRun$1 target=android.os.Handler }
+      Message 117: { when=-22ms callback=com.BeaconsWearhacksGmailCom.MarathonTracker6Wd.onRun$1 target=android.os.Handler }
+      Message 118: { when=-22ms callback=com.BeaconsWearhacksGmailCom.MarathonTracker6Wd.onRun$1 target=android.os.Handler }
+      Message 119: { when=-22ms callback=com.BeaconsWearhacksGmailCom.MarathonTracker6Wd.onRun$1 target=android.os.Handler }
+      Message 120: { when=-21ms callback=com.BeaconsWearhacksGmailCom.MarathonTracker6Wd.onRun$1 target=android.os.Handler }
+      Message 121: { when=-21ms callback=com.BeaconsWearhacksGmailCom.MarathonTracker6Wd.onRun$1 target=android.os.Handler }
+      Message 122: { when=-21ms callback=com.BeaconsWearhacksGmailCom.MarathonTracker6Wd.onRun$1 target=android.os.Handler }
+      Message 123: { when=-21ms callback=com.BeaconsWearhacksGmailCom.MarathonTracker6Wd.onRun$1 target=android.os.Handler }
+      Message 124: { when=-21ms callback=com.BeaconsWearhacksGmailCom.MarathonTracker6Wd.onRun$1 target=android.os.Handler }
+      Message 125: { when=-21ms callback=com.BeaconsWearhacksGmailCom.MarathonTracker6Wd.onRun$1 target=android.os.Handler }
+      Message 126: { when=-21ms callback=com.BeaconsWearhacksGmailCom.MarathonTracker6Wd.onRun$1 target=android.os.Handler }
+      Message 127: { when=-21ms callback=com.BeaconsWearhacksGmailCom.MarathonTracker6Wd.onRun$1 target=android.os.Handler }
+      Message 128: { when=-21ms callback=com.BeaconsWearhacksGmailCom.MarathonTracker6Wd.onRun$1 target=android.os.Handler }
+      Message 129: { when=-21ms callback=com.BeaconsWearhacksGmailCom.MarathonTracker6Wd.onRun$1 target=android.os.Handler }
+      Message 130: { when=-20ms callback=com.BeaconsWearhacksGmailCom.MarathonTracker6Wd.onRun$1 target=android.os.Handler }
+      Message 131: { when=-20ms callback=com.BeaconsWearhacksGmailCom.MarathonTracker6Wd.onRun$1 target=android.os.Handler }
+      Message 132: { when=-20ms callback=com.BeaconsWearhacksGmailCom.MarathonTracker6Wd.onRun$1 target=android.os.Handler }
+      Message 133: { when=-20ms callback=com.BeaconsWearhacksGmailCom.MarathonTracker6Wd.onRun$1 target=android.os.Handler }
+      Message 134: { when=-20ms callback=com.BeaconsWearhacksGmailCom.MarathonTracker6Wd.onRun$1 target=android.os.Handler }
+      Message 135: { when=-20ms callback=com.BeaconsWearhacksGmailCom.MarathonTracker6Wd.onRun$1 target=android.os.Handler }
+      Message 136: { when=-20ms callback=com.BeaconsWearhacksGmailCom.MarathonTracker6Wd.onRun$1 target=android.os.Handler }
+      Message 137: { when=-20ms callback=com.BeaconsWearhacksGmailCom.MarathonTracker6Wd.onRun$1 target=android.os.Handler }
+      Message 138: { when=-20ms callback=com.BeaconsWearhacksGmailCom.MarathonTracker6Wd.onRun$1 target=android.os.Handler }
+      Message 139: { when=-20ms callback=com.BeaconsWearhacksGmailCom.MarathonTracker6Wd.onRun$1 target=android.os.Handler }
+      Message 140: { when=-19ms callback=com.BeaconsWearhacksGmailCom.MarathonTracker6Wd.onRun$1 target=android.os.Handler }
+      Message 141: { when=-19ms callback=com.BeaconsWearhacksGmailCom.MarathonTracker6Wd.onRun$1 target=android.os.Handler }
+      Message 142: { when=-19ms callback=com.BeaconsWearhacksGmailCom.MarathonTracker6Wd.onRun$1 target=android.os.Handler }
+      Message 143: { when=-19ms callback=com.BeaconsWearhacksGmailCom.MarathonTracker6Wd.onRun$1 target=android.os.Handler }
+      Message 144: { when=-19ms callback=com.BeaconsWearhacksGmailCom.MarathonTracker6Wd.onRun$1 target=android.os.Handler }
+      Message 145: { when=-19ms callback=com.BeaconsWearhacksGmailCom.MarathonTracker6Wd.onRun$1 target=android.os.Handler }
+      Message 146: { when=-19ms callback=com.BeaconsWearhacksGmailCom.MarathonTracker6Wd.onRun$1 target=android.os.Handler }
+      Message 147: { when=-19ms callback=com.BeaconsWearhacksGmailCom.MarathonTracker6Wd.onRun$1 target=android.os.Handler }
+      Message 148: { when=-19ms callback=com.BeaconsWearhacksGmailCom.MarathonTracker6Wd.onRun$1 target=android.os.Handler }
+      Message 149: { when=-18ms callback=com.BeaconsWearhacksGmailCom.MarathonTracker6Wd.onRun$1 target=android.os.Handler }
+      Message 150: { when=-18ms callback=com.BeaconsWearhacksGmailCom.MarathonTracker6Wd.onRun$1 target=android.os.Handler }
+      Message 151: { when=-18ms callback=com.BeaconsWearhacksGmailCom.MarathonTracker6Wd.onRun$1 target=android.os.Handler }
+      Message 152: { when=-18ms callback=com.BeaconsWearhacksGmailCom.MarathonTracker6Wd.onRun$1 target=android.os.Handler }
+      Message 153: { when=-18ms callback=com.BeaconsWearhacksGmailCom.MarathonTracker6Wd.onRun$1 target=android.os.Handler }
+      Message 154: { when=-18ms callback=com.BeaconsWearhacksGmailCom.MarathonTracker6Wd.onRun$1 target=android.os.Handler }
+      Message 155: { when=-18ms callback=com.BeaconsWearhacksGmailCom.MarathonTracker6Wd.onRun$1 target=android.os.Handler }
+      Message 156: { when=-18ms callback=com.BeaconsWearhacksGmailCom.MarathonTracker6Wd.onRun$1 target=android.os.Handler }
+      Message 157: { when=-18ms callback=com.BeaconsWearhacksGmailCom.MarathonTracker6Wd.onRun$1 target=android.os.Handler }
+      Message 158: { when=-15ms callback=com.BeaconsWearhacksGmailCom.MarathonTracker6Wd.onRun$1 target=android.os.Handler }
+      Message 159: { when=-14ms callback=com.BeaconsWearhacksGmailCom.MarathonTracker6Wd.onRun$1 target=android.os.Handler }
+      Message 160: { when=-14ms callback=com.BeaconsWearhacksGmailCom.MarathonTracker6Wd.onRun$1 target=android.os.Handler }
+      Message 161: { when=-14ms callback=com.BeaconsWearhacksGmailCom.MarathonTracker6Wd.onRun$1 target=android.os.Handler }
+      Message 162: { when=-14ms callback=com.BeaconsWearhacksGmailCom.MarathonTracker6Wd.onRun$1 target=android.os.Handler }
+      Message 163: { when=-14ms callback=com.BeaconsWearhacksGmailCom.MarathonTracker6Wd.onRun$1 target=android.os.Handler }
+      Message 164: { when=-14ms callback=com.BeaconsWearhacksGmailCom.MarathonTracker6Wd.onRun$1 target=android.os.Handler }
+      Message 165: { when=-14ms callback=com.BeaconsWearhacksGmailCom.MarathonTracker6Wd.onRun$1 target=android.os.Handler }
+      Message 166: { when=-14ms callback=com.BeaconsWearhacksGmailCom.MarathonTracker6Wd.onRun$1 target=android.os.Handler }
+      Message 167: { when=-14ms callback=com.BeaconsWearhacksGmailCom.MarathonTracker6Wd.onRun$1 target=android.os.Handler }
+      Message 168: { when=-14ms callback=com.BeaconsWearhacksGmailCom.MarathonTracker6Wd.onRun$1 target=android.os.Handler }
+      Message 169: { when=-13ms callback=com.BeaconsWearhacksGmailCom.MarathonTracker6Wd.onRun$1 target=android.os.Handler }
+      Message 170: { when=-13ms callback=com.BeaconsWearhacksGmailCom.MarathonTracker6Wd.onRun$1 target=android.os.Handler }
+      Message 171: { when=-13ms callback=com.BeaconsWearhacksGmailCom.MarathonTracker6Wd.onRun$1 target=android.os.Handler }
+      Message 172: { when=-13ms callback=com.BeaconsWearhacksGmailCom.MarathonTracker6Wd.onRun$1 target=android.os.Handler }
+      Message 173: { when=-13ms callback=com.BeaconsWearhacksGmailCom.MarathonTracker6Wd.onRun$1 target=android.os.Handler }
+      Message 174: { when=-13ms callback=com.BeaconsWearhacksGmailCom.MarathonTracker6Wd.onRun$1 target=android.os.Handler }
+      Message 175: { when=-13ms callback=com.BeaconsWearhacksGmailCom.MarathonTracker6Wd.onRun$1 target=android.os.Handler }
+      Message 176: { when=-13ms callback=com.BeaconsWearhacksGmailCom.MarathonTracker6Wd.onRun$1 target=android.os.Handler }
+      Message 177: { when=-13ms callback=com.BeaconsWearhacksGmailCom.MarathonTracker6Wd.onRun$1 target=android.os.Handler }
+      Message 178: { when=-13ms callback=com.BeaconsWearhacksGmailCom.MarathonTracker6Wd.onRun$1 target=android.os.Handler }
+      Message 179: { when=-13ms callback=com.BeaconsWearhacksGmailCom.MarathonTracker6Wd.onRun$1 target=android.os.Handler }
+      Message 180: { when=-12ms callback=com.BeaconsWearhacksGmailCom.MarathonTracker6Wd.onRun$1 target=android.os.Handler }
+      Message 181: { when=-12ms callback=com.BeaconsWearhacksGmailCom.MarathonTracker6Wd.onRun$1 target=android.os.Handler }
+      Message 182: { when=-12ms callback=com.BeaconsWearhacksGmailCom.MarathonTracker6Wd.onRun$1 target=android.os.Handler }
+      Message 183: { when=-12ms callback=com.BeaconsWearhacksGmailCom.MarathonTracker6Wd.onRun$1 target=android.os.Handler }
+      Message 184: { when=-12ms callback=com.BeaconsWearhacksGmailCom.MarathonTracker6Wd.onRun$1 target=android.os.Handler }
+      Message 185: { when=-12ms callback=com.BeaconsWearhacksGmailCom.MarathonTracker6Wd.onRun$1 target=android.os.Handler }
+      Message 186: { when=-12ms callback=com.BeaconsWearhacksGmailCom.MarathonTracker6Wd.onRun$1 target=android.os.Handler }
+      Message 187: { when=-12ms callback=com.BeaconsWearhacksGmailCom.MarathonTracker6Wd.onRun$1 target=android.os.Handler }
+      Message 188: { when=-12ms callback=com.BeaconsWearhacksGmailCom.MarathonTracker6Wd.onRun$1 target=android.os.Handler }
+      Message 189: { when=-12ms callback=com.BeaconsWearhacksGmailCom.MarathonTracker6Wd.onRun$1 target=android.os.Handler }
+      Message 190: { when=-12ms callback=com.BeaconsWearhacksGmailCom.MarathonTracker6Wd.onRun$1 target=android.os.Handler }
+      Message 191: { when=-11ms callback=com.BeaconsWearhacksGmailCom.MarathonTracker6Wd.onRun$1 target=android.os.Handler }
+      Message 192: { when=-11ms callback=com.BeaconsWearhacksGmailCom.MarathonTracker6Wd.onRun$1 target=android.os.Handler }
+      Message 193: { when=-11ms callback=com.BeaconsWearhacksGmailCom.MarathonTracker6Wd.onRun$1 target=android.os.Handler }
+      Message 194: { when=-11ms callback=com.BeaconsWearhacksGmailCom.MarathonTracker6Wd.onRun$1 target=android.os.Handler }
+      Message 195: { when=-11ms callback=com.BeaconsWearhacksGmailCom.MarathonTracker6Wd.onRun$1 target=android.os.Handler }
+      Message 196: { when=-11ms callback=com.BeaconsWearhacksGmailCom.MarathonTracker6Wd.onRun$1 target=android.os.Handler }
+      Message 197: { when=-11ms callback=com.BeaconsWearhacksGmailCom.MarathonTracker6Wd.onRun$1 target=android.os.Handler }
+      Message 198: { when=-11ms callback=com.BeaconsWearhacksGmailCom.MarathonTracker6Wd.onRun$1 target=android.os.Handler }
+      Message 199: { when=-11ms callback=com.BeaconsWearhacksGmailCom.MarathonTracker6Wd.onRun$1 target=android.os.Handler }
+      Message 200: { when=-11ms callback=com.BeaconsWearhacksGmailCom.MarathonTracker6Wd.onRun$1 target=android.os.Handler }
+      Message 201: { when=-10ms callback=com.BeaconsWearhacksGmailCom.MarathonTracker6Wd.onRun$1 target=android.os.Handler }
+      Message 202: { when=-10ms callback=com.BeaconsWearhacksGmailCom.MarathonTracker6Wd.onRun$1 target=android.os.Handler }
+      Message 203: { when=-10ms callback=com.BeaconsWearhacksGmailCom.MarathonTracker6Wd.onRun$1 target=android.os.Handler }
+      Message 204: { when=-10ms callback=com.BeaconsWearhacksGmailCom.MarathonTracker6Wd.onRun$1 target=android.os.Handler }
+      Message 205: { when=-10ms callback=com.BeaconsWearhacksGmailCom.MarathonTracker6Wd.onRun$1 target=android.os.Handler }
+      Message 206: { when=-10ms callback=com.BeaconsWearhacksGmailCom.MarathonTracker6Wd.onRun$1 target=android.os.Handler }
+      Message 207: { when=-10ms callback=com.BeaconsWearhacksGmailCom.MarathonTracker6Wd.onRun$1 target=android.os.Handler }
+      Message 208: { when=-10ms callback=com.BeaconsWearhacksGmailCom.MarathonTracker6Wd.onRun$1 target=android.os.Handler }
+      Message 209: { when=-10ms callback=com.BeaconsWearhacksGmailCom.MarathonTracker6Wd.onRun$1 target=android.os.Handler }
+      Message 210: { when=-10ms callback=com.BeaconsWearhacksGmailCom.MarathonTracker6Wd.onRun$1 target=android.os.Handler }
+      Message 211: { when=-10ms callback=com.BeaconsWearhacksGmailCom.MarathonTracker6Wd.onRun$1 target=android.os.Handler }
+      Message 212: { when=-10ms callback=com.BeaconsWearhacksGmailCom.MarathonTracker6Wd.onRun$1 target=android.os.Handler }
+      Message 213: { when=-9ms callback=com.BeaconsWearhacksGmailCom.MarathonTracker6Wd.onRun$1 target=android.os.Handler }
+      Message 214: { when=-9ms callback=com.BeaconsWearhacksGmailCom.MarathonTracker6Wd.onRun$1 target=android.os.Handler }
+      Message 215: { when=-9ms callback=com.BeaconsWearhacksGmailCom.MarathonTracker6Wd.onRun$1 target=android.os.Handler }
+      Message 216: { when=-9ms callback=com.BeaconsWearhacksGmailCom.MarathonTracker6Wd.onRun$1 target=android.os.Handler }
+      Message 217: { when=-9ms callback=com.BeaconsWearhacksGmailCom.MarathonTracker6Wd.onRun$1 target=android.os.Handler }
+      Message 218: { when=-9ms callback=com.BeaconsWearhacksGmailCom.MarathonTracker6Wd.onRun$1 target=android.os.Handler }
+      Message 219: { when=-9ms callback=com.BeaconsWearhacksGmailCom.MarathonTracker6Wd.onRun$1 target=android.os.Handler }
+      Message 220: { when=-9ms callback=com.BeaconsWearhacksGmailCom.MarathonTracker6Wd.onRun$1 target=android.os.Handler }
+      Message 221: { when=-9ms callback=com.BeaconsWearhacksGmailCom.MarathonTracker6Wd.onRun$1 target=android.os.Handler }
+      Message 222: { when=-9ms callback=com.BeaconsWearhacksGmailCom.MarathonTracker6Wd.onRun$1 target=android.os.Handler }
+      Message 223: { when=-9ms callback=com.BeaconsWearhacksGmailCom.MarathonTracker6Wd.onRun$1 target=android.os.Handler }
+      Message 224: { when=-9ms callback=com.BeaconsWearhacksGmailCom.MarathonTracker6Wd.onRun$1 target=android.os.Handler }
+      Message 225: { when=-8ms callback=com.BeaconsWearhacksGmailCom.MarathonTracker6Wd.onRun$1 target=android.os.Handler }
+      Message 226: { when=-8ms callback=com.BeaconsWearhacksGmailCom.MarathonTracker6Wd.onRun$1 target=android.os.Handler }
+      Message 227: { when=-8ms callback=com.BeaconsWearhacksGmailCom.MarathonTracker6Wd.onRun$1 target=android.os.Handler }
+      Message 228: { when=-8ms callback=com.BeaconsWearhacksGmailCom.MarathonTracker6Wd.onRun$1 target=android.os.Handler }
+      Message 229: { when=-8ms callback=com.BeaconsWearhacksGmailCom.MarathonTracker6Wd.onRun$1 target=android.os.Handler }
+      Message 230: { when=-8ms callback=com.BeaconsWearhacksGmailCom.MarathonTracker6Wd.onRun$1 target=android.os.Handler }
+      Message 231: { when=-8ms callback=com.BeaconsWearhacksGmailCom.MarathonTracker6Wd.onRun$1 target=android.os.Handler }
+      Message 232: { when=-8ms callback=com.BeaconsWearhacksGmailCom.MarathonTracker6Wd.onRun$1 target=android.os.Handler }
+      Message 233: { when=-8ms callback=com.BeaconsWearhacksGmailCom.MarathonTracker6Wd.onRun$1 target=android.os.Handler }
+      Message 234: { when=-7ms callback=com.BeaconsWearhacksGmailCom.MarathonTracker6Wd.onRun$1 target=android.os.Handler }
+      Message 235: { when=-7ms callback=com.BeaconsWearhacksGmailCom.MarathonTracker6Wd.onRun$1 target=android.os.Handler }
+      Message 236: { when=-7ms callback=com.BeaconsWearhacksGmailCom.MarathonTracker6Wd.onRun$1 target=android.os.Handler }
+      Message 237: { when=-7ms callback=com.BeaconsWearhacksGmailCom.MarathonTracker6Wd.onRun$1 target=android.os.Handler }
+      Message 238: { when=-7ms callback=com.BeaconsWearhacksGmailCom.MarathonTracker6Wd.onRun$1 target=android.os.Handler }
+      Message 239: { when=-7ms callback=com.BeaconsWearhacksGmailCom.MarathonTracker6Wd.onRun$1 target=android.os.Handler }
+      Message 240: { when=-7ms callback=com.BeaconsWearhacksGmailCom.MarathonTracker6Wd.onRun$1 target=android.os.Handler }
+      Message 241: { when=-6ms callback=com.BeaconsWearhacksGmailCom.MarathonTracker6Wd.onRun$1 target=android.os.Handler }
+      Message 242: { when=-6ms callback=com.BeaconsWearhacksGmailCom.MarathonTracker6Wd.onRun$1 target=android.os.Handler }
+      Message 243: { when=-6ms callback=com.BeaconsWearhacksGmailCom.MarathonTracker6Wd.onRun$1 target=android.os.Handler }
+      Message 244: { when=-6ms callback=com.BeaconsWearhacksGmailCom.MarathonTracker6Wd.onRun$1 target=android.os.Handler }
+      Message 245: { when=-6ms callback=com.BeaconsWearhacksGmailCom.MarathonTracker6Wd.onRun$1 target=android.os.Handler }
+      Message 246: { when=-6ms callback=com.BeaconsWearhacksGmailCom.MarathonTracker6Wd.onRun$1 target=android.os.Handler }
+      Message 247: { when=-6ms callback=com.BeaconsWearhacksGmailCom.MarathonTracker6Wd.onRun$1 target=android.os.Handler }
+      Message 248: { when=-6ms callback=com.BeaconsWearhacksGmailCom.MarathonTracker6Wd.onRun$1 target=android.os.Handler }
+      Message 249: { when=-6ms callback=com.BeaconsWearhacksGmailCom.MarathonTracker6Wd.onRun$1 target=android.os.Handler }
+      Message 250: { when=-5ms callback=com.BeaconsWearhacksGmailCom.MarathonTracker6Wd.onRun$1 target=android.os.Handler }
+      Message 251: { when=-5ms callback=com.BeaconsWearhacksGmailCom.MarathonTracker6Wd.onRun$1 target=android.os.Handler }
+      Message 252: { when=-5ms callback=com.BeaconsWearhacksGmailCom.MarathonTracker6Wd.onRun$1 target=android.os.Handler }
+      Message 253: { when=-5ms callback=com.BeaconsWearhacksGmailCom.MarathonTracker6Wd.onRun$1 target=android.os.Handler }
+      Message 254: { when=-5ms callback=com.BeaconsWearhacksGmailCom.MarathonTracker6Wd.onRun$1 target=android.os.Handler }
+      Message 255: { when=-5ms callback=com.BeaconsWearhacksGmailCom.MarathonTracker6Wd.onRun$1 target=android.os.Handler }
+      Message 256: { when=-5ms callback=com.BeaconsWearhacksGmailCom.MarathonTracker6Wd.onRun$1 target=android.os.Handler }
+      Message 257: { when=-5ms callback=com.BeaconsWearhacksGmailCom.MarathonTracker6Wd.onRun$1 target=android.os.Handler }
+      Message 258: { when=-5ms callback=com.BeaconsWearhacksGmailCom.MarathonTracker6Wd.onRun$1 target=android.os.Handler }
+      Message 259: { when=-5ms callback=com.BeaconsWearhacksGmailCom.MarathonTracker6Wd.onRun$1 target=android.os.Handler }
+      Message 260: { when=-5ms callback=com.BeaconsWearhacksGmailCom.MarathonTracker6Wd.onRun$1 target=android.os.Handler }
+      Message 261: { when=-5ms callback=com.BeaconsWearhacksGmailCom.MarathonTracker6Wd.onRun$1 target=android.os.Handler }
+      Message 262: { when=-5ms callback=com.BeaconsWearhacksGmailCom.MarathonTracker6Wd.onRun$1 target=android.os.Handler }
+      Message 263: { when=-4ms callback=com.BeaconsWearhacksGmailCom.MarathonTracker6Wd.onRun$1 target=android.os.Handler }
+      Message 264: { when=-4ms callback=com.BeaconsWearhacksGmailCom.MarathonTracker6Wd.onRun$1 target=android.os.Handler }
+      Message 265: { when=-4ms callback=com.BeaconsWearhacksGmailCom.MarathonTracker6Wd.onRun$1 target=android.os.Handler }
+      Message 266: { when=-4ms callback=com.BeaconsWearhacksGmailCom.MarathonTracker6Wd.onRun$1 target=android.os.Handler }
+      Message 267: { when=-4ms callback=com.BeaconsWearhacksGmailCom.MarathonTracker6Wd.onRun$1 target=android.os.Handler }
+      Message 268: { when=-4ms callback=com.BeaconsWearhacksGmailCom.MarathonTracker6Wd.onRun$1 target=android.os.Handler }
+      Message 269: { when=-3ms callback=com.BeaconsWearhacksGmailCom.MarathonTracker6Wd.onRun$1 target=android.os.Handler }
+      Message 270: { when=-3ms callback=com.BeaconsWearhacksGmailCom.MarathonTracker6Wd.onRun$1 target=android.os.Handler }
+      Message 271: { when=-3ms callback=com.BeaconsWearhacksGmailCom.MarathonTracker6Wd.onRun$1 target=android.os.Handler }
+      Message 272: { when=-3ms callback=com.BeaconsWearhacksGmailCom.MarathonTracker6Wd.onRun$1 target=android.os.Handler }
+      Message 273: { when=-3ms callback=com.BeaconsWearhacksGmailCom.MarathonTracker6Wd.onRun$1 target=android.os.Handler }
+      Message 274: { when=-3ms callback=com.BeaconsWearhacksGmailCom.MarathonTracker6Wd.onRun$1 target=android.os.Handler }
+      Message 275: { when=-3ms callback=com.BeaconsWearhacksGmailCom.MarathonTracker6Wd.onRun$1 target=android.os.Handler }
+      Message 276: { when=-3ms callback=com.BeaconsWearhacksGmailCom.MarathonTracker6Wd.onRun$1 target=android.os.Handler }
+      Message 277: { when=-3ms callback=com.BeaconsWearhacksGmailCom.MarathonTracker6Wd.onRun$1 target=android.os.Handler }
+      Message 278: { when=-2ms callback=com.BeaconsWearhacksGmailCom.MarathonTracker6Wd.onRun$1 target=android.os.Handler }
+      Message 279: { when=-2ms callback=com.BeaconsWearhacksGmailCom.MarathonTracker6Wd.onRun$1 target=android.os.Handler }
+      Message 280: { when=-2ms callback=com.BeaconsWearhacksGmailCom.MarathonTracker6Wd.onRun$1 target=android.os.Handler }
+      Message 281: { when=-2ms callback=com.BeaconsWearhacksGmailCom.MarathonTracker6Wd.onRun$1 target=android.os.Handler }
+      Message 282: { when=-2ms callback=com.BeaconsWearhacksGmailCom.MarathonTracker6Wd.onRun$1 target=android.os.Handler }
+      Message 283: { when=-2ms callback=com.BeaconsWearhacksGmailCom.MarathonTracker6Wd.onRun$1 target=android.os.Handler }
+      Message 284: { when=-2ms callback=com.BeaconsWearhacksGmailCom.MarathonTracker6Wd.onRun$1 target=android.os.Handler }
+      Message 285: { when=-2ms callback=com.BeaconsWearhacksGmailCom.MarathonTracker6Wd.onRun$1 target=android.os.Handler }
+      Message 286: { when=-2ms callback=com.BeaconsWearhacksGmailCom.MarathonTracker6Wd.onRun$1 target=android.os.Handler }
+      Message 287: { when=-2ms callback=com.BeaconsWearhacksGmailCom.MarathonTracker6Wd.onRun$1 target=android.os.Handler }
+      Message 288: { when=-1ms callback=com.BeaconsWearhacksGmailCom.MarathonTracker6Wd.onRun$1 target=android.os.Handler }
+      Message 289: { when=-1ms callback=com.BeaconsWearhacksGmailCom.MarathonTracker6Wd.onRun$1 target=android.os.Handler }
+      Message 290: { when=-1ms callback=com.BeaconsWearhacksGmailCom.MarathonTracker6Wd.onRun$1 target=android.os.Handler }
+      Message 291: { when=-1ms callback=com.BeaconsWearhacksGmailCom.MarathonTracker6Wd.onRun$1 target=android.os.Handler }
+      Message 292: { when=-1ms callback=com.BeaconsWearhacksGmailCom.MarathonTracker6Wd.onRun$1 target=android.os.Handler }
+      Message 293: { when=-1ms callback=com.BeaconsWearhacksGmailCom.MarathonTracker6Wd.onRun$1 target=android.os.Handler }
+      Message 294: { when=-1ms callback=com.BeaconsWearhacksGmailCom.MarathonTracker6Wd.onRun$1 target=android.os.Handler }
+      Message 295: { when=-1ms callback=com.BeaconsWearhacksGmailCom.MarathonTracker6Wd.onRun$1 target=android.os.Handler }
+      Message 296: { when=0 callback=com.BeaconsWearhacksGmailCom.MarathonTracker6Wd.onRun$1 target=android.os.Handler }
+      Message 297: { when=0 callback=com.BeaconsWearhacksGmailCom.MarathonTracker6Wd.onRun$1 target=android.os.Handler }
+      Message 298: { when=0 callback=com.BeaconsWearhacksGmailCom.MarathonTracker6Wd.onRun$1 target=android.os.Handler }
+      Message 299: { when=0 callback=com.BeaconsWearhacksGmailCom.MarathonTracker6Wd.onRun$1 target=android.os.Handler }
+      Message 300: { when=0 callback=com.BeaconsWearhacksGmailCom.MarathonTracker6Wd.onRun$1 target=android.os.Handler }
+      Message 301: { when=+58m53s565ms callback=com.google.android.gms.measurement.internal.zzf$1 target=android.os.Handler }
+      Message 302: { when=+1d4h2m30s593ms callback=maps.ei.az target=android.os.Handler }
+      (Total messages: 303, polling=false, quitting=false)
