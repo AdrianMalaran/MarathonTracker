@@ -1,6 +1,7 @@
 package com.BeaconsWearhacksGmailCom.MarathonTracker6Wd;
 
 import android.app.Activity;
+<<<<<<< HEAD
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.graphics.Typeface;
@@ -8,6 +9,9 @@ import android.os.AsyncTask;
 import android.os.Bundle;
 import android.util.Log;
 import android.widget.TextView;
+=======
+import android.os.Bundle;
+>>>>>>> 52862da9da43e5230559f39db355df2dc68faa3f
 
 import com.BeaconsWearhacksGmailCom.MarathonTracker6Wd.estimote.Database;
 
@@ -33,12 +37,9 @@ public class historyPage extends Activity {
 
             super.onCreate(savedInstanceState);
         setContentView(R.layout.history_page);
-        // Font path
-        String fontPath = "fonts/Steinerlight.ttf";
 
-        // text view label
-        TextView txtGhost = (TextView) findViewById(R.id.textView8);
 
+<<<<<<< HEAD
         // Loading Font Face
         Typeface tf = Typeface.createFromAsset(getAssets(), fontPath);
 
@@ -111,5 +112,7 @@ public class historyPage extends Activity {
             }
         });
 
+=======
+>>>>>>> 52862da9da43e5230559f39db355df2dc68faa3f
     }
 }

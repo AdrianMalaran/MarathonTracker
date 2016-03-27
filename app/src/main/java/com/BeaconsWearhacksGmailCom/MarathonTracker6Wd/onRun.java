@@ -33,6 +33,7 @@ import com.BeaconsWearhacksGmailCom.MarathonTracker6Wd.estimote.EstimoteCloudBea
 import com.BeaconsWearhacksGmailCom.MarathonTracker6Wd.estimote.ProximityContentManager;
 import com.estimote.sdk.SystemRequirementsChecker;
 import com.estimote.sdk.cloud.model.Color;
+import com.github.lzyzsd.circleprogress.DonutProgress;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -81,6 +82,7 @@ public class onRun extends AppCompatActivity implements LocationListener, Sensor
     private Context mcontext;
     private Chronometer chronometer;
     private Thread thread;
+    private DonutProgress donutProgress;
 
     private Database db;
     SQLiteDatabase database;
@@ -89,6 +91,21 @@ public class onRun extends AppCompatActivity implements LocationListener, Sensor
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.during_run);
+<<<<<<< HEAD
+=======
+        lm = (LocationManager) this.getSystemService(Context.LOCATION_SERVICE);
+
+        try {
+            location = lm.getLastKnownLocation(LocationManager.GPS_PROVIDER);
+            lm.requestLocationUpdates(LocationManager.GPS_PROVIDER, 0, 0, this);
+        } catch (SecurityException e) {
+
+        }
+
+        this.onLocationChanged(null);
+
+        lapTimes = new ArrayList<>();
+>>>>>>> 52862da9da43e5230559f39db355df2dc68faa3f
         mcontext = this;
         myTimer = (TextView) findViewById(R.id.textView3);
         stopButton = (ImageButton) findViewById(R.id.stopButton);
@@ -176,6 +193,7 @@ public class onRun extends AppCompatActivity implements LocationListener, Sensor
                     thread.interrupt();
                     thread = null;
                     chronometer = null;
+                    startActivity(new Intent(onRun.this, historyPage.class));
                 }
                 proximityContentManager.destroy();
                // if (db.writeToHistoric())
@@ -191,6 +209,14 @@ public class onRun extends AppCompatActivity implements LocationListener, Sensor
 
             }
         });*/
+<<<<<<< HEAD
+=======
+
+        donutProgress = (DonutProgress) findViewById(R.id.donut_progress);
+        donutProgress.setMax(42);
+
+
+>>>>>>> 52862da9da43e5230559f39db355df2dc68faa3f
         t1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
             @Override
             public void onInit(int status) {
@@ -240,10 +266,48 @@ public class onRun extends AppCompatActivity implements LocationListener, Sensor
 
                     //lapTimes.add(lap);
 
-
                 }
             }
         });
+<<<<<<< HEAD
+=======
+    }
+
+    public void updateTime(final String text) {
+        runOnUiThread(new Runnable() {
+            @Override
+            public void run() {
+                myTimer.setText(text);
+            }
+        });
+    }
+    @Override
+    public void onLocationChanged(Location currentLocation) {
+        TextView txt = (TextView) this.findViewById(R.id.textView5);
+        speed = 0;
+        if (currentLocation == null)
+        {
+            speed = 0;
+            txt.setText("-.- m/s");
+        }
+        else {
+            speed = currentLocation.getSpeed();
+            txt.setText(speed + "m/s");
+        }
+
+    }
+    // TODO move to util class?
+    private float getAverageSpeed(float distance, float timeTaken) {
+        //float minutes = timeTaken/60;
+        //float hours = minutes/60;
+        float speed = 0;
+        if(distance > 0) {
+            float distancePerSecond = timeTaken > 0 ? distance/timeTaken : 0;
+            float distancePerMinute = distancePerSecond*60;
+            float distancePerHour = distancePerMinute*60;
+            speed = distancePerHour > 0 ? (distancePerHour/1000) : 0;
+        }
+>>>>>>> 52862da9da43e5230559f39db355df2dc68faa3f
 
     }
 
