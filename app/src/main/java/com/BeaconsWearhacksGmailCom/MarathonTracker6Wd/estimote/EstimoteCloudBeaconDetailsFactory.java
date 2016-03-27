@@ -8,6 +8,8 @@ import com.estimote.sdk.cloud.model.BeaconInfo;
 import com.estimote.sdk.cloud.model.Color;
 import com.estimote.sdk.exception.EstimoteServerException;
 
+import java.util.UUID;
+
 public class EstimoteCloudBeaconDetailsFactory implements BeaconContentFactory {
 
     private static final String TAG = "BeaconDetailsFactory";
@@ -31,7 +33,7 @@ public class EstimoteCloudBeaconDetailsFactory implements BeaconContentFactory {
                         + "token provided in the MyApplication are correct, and if the beacon with "
                         + "such ID is assigned to your Estimote Account. The error was: "
                         + e.toString());
-                callback.onContentReady(new EstimoteCloudBeaconDetails("beacon", Color.UNKNOWN, null));
+                callback.onContentReady(new EstimoteCloudBeaconDetails("beacon", Color.UNKNOWN, new UUID(0L, 0L) ));
             }
         });
     }

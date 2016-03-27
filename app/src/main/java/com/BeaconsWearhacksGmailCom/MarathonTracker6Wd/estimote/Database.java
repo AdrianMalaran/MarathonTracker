@@ -5,6 +5,7 @@ import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
+import android.util.Log;
 
 /**
  * Created by swagpanduhbur on 3/26/2016.
@@ -39,47 +40,60 @@ public class Database extends SQLiteOpenHelper {
     public Database(Context context) {
         super(context, DATABASE_NAME, null, 1);
     }
+    private static SQLiteOpenHelper instance;
 
     public void onCreate(SQLiteDatabase db) {
-        db.execSQL("create table " + TABLE_NAME + " (DISTANCE_TRAVELLED DOUBLE, CALORIES_BURNED DOUBLE, STEP_COUNT INTEGER, MAX_SPEED DOUBLE, TIME_SPLIT STRING, SECTION INT PRIMARY KEY AUTOINCREMENT)");
-        db.execSQL("create table " + TABLE_NAME2 + " (DISTANCE_TRAVELLED DOUBLE, CALORIES_BURNED DOUBLE, STEP_COUNT INTEGER, MAX_SPEED DOUBLE, TIME_SPLIT STRING, SECTION INT PRIMARY KEY AUTOINCREMENT)");
+        db.execSQL("create table " + TABLE_NAME + " (DISTANCE_TRAVELLED DOUBLE, CALORIES_BURNED DOUBLE, STEP_COUNT INTEGER, MAX_SPEED DOUBLE, TIME_SPLIT STRING, SECTION INTEGER PRIMARY KEY AUTOINCREMENT)");
+        db.execSQL("create table " + TABLE_NAME2 + " (DISTANCE_TRAVELLED DOUBLE, CALORIES_BURNED DOUBLE, STEP_COUNT DOUBLE, MAX_SPEED DOUBLE, TIME_SPLIT STRING, SECTION INTEGER PRIMARY KEY AUTOINCREMENT)");
         db.execSQL("create table " + TABLE_NAME1 + " (ID STRING PRIMARY KEY, MILE_MARKER INTEGER, LONGITUDE FLOAT, LATITUDE FLOAT, TYPE STRING)");
-
     }
 
-
+    public void onOpen(SQLiteDatabase db){
+        //Log.d("db", "opened" + db.toString());
+        return;
+    }
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
         db.execSQL(" DROP TABLE IF EXISTS " + TABLE_NAME);
         onCreate(db);
     }
 
-    public boolean insertData(double distanceTravelled, double caloriesBurned, double stepCount, double maxSpeed, String timeTaken, int section) {
-        SQLiteDatabase db = this.getWritableDatabase();
+    public boolean insertData(SQLiteDatabase db, double distanceTravelled, double caloriesBurned, double stepCount, double maxSpeed, String timeTaken, int section) {
         ContentValues contentValues = new ContentValues();
         contentValues.put(COL_1, distanceTravelled); // DISTANCE TRAVELLED
         contentValues.put(COL_2, caloriesBurned); // CALORIES BURNED
         contentValues.put(COL_3, stepCount); // STEP COUNT
         contentValues.put(COL_4, maxSpeed); // MAX SPEED
         contentValues.put(COL_5, timeTaken); // TOTAL TIME TAKEN
-        contentValues.put(COL_6, section); // SECTION
         long result = db.insert(TABLE_NAME, null, contentValues);
-        if (result != -1)
-            return true;
-        else
-            return false;
+        return result != -1;
     }
 
-    public Cursor getAllData(String table) {
-        SQLiteDatabase db = this.getWritableDatabase();
-        Cursor res = db.rawQuery("select * from " + table, null);
+    public boolean insertDataHistorical(SQLiteDatabase db, double distanceTravelled, double caloriesBurned, double stepCount, double maxSpeed, String timeTaken, int section) {
+        ContentValues contentValues = new ContentValues();
+        contentValues.put(COL2_1, distanceTravelled); // DISTANCE TRAVELLED
+        contentValues.put(COL2_2, caloriesBurned); // CALORIES BURNED
+        contentValues.put(COL2_3, stepCount); // STEP COUNT
+        contentValues.put(COL2_4, maxSpeed); // MAX SPEED
+        contentValues.put(COL2_5, timeTaken); // TOTAL TIME TAKEN
+        Log.d("entering", contentValues.toString());
+        long result = db.insert(TABLE_NAME2, null, contentValues);
+        return result != -1;
+    }
+    public Cursor getData(SQLiteDatabase db, String table, String col) {
+        Cursor res = db.rawQuery("select section," + col + " from " + table, null);
         return res;
     }
-
-    public boolean writeToHistoric() {
+    //(String table, String[] columns, String selection, String[] selectionArgs, String groupBy, String having, String orderBy, String limit)
+    public Cursor getAllData(SQLiteDatabase db, String table, String[] cols, int lim) {
+        Cursor res = db.query(table, cols, cols[0] + "",null,null,null,null,"10");
+        //res.toString();
+        return res;
+    }
+    /*public boolean writeToHistoric() {
         SQLiteDatabase db = this.getWritableDatabase();
 
-        Cursor cs = getAllData(TABLE_NAME);
+      //  Cursor cs = getAllData(TABLE_NAME);
         ContentValues contentValues = new ContentValues();
         long result = 0;
         while (!cs.isLast()) {
@@ -88,34 +102,30 @@ public class Database extends SQLiteOpenHelper {
             contentValues.put(COL2_3, cs.getColumnIndex("3")); // STEP COUNT
             contentValues.put(COL2_4, cs.getColumnIndex("4")); // MAX SPEED
             contentValues.put(COL2_5, cs.getColumnIndex("5")); // TOTAL TIME TAKEN
-            contentValues.put(COL2_6, cs.getColumnIndex("6")); // SECTION
             result = db.insert(TABLE_NAME2, null, contentValues);
             if (result == -1)
                 return false;
         }
+        onUpgrade(db,1,2);
         cs.close();
         return true;
-    }
+    }*/
 
-    public boolean addNewBeacon(String id, Integer mileMarker, float longitude, float latitude) {
-        SQLiteDatabase db = this.getWritableDatabase();
+    public boolean addNewBeacon(SQLiteDatabase db, String id, Integer mileMarker, float longitude, float latitude) {
         ContentValues contentValues = new ContentValues();
-        contentValues.put(COL_1, id); // DISTANCE TRAVELLED
-        contentValues.put(COL_2, mileMarker); // CALORIES BURNED
-        contentValues.put(COL_3, longitude); // STEP COUNT
-        contentValues.put(COL_4, latitude); // MAX SPEED
+        contentValues.put(COL1_1, id); // DISTANCE TRAVELLED
+        contentValues.put(COL1_2, mileMarker); // CALORIES BURNED
+        contentValues.put(COL1_3, longitude); // STEP COUNT
+        contentValues.put(COL1_4, latitude); // MAX SPEED
 
         if (mileMarker == 0)
-            contentValues.put(COL_5, "START"); // TOTAL TIME TAKEN
+            contentValues.put(COL1_5, "START"); // TOTAL TIME TAKEN
         if (mileMarker == 42)
-            contentValues.put(COL_5, "END"); // TOTAL TIME TAKEN
+            contentValues.put(COL1_5, "END"); // TOTAL TIME TAKEN
         else
-            contentValues.put(COL_5, "ON_RACE"); // TOTAL TIME TAKEN
+            contentValues.put(COL1_5, "ON_RACE"); // TOTAL TIME TAKEN
         long result = db.insert(TABLE_NAME1, null, contentValues);
-        if (result != -1)
-            return true;
-        else
-            return false;
+        return result != -1;
     }
 
 }

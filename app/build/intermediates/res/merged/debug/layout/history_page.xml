@@ -12,11 +12,58 @@
         android:layout_gravity="center_horizontal"
         android:paddingTop="30dp" />
 
-    <ScrollView
-        android:layout_width="fill_parent"
-        android:layout_height="match_parent">
-        //GRAPHS AND SHIT
+    <TabHost
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/tabHost"
+        android:layout_gravity="center_horizontal">
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
 
+            <TabWidget
+                android:id="@android:id/tabs"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"></TabWidget>
+
+            <FrameLayout
+                android:id="@android:id/tabcontent"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:id="@+id/summary"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+                    <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:id="@+id/sum"
+                    android:layout_gravity="center_horizontal"
+                    android:paddingTop="30dp" /></LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/graph1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"></LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/graph2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"></LinearLayout>
+            </FrameLayout>
+        </LinearLayout>
+    </TabHost>
+
+<<<<<<< HEAD
     </ScrollView>
 </LinearLayout><!-- From: file:/C:/Users/Andrew/Documents/GitHub/MarathonTracker/app/src/main/res/layout/history_page.xml -->
+=======
+</LinearLayout><!-- From: file:/C:/Users/sam/Documents/GitHub/MarathonTracker/app/src/main/res/layout/history_page.xml -->
+>>>>>>> 8d0b3f84ee831b6429a936c04b263c1fd386cd74

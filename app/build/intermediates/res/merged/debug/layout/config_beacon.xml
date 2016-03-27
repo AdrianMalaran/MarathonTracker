@@ -3,36 +3,22 @@
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical"
-        >
-
-        <ListView
-            android:id="@+id/device_list"
-            android:orientation="vertical"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            />
-
-    </LinearLayout>
     <TextView
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:id="@+id/beaconColor"
         android:layout_gravity="center_horizontal" />
 
     <TextView
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:id="@+id/beaconName"
         android:layout_gravity="center_horizontal" />
 
     <TextView
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:id="@+id/UUID"
@@ -51,7 +37,26 @@
         style="?android:attr/buttonStyleSmall"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Add Beacons"
+        android:text="Add beacon"
         android:id="@+id/add"
         android:layout_gravity="center_horizontal" />
+<<<<<<< HEAD
 </LinearLayout><!-- From: file:/C:/Users/Andrew/Documents/GitHub/MarathonTracker/app/src/main/res/layout/config_beacon.xml -->
+=======
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        >
+
+        <ListView
+            android:id="@+id/device_list"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="323dp"
+            />
+
+    </LinearLayout>
+</LinearLayout><!-- From: file:/C:/Users/sam/Documents/GitHub/MarathonTracker/app/src/main/res/layout/config_beacon.xml -->
+>>>>>>> 8d0b3f84ee831b6429a936c04b263c1fd386cd74

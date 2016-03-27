@@ -31,17 +31,27 @@ public class Chronometer implements Runnable {
     @Override
     public void run() {
 
-        while(isRunning) {
+        while (isRunning) {
             long since = System.currentTimeMillis() - mstartTime;
 
             int seconds = (int) ((since / 1000) % 60);
-            int minutes = (int) ((since/MILLS_TO_MINUTES) % 60);
-            int hours = (int) ((since/MILLS_TO_HOURS) & 24);
+            int minutes = (int) ((since / MILLS_TO_MINUTES) % 60);
+            int hours = (int) ((since / MILLS_TO_HOURS) & 24);
             int millis = (int) (since % 1000);
 
-            ((onRun)mcontext).updateTime(String.format(
+            ((onRun) mcontext).updateTime(String.format(
                     "%02d:%02d:%02d:%03d", hours, minutes, seconds, millis
             ));
         }
+    }
+
+    public static String setFromSec(long since) {
+        int seconds = (int) ((since / 1000) % 60);
+        int minutes = (int) ((since / MILLS_TO_MINUTES) % 60);
+        int hours = (int) ((since / MILLS_TO_HOURS) & 24);
+        int millis = (int) (since % 1000);
+
+        return String.format("%02d:%02d:%02d:%03d", hours, minutes, seconds, millis);
+
     }
 }

@@ -1,6 +1,10 @@
 -- Merging decision tree log ---
 manifest
+<<<<<<< HEAD
 ADDED from C:\Users\Andrew\Documents\GitHub\MarathonTracker\app\src\main\AndroidManifest.xml:2:1-30:12
+=======
+ADDED from C:\Users\sam\Documents\GitHub\MarathonTracker\app\src\main\AndroidManifest.xml:2:1-33:12
+>>>>>>> 8d0b3f84ee831b6429a936c04b263c1fd386cd74
 	package
 		ADDED from C:\Users\Andrew\Documents\GitHub\MarathonTracker\app\src\main\AndroidManifest.xml:3:5-62
 		INJECTED from C:\Users\Andrew\Documents\GitHub\MarathonTracker\app\src\main\AndroidManifest.xml
@@ -20,6 +24,7 @@ ADDED from C:\Users\Andrew\Documents\GitHub\MarathonTracker\app\src\main\Android
 uses-permission#android.permission.ACCESS_COARSE_LOCATION
 ADDED from C:\Users\Andrew\Documents\GitHub\MarathonTracker\app\src\main\AndroidManifest.xml:6:5-80
 	android:name
+<<<<<<< HEAD
 		ADDED from C:\Users\Andrew\Documents\GitHub\MarathonTracker\app\src\main\AndroidManifest.xml:6:22-78
 application
 ADDED from C:\Users\Andrew\Documents\GitHub\MarathonTracker\app\src\main\AndroidManifest.xml:7:5-28:19
@@ -184,6 +189,203 @@ activity#com.BeaconsWearhacksGmailCom.MarathonTracker6Wd.HayesThing
 ADDED from C:\Users\Andrew\Documents\GitHub\MarathonTracker\app\src\main\AndroidManifest.xml:26:9-57
 	android:name
 		ADDED from C:\Users\Andrew\Documents\GitHub\MarathonTracker\app\src\main\AndroidManifest.xml:26:19-45
+=======
+		ADDED from C:\Users\sam\Documents\GitHub\MarathonTracker\app\src\main\AndroidManifest.xml:6:22-78
+uses-permission#android.permission.INTERNET
+ADDED from C:\Users\sam\Documents\GitHub\MarathonTracker\app\src\main\AndroidManifest.xml:7:5-67
+MERGED from [com.google.android.gms:play-services-ads:8.4.0] C:\Users\sam\Documents\GitHub\MarathonTracker\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-ads\8.4.0\AndroidManifest.xml:20:5-66
+MERGED from [com.google.android.gms:play-services-analytics:8.4.0] C:\Users\sam\Documents\GitHub\MarathonTracker\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-analytics\8.4.0\AndroidManifest.xml:21:5-67
+MERGED from [com.google.android.gms:play-services-appinvite:8.4.0] C:\Users\sam\Documents\GitHub\MarathonTracker\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-appinvite\8.4.0\AndroidManifest.xml:19:5-67
+MERGED from [com.google.android.gms:play-services-maps:8.4.0] C:\Users\sam\Documents\GitHub\MarathonTracker\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-maps\8.4.0\AndroidManifest.xml:21:5-66
+MERGED from [com.google.android.gms:play-services-gcm:8.4.0] C:\Users\sam\Documents\GitHub\MarathonTracker\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-gcm\8.4.0\AndroidManifest.xml:22:5-67
+MERGED from [com.google.android.gms:play-services-measurement:8.4.0] C:\Users\sam\Documents\GitHub\MarathonTracker\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-measurement\8.4.0\AndroidManifest.xml:21:5-67
+MERGED from [com.google.android.gms:play-services-maps:8.4.0] C:\Users\sam\Documents\GitHub\MarathonTracker\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-maps\8.4.0\AndroidManifest.xml:21:5-66
+MERGED from [com.google.android.gms:play-services-maps:8.4.0] C:\Users\sam\Documents\GitHub\MarathonTracker\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-maps\8.4.0\AndroidManifest.xml:21:5-66
+MERGED from [com.google.android.gms:play-services-measurement:8.4.0] C:\Users\sam\Documents\GitHub\MarathonTracker\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-measurement\8.4.0\AndroidManifest.xml:21:5-67
+MERGED from [com.google.android.gms:play-services-maps:8.4.0] C:\Users\sam\Documents\GitHub\MarathonTracker\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-maps\8.4.0\AndroidManifest.xml:21:5-66
+MERGED from [com.google.android.gms:play-services-maps:8.4.0] C:\Users\sam\Documents\GitHub\MarathonTracker\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-maps\8.4.0\AndroidManifest.xml:21:5-66
+MERGED from [com.estimote:sdk:0.9.4] C:\Users\sam\Documents\GitHub\MarathonTracker\app\build\intermediates\exploded-aar\com.estimote\sdk\0.9.4\AndroidManifest.xml:15:5-67
+	android:name
+		ADDED from C:\Users\sam\Documents\GitHub\MarathonTracker\app\src\main\AndroidManifest.xml:7:22-64
+uses-permission#android.permission.ACCESS_NETWORK_STATE
+ADDED from C:\Users\sam\Documents\GitHub\MarathonTracker\app\src\main\AndroidManifest.xml:8:5-79
+MERGED from [com.google.android.gms:play-services-ads:8.4.0] C:\Users\sam\Documents\GitHub\MarathonTracker\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-ads\8.4.0\AndroidManifest.xml:21:5-78
+MERGED from [com.google.android.gms:play-services-analytics:8.4.0] C:\Users\sam\Documents\GitHub\MarathonTracker\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-analytics\8.4.0\AndroidManifest.xml:22:5-79
+MERGED from [com.google.android.gms:play-services-maps:8.4.0] C:\Users\sam\Documents\GitHub\MarathonTracker\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-maps\8.4.0\AndroidManifest.xml:20:5-78
+MERGED from [com.google.android.gms:play-services-measurement:8.4.0] C:\Users\sam\Documents\GitHub\MarathonTracker\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-measurement\8.4.0\AndroidManifest.xml:22:5-79
+MERGED from [com.google.android.gms:play-services-maps:8.4.0] C:\Users\sam\Documents\GitHub\MarathonTracker\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-maps\8.4.0\AndroidManifest.xml:20:5-78
+MERGED from [com.google.android.gms:play-services-maps:8.4.0] C:\Users\sam\Documents\GitHub\MarathonTracker\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-maps\8.4.0\AndroidManifest.xml:20:5-78
+MERGED from [com.google.android.gms:play-services-measurement:8.4.0] C:\Users\sam\Documents\GitHub\MarathonTracker\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-measurement\8.4.0\AndroidManifest.xml:22:5-79
+MERGED from [com.google.android.gms:play-services-nearby:8.4.0] C:\Users\sam\Documents\GitHub\MarathonTracker\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-nearby\8.4.0\AndroidManifest.xml:19:5-79
+MERGED from [com.google.android.gms:play-services-maps:8.4.0] C:\Users\sam\Documents\GitHub\MarathonTracker\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-maps\8.4.0\AndroidManifest.xml:20:5-78
+MERGED from [com.google.android.gms:play-services-maps:8.4.0] C:\Users\sam\Documents\GitHub\MarathonTracker\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-maps\8.4.0\AndroidManifest.xml:20:5-78
+MERGED from [com.estimote:sdk:0.9.4] C:\Users\sam\Documents\GitHub\MarathonTracker\app\build\intermediates\exploded-aar\com.estimote\sdk\0.9.4\AndroidManifest.xml:16:5-79
+	android:name
+		ADDED from C:\Users\sam\Documents\GitHub\MarathonTracker\app\src\main\AndroidManifest.xml:8:22-76
+application
+ADDED from C:\Users\sam\Documents\GitHub\MarathonTracker\app\src\main\AndroidManifest.xml:9:5-31:19
+MERGED from [com.android.support:appcompat-v7:23.1.1] C:\Users\sam\Documents\GitHub\MarathonTracker\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.1.1\AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:support-v4:23.1.1] C:\Users\sam\Documents\GitHub\MarathonTracker\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.1.1\AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:design:23.1.1] C:\Users\sam\Documents\GitHub\MarathonTracker\app\build\intermediates\exploded-aar\com.android.support\design\23.1.1\AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:appcompat-v7:23.1.1] C:\Users\sam\Documents\GitHub\MarathonTracker\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.1.1\AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:support-v4:23.1.1] C:\Users\sam\Documents\GitHub\MarathonTracker\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.1.1\AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:support-v4:23.1.1] C:\Users\sam\Documents\GitHub\MarathonTracker\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.1.1\AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:support-v4:23.1.1] C:\Users\sam\Documents\GitHub\MarathonTracker\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.1.1\AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.gms:play-services:8.4.0] C:\Users\sam\Documents\GitHub\MarathonTracker\app\build\intermediates\exploded-aar\com.google.android.gms\play-services\8.4.0\AndroidManifest.xml:19:5-20
+MERGED from [com.google.android.gms:play-services-ads:8.4.0] C:\Users\sam\Documents\GitHub\MarathonTracker\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-ads\8.4.0\AndroidManifest.xml:24:5-32:19
+MERGED from [com.google.android.gms:play-services-basement:8.4.0] C:\Users\sam\Documents\GitHub\MarathonTracker\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\8.4.0\AndroidManifest.xml:20:5-24:19
+MERGED from [com.android.support:support-v4:23.1.1] C:\Users\sam\Documents\GitHub\MarathonTracker\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.1.1\AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.gms:play-services-analytics:8.4.0] C:\Users\sam\Documents\GitHub\MarathonTracker\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-analytics\8.4.0\AndroidManifest.xml:24:5-20
+MERGED from [com.google.android.gms:play-services-basement:8.4.0] C:\Users\sam\Documents\GitHub\MarathonTracker\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\8.4.0\AndroidManifest.xml:20:5-24:19
+MERGED from [com.android.support:support-v4:23.1.1] C:\Users\sam\Documents\GitHub\MarathonTracker\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.1.1\AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.gms:play-services-appindexing:8.4.0] C:\Users\sam\Documents\GitHub\MarathonTracker\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-appindexing\8.4.0\AndroidManifest.xml:19:5-20
+MERGED from [com.google.android.gms:play-services-basement:8.4.0] C:\Users\sam\Documents\GitHub\MarathonTracker\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\8.4.0\AndroidManifest.xml:20:5-24:19
+MERGED from [com.android.support:support-v4:23.1.1] C:\Users\sam\Documents\GitHub\MarathonTracker\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.1.1\AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.gms:play-services-appinvite:8.4.0] C:\Users\sam\Documents\GitHub\MarathonTracker\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-appinvite\8.4.0\AndroidManifest.xml:20:5-30:19
+MERGED from [com.google.android.gms:play-services-basement:8.4.0] C:\Users\sam\Documents\GitHub\MarathonTracker\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\8.4.0\AndroidManifest.xml:20:5-24:19
+MERGED from [com.android.support:support-v4:23.1.1] C:\Users\sam\Documents\GitHub\MarathonTracker\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.1.1\AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.gms:play-services-appstate:8.4.0] C:\Users\sam\Documents\GitHub\MarathonTracker\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-appstate\8.4.0\AndroidManifest.xml:19:5-20
+MERGED from [com.google.android.gms:play-services-basement:8.4.0] C:\Users\sam\Documents\GitHub\MarathonTracker\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\8.4.0\AndroidManifest.xml:20:5-24:19
+MERGED from [com.android.support:support-v4:23.1.1] C:\Users\sam\Documents\GitHub\MarathonTracker\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.1.1\AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.gms:play-services-auth:8.4.0] C:\Users\sam\Documents\GitHub\MarathonTracker\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-auth\8.4.0\AndroidManifest.xml:20:5-32:19
+MERGED from [com.google.android.gms:play-services-basement:8.4.0] C:\Users\sam\Documents\GitHub\MarathonTracker\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\8.4.0\AndroidManifest.xml:20:5-24:19
+MERGED from [com.android.support:support-v4:23.1.1] C:\Users\sam\Documents\GitHub\MarathonTracker\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.1.1\AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.gms:play-services-basement:8.4.0] C:\Users\sam\Documents\GitHub\MarathonTracker\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\8.4.0\AndroidManifest.xml:20:5-24:19
+MERGED from [com.android.support:support-v4:23.1.1] C:\Users\sam\Documents\GitHub\MarathonTracker\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.1.1\AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.gms:play-services-basement:8.4.0] C:\Users\sam\Documents\GitHub\MarathonTracker\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\8.4.0\AndroidManifest.xml:20:5-24:19
+MERGED from [com.android.support:support-v4:23.1.1] C:\Users\sam\Documents\GitHub\MarathonTracker\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.1.1\AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.gms:play-services-cast:8.4.0] C:\Users\sam\Documents\GitHub\MarathonTracker\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-cast\8.4.0\AndroidManifest.xml:19:5-20
+MERGED from [com.google.android.gms:play-services-basement:8.4.0] C:\Users\sam\Documents\GitHub\MarathonTracker\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\8.4.0\AndroidManifest.xml:20:5-24:19
+MERGED from [com.android.support:support-v4:23.1.1] C:\Users\sam\Documents\GitHub\MarathonTracker\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.1.1\AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:mediarouter-v7:23.0.0] C:\Users\sam\Documents\GitHub\MarathonTracker\app\build\intermediates\exploded-aar\com.android.support\mediarouter-v7\23.0.0\AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:appcompat-v7:23.1.1] C:\Users\sam\Documents\GitHub\MarathonTracker\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.1.1\AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:support-v4:23.1.1] C:\Users\sam\Documents\GitHub\MarathonTracker\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.1.1\AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.gms:play-services-drive:8.4.0] C:\Users\sam\Documents\GitHub\MarathonTracker\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-drive\8.4.0\AndroidManifest.xml:19:5-20
+MERGED from [com.google.android.gms:play-services-basement:8.4.0] C:\Users\sam\Documents\GitHub\MarathonTracker\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\8.4.0\AndroidManifest.xml:20:5-24:19
+MERGED from [com.android.support:support-v4:23.1.1] C:\Users\sam\Documents\GitHub\MarathonTracker\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.1.1\AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.gms:play-services-fitness:8.4.0] C:\Users\sam\Documents\GitHub\MarathonTracker\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-fitness\8.4.0\AndroidManifest.xml:19:5-20
+MERGED from [com.google.android.gms:play-services-basement:8.4.0] C:\Users\sam\Documents\GitHub\MarathonTracker\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\8.4.0\AndroidManifest.xml:20:5-24:19
+MERGED from [com.android.support:support-v4:23.1.1] C:\Users\sam\Documents\GitHub\MarathonTracker\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.1.1\AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.gms:play-services-location:8.4.0] C:\Users\sam\Documents\GitHub\MarathonTracker\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-location\8.4.0\AndroidManifest.xml:19:5-20
+MERGED from [com.google.android.gms:play-services-basement:8.4.0] C:\Users\sam\Documents\GitHub\MarathonTracker\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\8.4.0\AndroidManifest.xml:20:5-24:19
+MERGED from [com.android.support:support-v4:23.1.1] C:\Users\sam\Documents\GitHub\MarathonTracker\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.1.1\AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.gms:play-services-maps:8.4.0] C:\Users\sam\Documents\GitHub\MarathonTracker\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-maps\8.4.0\AndroidManifest.xml:27:5-20
+MERGED from [com.google.android.gms:play-services-basement:8.4.0] C:\Users\sam\Documents\GitHub\MarathonTracker\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\8.4.0\AndroidManifest.xml:20:5-24:19
+MERGED from [com.android.support:support-v4:23.1.1] C:\Users\sam\Documents\GitHub\MarathonTracker\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.1.1\AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.gms:play-services-games:8.4.0] C:\Users\sam\Documents\GitHub\MarathonTracker\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-games\8.4.0\AndroidManifest.xml:19:5-20
+MERGED from [com.google.android.gms:play-services-basement:8.4.0] C:\Users\sam\Documents\GitHub\MarathonTracker\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\8.4.0\AndroidManifest.xml:20:5-24:19
+MERGED from [com.android.support:support-v4:23.1.1] C:\Users\sam\Documents\GitHub\MarathonTracker\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.1.1\AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.gms:play-services-drive:8.4.0] C:\Users\sam\Documents\GitHub\MarathonTracker\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-drive\8.4.0\AndroidManifest.xml:19:5-20
+MERGED from [com.google.android.gms:play-services-basement:8.4.0] C:\Users\sam\Documents\GitHub\MarathonTracker\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\8.4.0\AndroidManifest.xml:20:5-24:19
+MERGED from [com.android.support:support-v4:23.1.1] C:\Users\sam\Documents\GitHub\MarathonTracker\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.1.1\AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.gms:play-services-gcm:8.4.0] C:\Users\sam\Documents\GitHub\MarathonTracker\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-gcm\8.4.0\AndroidManifest.xml:24:5-20
+MERGED from [com.google.android.gms:play-services-basement:8.4.0] C:\Users\sam\Documents\GitHub\MarathonTracker\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\8.4.0\AndroidManifest.xml:20:5-24:19
+MERGED from [com.android.support:support-v4:23.1.1] C:\Users\sam\Documents\GitHub\MarathonTracker\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.1.1\AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.gms:play-services-measurement:8.4.0] C:\Users\sam\Documents\GitHub\MarathonTracker\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-measurement\8.4.0\AndroidManifest.xml:26:5-46:19
+MERGED from [com.google.android.gms:play-services-basement:8.4.0] C:\Users\sam\Documents\GitHub\MarathonTracker\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\8.4.0\AndroidManifest.xml:20:5-24:19
+MERGED from [com.android.support:support-v4:23.1.1] C:\Users\sam\Documents\GitHub\MarathonTracker\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.1.1\AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.gms:play-services-identity:8.4.0] C:\Users\sam\Documents\GitHub\MarathonTracker\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-identity\8.4.0\AndroidManifest.xml:19:5-20
+MERGED from [com.google.android.gms:play-services-basement:8.4.0] C:\Users\sam\Documents\GitHub\MarathonTracker\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\8.4.0\AndroidManifest.xml:20:5-24:19
+MERGED from [com.android.support:support-v4:23.1.1] C:\Users\sam\Documents\GitHub\MarathonTracker\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.1.1\AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.gms:play-services-location:8.4.0] C:\Users\sam\Documents\GitHub\MarathonTracker\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-location\8.4.0\AndroidManifest.xml:19:5-20
+MERGED from [com.google.android.gms:play-services-basement:8.4.0] C:\Users\sam\Documents\GitHub\MarathonTracker\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\8.4.0\AndroidManifest.xml:20:5-24:19
+MERGED from [com.android.support:support-v4:23.1.1] C:\Users\sam\Documents\GitHub\MarathonTracker\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.1.1\AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.gms:play-services-maps:8.4.0] C:\Users\sam\Documents\GitHub\MarathonTracker\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-maps\8.4.0\AndroidManifest.xml:27:5-20
+MERGED from [com.google.android.gms:play-services-basement:8.4.0] C:\Users\sam\Documents\GitHub\MarathonTracker\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\8.4.0\AndroidManifest.xml:20:5-24:19
+MERGED from [com.android.support:support-v4:23.1.1] C:\Users\sam\Documents\GitHub\MarathonTracker\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.1.1\AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.gms:play-services-maps:8.4.0] C:\Users\sam\Documents\GitHub\MarathonTracker\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-maps\8.4.0\AndroidManifest.xml:27:5-20
+MERGED from [com.google.android.gms:play-services-basement:8.4.0] C:\Users\sam\Documents\GitHub\MarathonTracker\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\8.4.0\AndroidManifest.xml:20:5-24:19
+MERGED from [com.android.support:support-v4:23.1.1] C:\Users\sam\Documents\GitHub\MarathonTracker\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.1.1\AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.gms:play-services-measurement:8.4.0] C:\Users\sam\Documents\GitHub\MarathonTracker\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-measurement\8.4.0\AndroidManifest.xml:26:5-46:19
+MERGED from [com.google.android.gms:play-services-basement:8.4.0] C:\Users\sam\Documents\GitHub\MarathonTracker\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\8.4.0\AndroidManifest.xml:20:5-24:19
+MERGED from [com.android.support:support-v4:23.1.1] C:\Users\sam\Documents\GitHub\MarathonTracker\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.1.1\AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.gms:play-services-nearby:8.4.0] C:\Users\sam\Documents\GitHub\MarathonTracker\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-nearby\8.4.0\AndroidManifest.xml:20:5-20
+MERGED from [com.google.android.gms:play-services-basement:8.4.0] C:\Users\sam\Documents\GitHub\MarathonTracker\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\8.4.0\AndroidManifest.xml:20:5-24:19
+MERGED from [com.android.support:support-v4:23.1.1] C:\Users\sam\Documents\GitHub\MarathonTracker\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.1.1\AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.gms:play-services-panorama:8.4.0] C:\Users\sam\Documents\GitHub\MarathonTracker\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-panorama\8.4.0\AndroidManifest.xml:19:5-20
+MERGED from [com.google.android.gms:play-services-basement:8.4.0] C:\Users\sam\Documents\GitHub\MarathonTracker\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\8.4.0\AndroidManifest.xml:20:5-24:19
+MERGED from [com.android.support:support-v4:23.1.1] C:\Users\sam\Documents\GitHub\MarathonTracker\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.1.1\AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.gms:play-services-plus:8.4.0] C:\Users\sam\Documents\GitHub\MarathonTracker\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-plus\8.4.0\AndroidManifest.xml:19:5-20
+MERGED from [com.google.android.gms:play-services-basement:8.4.0] C:\Users\sam\Documents\GitHub\MarathonTracker\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\8.4.0\AndroidManifest.xml:20:5-24:19
+MERGED from [com.android.support:support-v4:23.1.1] C:\Users\sam\Documents\GitHub\MarathonTracker\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.1.1\AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.gms:play-services-safetynet:8.4.0] C:\Users\sam\Documents\GitHub\MarathonTracker\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-safetynet\8.4.0\AndroidManifest.xml:19:5-20
+MERGED from [com.google.android.gms:play-services-basement:8.4.0] C:\Users\sam\Documents\GitHub\MarathonTracker\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\8.4.0\AndroidManifest.xml:20:5-24:19
+MERGED from [com.android.support:support-v4:23.1.1] C:\Users\sam\Documents\GitHub\MarathonTracker\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.1.1\AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.gms:play-services-vision:8.4.0] C:\Users\sam\Documents\GitHub\MarathonTracker\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-vision\8.4.0\AndroidManifest.xml:5:5-20
+MERGED from [com.google.android.gms:play-services-basement:8.4.0] C:\Users\sam\Documents\GitHub\MarathonTracker\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\8.4.0\AndroidManifest.xml:20:5-24:19
+MERGED from [com.android.support:support-v4:23.1.1] C:\Users\sam\Documents\GitHub\MarathonTracker\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.1.1\AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.gms:play-services-basement:8.4.0] C:\Users\sam\Documents\GitHub\MarathonTracker\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\8.4.0\AndroidManifest.xml:20:5-24:19
+MERGED from [com.android.support:support-v4:23.1.1] C:\Users\sam\Documents\GitHub\MarathonTracker\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.1.1\AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.gms:play-services-identity:8.4.0] C:\Users\sam\Documents\GitHub\MarathonTracker\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-identity\8.4.0\AndroidManifest.xml:19:5-20
+MERGED from [com.google.android.gms:play-services-basement:8.4.0] C:\Users\sam\Documents\GitHub\MarathonTracker\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\8.4.0\AndroidManifest.xml:20:5-24:19
+MERGED from [com.android.support:support-v4:23.1.1] C:\Users\sam\Documents\GitHub\MarathonTracker\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.1.1\AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.gms:play-services-maps:8.4.0] C:\Users\sam\Documents\GitHub\MarathonTracker\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-maps\8.4.0\AndroidManifest.xml:27:5-20
+MERGED from [com.google.android.gms:play-services-basement:8.4.0] C:\Users\sam\Documents\GitHub\MarathonTracker\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\8.4.0\AndroidManifest.xml:20:5-24:19
+MERGED from [com.android.support:support-v4:23.1.1] C:\Users\sam\Documents\GitHub\MarathonTracker\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.1.1\AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.gms:play-services-wearable:8.4.0] C:\Users\sam\Documents\GitHub\MarathonTracker\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-wearable\8.4.0\AndroidManifest.xml:19:5-20
+MERGED from [com.google.android.gms:play-services-basement:8.4.0] C:\Users\sam\Documents\GitHub\MarathonTracker\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\8.4.0\AndroidManifest.xml:20:5-24:19
+MERGED from [com.android.support:support-v4:23.1.1] C:\Users\sam\Documents\GitHub\MarathonTracker\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.1.1\AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.gms:play-services-location:8.4.0] C:\Users\sam\Documents\GitHub\MarathonTracker\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-location\8.4.0\AndroidManifest.xml:19:5-20
+MERGED from [com.google.android.gms:play-services-basement:8.4.0] C:\Users\sam\Documents\GitHub\MarathonTracker\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\8.4.0\AndroidManifest.xml:20:5-24:19
+MERGED from [com.android.support:support-v4:23.1.1] C:\Users\sam\Documents\GitHub\MarathonTracker\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.1.1\AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.gms:play-services-maps:8.4.0] C:\Users\sam\Documents\GitHub\MarathonTracker\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-maps\8.4.0\AndroidManifest.xml:27:5-20
+MERGED from [com.google.android.gms:play-services-basement:8.4.0] C:\Users\sam\Documents\GitHub\MarathonTracker\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\8.4.0\AndroidManifest.xml:20:5-24:19
+MERGED from [com.android.support:support-v4:23.1.1] C:\Users\sam\Documents\GitHub\MarathonTracker\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.1.1\AndroidManifest.xml:22:5-20
+MERGED from [com.estimote:sdk:0.9.4] C:\Users\sam\Documents\GitHub\MarathonTracker\app\build\intermediates\exploded-aar\com.estimote\sdk\0.9.4\AndroidManifest.xml:22:5-32:19
+MERGED from [com.android.support:support-v4:23.1.1] C:\Users\sam\Documents\GitHub\MarathonTracker\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.1.1\AndroidManifest.xml:22:5-20
+	android:label
+		ADDED from C:\Users\sam\Documents\GitHub\MarathonTracker\app\src\main\AndroidManifest.xml:13:9-41
+	android:supportsRtl
+		ADDED from C:\Users\sam\Documents\GitHub\MarathonTracker\app\src\main\AndroidManifest.xml:14:9-35
+	android:allowBackup
+		ADDED from C:\Users\sam\Documents\GitHub\MarathonTracker\app\src\main\AndroidManifest.xml:11:9-35
+	android:icon
+		ADDED from C:\Users\sam\Documents\GitHub\MarathonTracker\app\src\main\AndroidManifest.xml:12:9-43
+	android:theme
+		ADDED from C:\Users\sam\Documents\GitHub\MarathonTracker\app\src\main\AndroidManifest.xml:15:9-40
+	android:name
+		ADDED from C:\Users\sam\Documents\GitHub\MarathonTracker\app\src\main\AndroidManifest.xml:10:9-38
+meta-data#com.google.android.geo.API_KEY
+ADDED from C:\Users\sam\Documents\GitHub\MarathonTracker\app\src\main\AndroidManifest.xml:16:9-123
+	android:value
+		ADDED from C:\Users\sam\Documents\GitHub\MarathonTracker\app\src\main\AndroidManifest.xml:16:66-121
+	android:name
+		ADDED from C:\Users\sam\Documents\GitHub\MarathonTracker\app\src\main\AndroidManifest.xml:16:20-65
+activity#com.BeaconsWearhacksGmailCom.MarathonTracker6Wd.mainPage
+ADDED from C:\Users\sam\Documents\GitHub\MarathonTracker\app\src\main\AndroidManifest.xml:18:9-24:20
+	android:name
+		ADDED from C:\Users\sam\Documents\GitHub\MarathonTracker\app\src\main\AndroidManifest.xml:18:19-43
+intent-filter#android.intent.action.MAIN+android.intent.category.LAUNCHER
+ADDED from C:\Users\sam\Documents\GitHub\MarathonTracker\app\src\main\AndroidManifest.xml:19:13-22:29
+action#android.intent.action.MAIN
+ADDED from C:\Users\sam\Documents\GitHub\MarathonTracker\app\src\main\AndroidManifest.xml:20:17-69
+	android:name
+		ADDED from C:\Users\sam\Documents\GitHub\MarathonTracker\app\src\main\AndroidManifest.xml:20:25-66
+category#android.intent.category.LAUNCHER
+ADDED from C:\Users\sam\Documents\GitHub\MarathonTracker\app\src\main\AndroidManifest.xml:21:17-77
+	android:name
+		ADDED from C:\Users\sam\Documents\GitHub\MarathonTracker\app\src\main\AndroidManifest.xml:21:27-74
+activity#com.BeaconsWearhacksGmailCom.MarathonTracker6Wd.historyPage
+ADDED from C:\Users\sam\Documents\GitHub\MarathonTracker\app\src\main\AndroidManifest.xml:25:9-94
+	android:name
+		ADDED from C:\Users\sam\Documents\GitHub\MarathonTracker\app\src\main\AndroidManifest.xml:25:19-46
+activity#com.BeaconsWearhacksGmailCom.MarathonTracker6Wd.onRun
+ADDED from C:\Users\sam\Documents\GitHub\MarathonTracker\app\src\main\AndroidManifest.xml:26:9-88
+	android:name
+		ADDED from C:\Users\sam\Documents\GitHub\MarathonTracker\app\src\main\AndroidManifest.xml:26:19-40
+activity#com.BeaconsWearhacksGmailCom.MarathonTracker6Wd.MainActivity
+ADDED from C:\Users\sam\Documents\GitHub\MarathonTracker\app\src\main\AndroidManifest.xml:27:9-95
+	android:name
+		ADDED from C:\Users\sam\Documents\GitHub\MarathonTracker\app\src\main\AndroidManifest.xml:27:19-47
+activity#com.BeaconsWearhacksGmailCom.MarathonTracker6Wd.pastHistory
+ADDED from C:\Users\sam\Documents\GitHub\MarathonTracker\app\src\main\AndroidManifest.xml:28:9-94
+	android:name
+		ADDED from C:\Users\sam\Documents\GitHub\MarathonTracker\app\src\main\AndroidManifest.xml:28:19-46
+activity#com.BeaconsWearhacksGmailCom.MarathonTracker6Wd.BeaconConfig
+ADDED from C:\Users\sam\Documents\GitHub\MarathonTracker\app\src\main\AndroidManifest.xml:29:9-95
+	android:name
+		ADDED from C:\Users\sam\Documents\GitHub\MarathonTracker\app\src\main\AndroidManifest.xml:29:19-47
+>>>>>>> 8d0b3f84ee831b6429a936c04b263c1fd386cd74
 uses-sdk
 INJECTED from C:\Users\Andrew\Documents\GitHub\MarathonTracker\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 MERGED from [com.android.support:appcompat-v7:23.1.1] C:\Users\Andrew\Documents\GitHub\MarathonTracker\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.1.1\AndroidManifest.xml:20:5-43
@@ -330,6 +532,7 @@ MERGED from [com.github.lzyzsd:circleprogress:1.1.0] C:\Users\Andrew\Documents\G
 		INJECTED from C:\Users\Andrew\Documents\GitHub\MarathonTracker\app\src\main\AndroidManifest.xml
 		INJECTED from C:\Users\Andrew\Documents\GitHub\MarathonTracker\app\src\main\AndroidManifest.xml
 	android:minSdkVersion
+<<<<<<< HEAD
 		INJECTED from C:\Users\Andrew\Documents\GitHub\MarathonTracker\app\src\main\AndroidManifest.xml
 		INJECTED from C:\Users\Andrew\Documents\GitHub\MarathonTracker\app\src\main\AndroidManifest.xml
 uses-permission#android.permission.INTERNET
@@ -361,6 +564,10 @@ MERGED from [com.google.android.gms:play-services-maps:8.4.0] C:\Users\Andrew\Do
 MERGED from [com.estimote:sdk:0.9.4] C:\Users\Andrew\Documents\GitHub\MarathonTracker\app\build\intermediates\exploded-aar\com.estimote\sdk\0.9.4\AndroidManifest.xml:16:5-79
 	android:name
 		ADDED from [com.google.android.gms:play-services-ads:8.4.0] C:\Users\Andrew\Documents\GitHub\MarathonTracker\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-ads\8.4.0\AndroidManifest.xml:21:22-76
+=======
+		INJECTED from C:\Users\sam\Documents\GitHub\MarathonTracker\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\sam\Documents\GitHub\MarathonTracker\app\src\main\AndroidManifest.xml
+>>>>>>> 8d0b3f84ee831b6429a936c04b263c1fd386cd74
 activity#com.google.android.gms.ads.AdActivity
 ADDED from [com.google.android.gms:play-services-ads:8.4.0] C:\Users\Andrew\Documents\GitHub\MarathonTracker\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-ads\8.4.0\AndroidManifest.xml:26:9-29:64
 	android:configChanges
