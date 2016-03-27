@@ -1,6 +1,7 @@
 package com.BeaconsWearhacksGmailCom.MarathonTracker6Wd;
 
 import android.content.Context;
+import android.content.Intent;
 import android.location.Location;
 import android.location.LocationListener;
 import android.location.LocationManager;
@@ -21,6 +22,7 @@ import com.BeaconsWearhacksGmailCom.MarathonTracker6Wd.estimote.EstimoteCloudBea
 import com.BeaconsWearhacksGmailCom.MarathonTracker6Wd.estimote.ProximityContentManager;
 import com.estimote.sdk.SystemRequirementsChecker;
 import com.estimote.sdk.cloud.model.Color;
+import com.github.lzyzsd.circleprogress.DonutProgress;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -56,6 +58,7 @@ public class onRun extends AppCompatActivity implements LocationListener {
     private Context mcontext;
     private Chronometer chronometer;
     private Thread thread;
+    private DonutProgress donutProgress;
 
     private List<String> lapTimes;
 
@@ -63,6 +66,17 @@ public class onRun extends AppCompatActivity implements LocationListener {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.during_run);
+        lm = (LocationManager) this.getSystemService(Context.LOCATION_SERVICE);
+
+        try {
+            location = lm.getLastKnownLocation(LocationManager.GPS_PROVIDER);
+            lm.requestLocationUpdates(LocationManager.GPS_PROVIDER, 0, 0, this);
+        } catch (SecurityException e) {
+
+        }
+
+        this.onLocationChanged(null);
+
         lapTimes = new ArrayList<>();
         mcontext = this;
 
@@ -95,6 +109,7 @@ public class onRun extends AppCompatActivity implements LocationListener {
                     thread.interrupt();
                     thread = null;
                     chronometer = null;
+                    startActivity(new Intent(onRun.this, historyPage.class));
                 }
             }
         });
@@ -106,6 +121,10 @@ public class onRun extends AppCompatActivity implements LocationListener {
                 lapTimes.add(lap);
             }
         });*/
+
+        donutProgress = (DonutProgress) findViewById(R.id.donut_progress);
+        donutProgress.setMax(42);
+
 
         t1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
             @Override
@@ -137,20 +156,10 @@ public class onRun extends AppCompatActivity implements LocationListener {
                     //Write to db
 
 
-
                 }
             }
         });
-        lm = (LocationManager) this.getSystemService(Context.LOCATION_SERVICE);
 
-        try {
-            location = lm.getLastKnownLocation(LocationManager.GPS_PROVIDER);
-            lm.requestLocationUpdates(LocationManager.GPS_PROVIDER, 0, 0, this);
-        } catch (SecurityException e) {
-
-        }
-
-        this.onLocationChanged(null);
     }
 
     public void updateTime(final String text) {
@@ -165,7 +174,7 @@ public class onRun extends AppCompatActivity implements LocationListener {
     @Override
     public void onLocationChanged(Location currentLocation) {
         TextView txt = (TextView) this.findViewById(R.id.textView5);
-
+        speed = 0;
         if (currentLocation == null)
         {
             speed = 0;

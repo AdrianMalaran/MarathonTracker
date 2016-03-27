@@ -52,8 +52,6 @@ public class MainActivity  extends FragmentActivity implements OnMapReadyCallbac
             mMap.addMarker(new MarkerOptions().position(currentPos).title("Marker in Sydney"));
             mMap.moveCamera(CameraUpdateFactory.newLatLng(currentPos));
 
-
-
         }
     };
     @Override
