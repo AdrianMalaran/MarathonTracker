@@ -44,8 +44,6 @@ public class MainActivity  extends FragmentActivity implements OnMapReadyCallbac
     private LocationRequest mLocationRequest;
     private double currentLatitude;
     private double currentLongitude;
-    
-    Database myDb;
 
     private final LocationListener mLocationListener = new LocationListener() {
 
@@ -69,19 +67,7 @@ public class MainActivity  extends FragmentActivity implements OnMapReadyCallbac
                 .findFragmentById(R.id.map);
         mapFragment.getMapAsync(this);
         startRun = (Button) findViewById(R.id.button);
-        btnShowData = (Button) findViewById(R.id.showdb);
-        btnUpdateData = (Button)findViewById(R.id.updatedb);
-        myDb = new Database(this);
-        
-        startRun.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(MainActivity.this, onRun.class));
-            }
-        });
-        
-        viewAll();
-        
+
         mGoogleApiClient = new GoogleApiClient.Builder(this)
                 // The next two lines tell the new client that “this” current class will handle connection stuff
                 .addConnectionCallbacks(this)
@@ -95,9 +81,24 @@ public class MainActivity  extends FragmentActivity implements OnMapReadyCallbac
                 .setPriority(LocationRequest.PRIORITY_HIGH_ACCURACY)
                 .setInterval(10 * 1000)        // 10 seconds, in milliseconds
                 .setFastestInterval(1 * 1000); // 1 second, in milliseconds
+        startRun.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this, onRun.class));
+            }
+        });
+    }
+        /*btnShowData = (Button) findViewById(R.id.showdb);
+        btnUpdateData = (Button)findViewById(R.id.updatedb);
+        myDb = new Database(this);
+
+
+
+        viewAll();
+
 
     }
-    
+
     public void viewAll() {
         btnShowData.setOnClickListener(
                         new View.OnClickListener() {
@@ -148,7 +149,7 @@ public class MainActivity  extends FragmentActivity implements OnMapReadyCallbac
         builder.setTitle(title);
         builder.setMessage(message);
         builder.show();
-    }
+    }*/
 
     protected void onResume() {
         super.onResume();
