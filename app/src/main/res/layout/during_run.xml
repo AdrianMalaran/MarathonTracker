@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingTop="20dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Time: 00:00:00:000"
+        android:id="@+id/textView3"
+        android:layout_gravity="center_horizontal"
+        android:textSize="40dp"
+        android:paddingTop="10dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="46dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="-.- m/s"
+        android:id="@+id/textView5"
+        android:layout_gravity="center_horizontal"
+        android:paddingTop="25dp"
+        android:textIsSelectable="false"
+        android:textSize="40dp"
+        android:layout_alignTop="@+id/donut_progress"
+        android:layout_toStartOf="@+id/stopButton" />
+
+    <com.github.lzyzsd.circleprogress.DonutProgress
+        android:layout_marginTop="42dp"
+        android:layout_marginLeft="15dp"
+        android:id="@+id/donut_progress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        custom:donut_progress="30"
+        android:layout_below="@+id/textView3"
+        android:layout_toEndOf="@+id/stopButton" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Click the flag to\nend your run"
+        android:id="@+id/textView4"
+        android:layout_gravity="center_horizontal"
+        android:layout_weight="0.21"
+        android:paddingTop="15dp"
+        android:textAlignment="center"
+        android:singleLine="false"
+        android:layout_marginBottom="145dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true" />
+
+    <ImageButton
+        android:layout_width="70dp"
+        android:layout_height="50dp"
+        android:id="@+id/stopButton"
+        android:layout_gravity="center_horizontal"
+        android:layout_weight="0.21"
+        android:background="@drawable/flag"
+        android:layout_above="@+id/textView4"
+        android:layout_centerHorizontal="true" />
+
+    <ImageButton
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:id="@+id/alertButton"
+        android:background="#000000"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true" />
+
+</RelativeLayout>

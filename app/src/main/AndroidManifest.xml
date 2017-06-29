@@ -3,7 +3,9 @@
     package="com.BeaconsWearhacksGmailCom.MarathonTracker6Wd">
 
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
-
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <application
         android:name=".MyApplication"
         android:allowBackup="true"
@@ -11,13 +13,20 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <meta-data android:name="com.google.android.geo.API_KEY" android:value="AIzaSyDaOAXxw0HcHDr2sqhBEipRocr3kMhBKI0"/>
 
-        <activity android:name=".MainActivity">
+        <activity android:name=".mainPage">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+            android:screenOrientation="portrait"
         </activity>
+        <activity android:name=".historyPage">android:screenOrientation="portrait"</activity>
+        <activity android:name=".onRun">android:screenOrientation="portrait"</activity>
+        <activity android:name=".MainActivity">android:screenOrientation="portrait"</activity>
+        <activity android:name=".pastHistory">android:screenOrientation="portrait"</activity>
+        <activity android:name=".BeaconConfig">android:screenOrientation="portrait"</activity>
 
     </application>
 
